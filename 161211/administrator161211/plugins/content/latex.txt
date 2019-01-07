@@ -1,0 +1,33 @@
+LaTeX Plugin
+
+Private homepage:    http://www.gesellix.de/
+
+Written by Tobias Gesellchen (www.gesellix.de)
+
+
+
+Description:
+------------
+
+
+Installation:
+-------------
+After installing the Plugin be sure to publish the Plugin to activate it.
+Publishing the Plugin is the way you turn it on.
+
+
+Using LaTeX plugin:
+-------------------
+
+
+
+Feedback and Support:
+---------------------
+Tobias Gesellchen (tobias@gesellix.de) is the main programmer.
+We welcome your ideas and feedback on the program.
+
+
+License:
+--------
+Released under the GPL License.
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="JLIST_FRONTEND_SEARCH_LINKTEXT">
+		<message>
+			<![CDATA[JLIST_FRONTEND_SEARCH_LINKTEXT]]>
+		</message>
+	</layout>
+	<state>
+		<name>JLIST_FRONTEND_SEARCH_LINKTEXT</name>
+		<description>JLIST_FRONTEND_SEARCH_LINKTEXT</description>
+		<params>
+		</params>
+	</state>
+</metadata>

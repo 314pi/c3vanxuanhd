@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Custom Content</name>
+	<author>Ian MacLennan</author>
+	<creationDate>February 2008</creationDate>
+	<copyright>Copyright (C) 2008 Ian MacLennan.  All rights reserved.
+		Portions Copyright (C) 2005 - 2008 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>ian.maclennan@help.joomla.org</authorEmail>
+	<version>1.5.0</version>
+	<description>Thank you for using the custom content module</description>
+	<files>
+		<filename module="mod_customcontent">mod_customcontent.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>		<language tag="en-GB">language/en-GB/en-GB.mod_customcontent.ini</language>
+	</languages>
+	<params addpath="/administrator/components/com_content/elements">
+		<param name="id" type="article" default="0" label="Select Article" description="An article" />
+		<param name="image" type="radio" default="0" label="Show images" description="Display Article images">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	</params>
+	<params group="advanced">
+		<param name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+		<param name="load_mootools" type="list" default="0" label="Load Mootools" description="Load MooTools">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+</install>

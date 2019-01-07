@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>scroll news</name>
+	<author>tienap@gsaedu.com</author>
+	<creationDate>July 2008</creationDate>
+	<copyright>Copyright (C) 2005 - 2008 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>tienap@gsaedu.com</authorEmail>
+	<authorUrl>http://joomdesign.net</authorUrl>
+	<version>1.5.0</version>
+	<description>Edit by Phan Anh Tien | Website: http://songchu.info | Tel: 0987472757</description>
+	<files>
+		<filename module="mod_scnews">mod_scnews.php</filename>
+		<filename module="mod_scnews">helper.php</filename>
+		<filename module="mod_scnews">index.html</filename>
+		<filename module="mod_scnews">tmpl/default.php</filename>
+		<filename module="mod_scnews">tmpl/index.html</filename>
+	</files>
+	<params>
+		<param name="delay" type="text" default="25" label="Delay" description="Delay number in Marquee" />
+		<param name="amount" type="text" default="3" label="Amount" description="Amount number  in Marquee" />
+		<param name="count" type="text" default="5" label="Count" description="The number of items to display (default 5)" />
+		<param name="ordering" type="list" default="create_dsc" label="Ordering" description="Ordering options">
+			<option value="c_dsc">Recently Added First</option>
+			<option value="m_dsc">Recently Modified First</option>
+	  	</param>
+		<param name="user_id" type="list" default="0" label="Authors" description="A filter for the authors">
+			<option value="0">Anyone</option>
+			<option value="by_me">Added or modified by me</option>
+			<option value="not_me">Not added or modified by me</option>
+	  	</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="show_front" type="radio" default="1" label="Frontpage Items" description="PARAMFRONTPAGEITEMS">
+			<option value="1">show</option>
+			<option value="0">hide</option>
+		</param>
+		<param name="secid" type="text" default="" label="Section ID" description="PARAMSECTIONID" />
+		<param name="catid" type="text" default="" label="Category ID" description="PARAMCATEGORYID" />
+		<param name="artid" type="text" default="" label="Article ID" description="PARAMSECTIONID" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	</params>
+</install>

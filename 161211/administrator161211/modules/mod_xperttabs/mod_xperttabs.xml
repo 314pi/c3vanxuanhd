@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade">
+    <name>Xpert Tabs</name>
+    <author>ThemeXpert</author>
+    <creationDate>May 2011</creationDate>
+    <authorEmail>support@themexpert.com</authorEmail>
+    <authorUrl>http://www.themexpert.com</authorUrl>
+    <copyright>(C) 2008 - 2011 ThemeXpert, LLC. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only</license>
+    <version>1.5.1</version>
+    <description>Xpert Tabs, Next Generation Tab Module For Joomla! designed to show section articles and modules in a pleasing format.Brought to you by ThemeXpert</description>
+    
+    <files>
+        <filename module="mod_xperttabs">mod_xperttabs.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <folder>admin</folder>
+        <folder>elements</folder>
+        <folder>styles</folder>
+        <folder>tmpl</folder>
+    </files>
+    
+    <params addpath="/modules/mod_xperttabs/elements">
+    
+        <param name="" type="assets" default="" label="" description=""/>
+        <param name="" type="comcheck" default="" label="" description=""/>
+
+        <param type="spacer" default="Content Source" />
+            <param name="content_source" type="list" default="mods" label="Content Type" description="">
+                    <option value="joomla">Joomla Contents</option>
+                    <option value="k2">K2 Contents</option>
+                    <option value="mods">Modules</option>
+            </param>
+
+        <!--Joomla Content Start-->
+        <param type="spacer" default="Joomla Contents" class="xt_joomla" />
+        
+            <param name="joomla_cat_id" type="category" default="" label="Category" description="A content category" />
+            
+            <param name="show_front" type="list" default="1" label="Show Frontpage Items" description="Show frontpage articles in this module ">
+                <option value="1">Show</option>
+                <option value="0">Hide</option>
+                <option value="2">Only Frontpage Items</option>
+            </param>
+            
+            <param name="item_ordering" type="list" default="" label="Item Ordering" description="">
+                <option value="">Default</option>
+                <option value="date">Oldest first</option>
+                <option value="rdate">Most recent first</option>
+                <option value="alpha">Title Alphabetical</option>
+                <option value="ralpha">Title Reverse-Alphabetical</option>
+                <option value="order">Ordering</option>
+            </param>
+        <!--Joomla Contents End-->
+
+        <!--K2 Contents Start-->
+        <param type="spacer" default="K2 Contents" class="xt_k2" />
+        
+            <param name="catfilter" type="radio" default="0" label="Category Filter" description="">
+              <option value="0">All</option>
+              <option value="1">Select</option>
+            </param>
+            
+            <param name="k2_cat_id" type="k2categories" default="" label="Select Category" description="You can select multiple category by holding ctrl key" />
+            
+            <param name="get_children" type="radio" default="0" label="Enable Children Category" description="Fetch items from children categories">
+                <option value="1">Enable</option>
+                <option value="0">Disable</option>
+            </param>
+            <param name="k2_item_ordering" type="list" default="" label="Ordering" description="">
+                <option value="">Default</option>
+                <option value="date">Oldest first</option>
+                <option value="rdate">Most recent first</option>
+                <option value="alpha">Title Alphabetical</option>
+                <option value="ralpha">Title Reverse-Alphabetical</option>
+                <option value="order">Ordering</option>
+                <option value="rorder">Ordering Reverse</option>
+                <!--<option value="hits">Most popular</option>-->
+                <option value="best">Highest rated</option>
+                <option value="comments">Most commented</option>
+                <option value="rand">Random ordering</option>
+            </param>
+            <param name="k2_featured_items" type="list" default="1" label="Featured Item" description="Show Featured Item in this module">
+                <option value="0">Hide</option>
+                <option value="1">Show</option>
+                <option value="2">Show only Featured Items</option>
+            </param>
+            
+            <param name="k2_img_size" type="list" default="M" label="Item Image Size" description="Select Item Image Size">
+                <option value="XS">XSmall</option>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">XLarge</option>
+            </param>
+        <!--K2 item End-->
+
+        <!--Modules Start-->
+        <param type="spacer" default="Modules" class="xt_mods" />
+            <param name="modules" type="modules" lable="Select Modules" description="Select Modules form lists"/>
+        <!--Module End-->
+
+        <!--Tab Settings Start-->
+        <param type="spacer" default="Tab Settings" label="" description="" />
+
+            <param name="width" type="text" label="Width" description="Width in pixed to be used on Xpert Tabs. Leave this field blank for auto width" />
+
+            <param name="tabs_count" type="text" default="3" label="Max # of Tabs (0 = All)" description="The maximum numbers to tab to show. Use 0 to show them all" />
+
+            <param name="tabs_position" type="list" default="top" label="Tab Position" description="Positions of your tabs">
+                <option value="top">Top</option>
+                <option value="bottom">Bottom</option>
+            </param>
+            
+            <param name="tabs_interaction" type="list" default="click" label="Tabs Interaction" description="If you want to mouseover or click for triggring the tab change">
+                <option value="click">Click</option>
+                <option value="mouseenter">Mouse Over</option>
+            </param>
+            
+            <!--<param name="tabs_scrollable" type="radio" default="1" label="Scrollable Tabs" description="Weather to enable the scroll ability on the navigation tabs">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </param>-->
+            
+            <param name="tabs_title_type" type="list" default="content" label="Tabs Title" description="Choose one of the way you want your Tabs title are set.">
+                <option value="content">By Content Title</option>
+                <option value="custom">Custom</option>
+            </param>
+
+            <param name="tabs_title_custom" type="textarea" rows="4" cols="40" default="Tab Title1, Tab Title2, Tab Title3" label="Custom Titles" description="If you choose custom title then enter titles separated by ,"/>
+
+            <param name="show_readmore" type="list" default="1" label="Default Readmore" description="">
+                <option value="1">Show</option>
+                <option value="0">Hide</option>
+            </param>
+
+            <param name="readmore_text" type="text" default="Read more.." label="Custom Readmore Text" description="Custom Text to use for the Read More links" />
+        <!--Tab Settings End-->
+
+
+        <param type="spacer" default="Animation and Styling" />
+            <param name="style" type="list" default="style1" label="Theme Style" description="The style theme you want to use. Custom will let you use your own customized style. Create xperttabs.css file under your template/css folder and this option will load this css file automatically.">
+                <option value="style1">Style 1</option>
+                <option value="style2">Style 2</option>
+                <option value="style3">Style 3</option>
+                <option value="style4">Style 4</option>
+                <option value="style5">Style 5</option>
+                <option value="custom">Custom</option>
+            </param>
+
+            <param name="transition_type" type="list" default="fade" label="Type of Transition" description="The type of the transition. Can be plain(No Effect), scrolling or fading.">
+                <option value="default">Plain</option>
+                <option value="fade">Fading</option>
+                <option value="slide">Scrolling</option>
+            </param>
+                        
+            <param name="fadein_speed" type="text" default="0" label="FadeIn Speed" description=" This property defines how fast (in milliseconds) the opened pane reveals its content." />
+
+            <param name="fadeout_speed" type="text" default="400" label="FadeOut Speed" description="This property defines how fast (in milliseconds) the opened pane hides its content." />
+
+            <param name="auto_play" type="radio" default="0" label="Auto Play" description="Auto play the tabs">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </param>
+
+            <param name="auto_pause" type="radio" default="1" label="Auto Pause" description="If auto play turn on, this option will allows you to pause the slide on mouse over.">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </param>
+
+        <param type="spacer" default="Advance" />
+
+            <param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+
+            <param name="load_jquery" type="list" default="1" label="Load jQuery" description="">
+                <option value="1">Enable</option>
+                <option value="0">Disable</option>
+            </param>
+
+            <param name="jquery_source" type="list" default="local" label="jQuery Source" description="Select Jquery Source. Google CDN is recommended for live site.">
+                <option value="local">From Module Core</option>
+                <option value="google_cdn">From Google CDN</option>
+            </param>
+
+            <param name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+                <option value="1">Use global</option>
+                <option value="0">No caching</option>
+		    </param>
+
+            <param name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+            
+    </params>
+</install>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://www.joomla.org/xml/dtd/1.5/plugin-install.dtd">
+<install type="plugin" group="system" version="1.5">
+	<name>System - Tabber</name>
+	<description>PLG_SYSTEM_TABBER_DESC</description>
+	<version>1.7.1</version>
+	<creationDate>October 2011</creationDate>
+	<author>NoNumber! (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright © 2011 NoNumber! All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<!-- Files -->
+	<files>
+		<filename plugin="tabber">tabber.php</filename>
+		<folder>tabber</folder>
+	</files>
+
+	<!-- Parameters -->
+	<params addpath="/plugins/system/nnframework/fields">
+		<param name="@loadlanguage" type="nn_loadlanguage" extension="plg_system_tabber" />
+		<param name="@license" type="nn_license" extension="TABBER" />
+		<param name="@version" type="nn_version" extension="TABBER" xml="/plugins/system/tabber.xml" />
+		<param name="@header" type="nn_header"
+			label="TABBER"
+			description="TABBER_DESC"
+			xml="/plugins/system/tabber.xml"
+			image="/plugins/system/tabber/images/logo.png"
+			image_w="60" image_h="80"
+			url="http://www.nonumber.nl/tabber"
+			help_url="http://www.nonumber.nl/tabber" />
+
+		<param name="tabber_mode" type="radio" default="click" label="TBR_MODE" description="TBR_MODE_DESC">
+			<option value="click">TBR_CLICK</option>
+			<option value="mouseenter">TBR_HOVER</option>
+		</param>
+		<param name="tabber_slide_speed" type="text" size="5" default="500" label="TBR_SLIDE_SPEED" description="TBR_SLIDE_SPEED_DESC" />
+		<param name="tabber_fade_in_speed" type="text" size="5" default="500" label="TBR_FADE_IN_SPEED" description="TBR_FADE_SPEED_DESC" />
+
+		<param name="@block_scroll_a" type="nn_block" start="1" />
+			<param name="tabber_scroll" type="radio" default="0" label="TBR_SCROLL" description="TBR_SCROLL_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+			<param name="tabber_tablinkscroll" type="radio" default="1" label="TBR_SCROLL_TABLINKS" description="TBR_SCROLL_TABLINKS_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+			<param name="tabber_urlscroll" type="radio" default="1" label="TBR_SCROLL_BY_URL" description="TBR_SCROLL_BY_URL_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+		<param name="@block_scroll_b" type="nn_block" end="1" />
+
+		<param name="outline" type="radio" default="1" label="TBR_OUTLINE" description="TBR_OUTLINE_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@toggler_outline_a" type="nn_toggler" param="outline" value="1" />
+			<param name="line_color" type="nn_colorpicker" default="B4B4B4" label="TBR_LINE_COLOR" description="TBR_LINE_COLOR_DESC" />
+		<param name="@toggler_outline_b" type="nn_toggler" />
+		<param name="rounded" type="radio" default="1" label="TBR_ROUNDED_CORNERS" description="TBR_ROUNDED_CORNERS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@toggler_rounded_a" type="nn_toggler" param="rounded" value="1" />
+			<param name="rounded_radius" type="text" size="5" default="10" label="TBR_ROUNDED_RADIUS" description="TBR_ROUNDED_RADIUS_DESC" />
+		<param name="@toggler_rounded_b" type="nn_toggler" />
+
+		<param name="@hr_tags" type="nn_hr" />
+
+		<param name="tag_open" type="text" size="20" default="tab" label="TBR_OPENING_TAG" description="TBR_OPENING_TAG_DESC" />
+		<param name="tag_close" type="text" size="20" default="tabs" label="TBR_CLOSING_TAG" description="TBR_CLOSING_TAG_DESC" />
+		<param name="tag_tablink" type="text" size="20" default="tablink" label="TBR_TAB_LINK_TAG" description="TBR_TAB_LINK_TAG_DESC" />
+		<param name="tag_delimiter" type="nn_radiolist" size="2" default="=" label="TBR_TAG_SYNTAX" description="TBR_TAG_SYNTAX_DESC">
+			<option value="=">TBR_SYNTAX_IS</option>
+			<option value="space">TBR_SYNTAX_SPACE</option>
+		</param>
+		<param name="place_comments" type="radio" default="1" label="NN_PLACE_HTML_COMMENTS" description="NN_PLACE_HTML_COMMENTS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+
+	<param name="@slide_button" type="nn_slide" label="COM_PLUGINS_TABBER_EDITOR_BUTTON_FIELDSET_LABEL" />
+		<param name="button_text" type="text" default="Insert Tabs" label="NN_BUTTON_TEXT" description="NN_BUTTON_TEXT_DESC" />
+		<param name="button_icon" type="radio" default="1" label="NN_SHOW_ICON" description="NN_SHOW_ICON_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="enable_frontend" type="radio" default="1" label="NN_ENABLE_IN_FRONTEND" description="NN_ENABLE_IN_FRONTEND_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+
+	<param name="@slide_advanced" type="nn_slide" label="ADVANCED PARAMETERS" />
+		<param name="title_tag" type="text" size="20" default="h2" label="TBR_TITLE_TAG" description="TBR_TITLE_TAG_DESC" />
+		<param name="direction" type="radio" default="" label="NN_DIRECTION" description="NN_DIRECTION_DESC">
+			<option value="">NN_LTR</option>
+			<option value="rtl">NN_RTL</option>
+		</param>
+		<param name="use_cookies" type="radio" default="0" label="TBR_USE_COOKIES" description="TBR_USE_COOKIES_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@set_cookies_a" type="nn_toggler" param="use_cookies" value="0" />
+			<param name="set_cookies" type="radio" default="0" label="TBR_SAVE_COOKIES" description="TBR_SAVE_COOKIES_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+		<param name="@set_cookies_b" type="nn_toggler" />
+		<param name="load_stylesheet" type="radio" default="1" label="NN_LOAD_STYLESHEET" description="NN_LOAD_STYLESHEET_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="load_mootools" type="radio" default="1" label="NN_LOAD_MOOTOOLS" description="NN_LOAD_MOOTOOLS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="mootools_compatibility" type="radio" default="1" label="NN_MOOTOOLS_COMPATIBILITY" description="NN_MOOTOOLS_COMPATIBILITY_DESC">
+			<option value="0">NN_AUTO</option>
+			<option value="1">1.11</option>
+			<option value="2">1.2+</option>
+		</param>
+		<param name="use_versioned_files" type="radio" default="0" label="NN_USE_VERSIONED_FILES" description="NN_USE_VERSIONED_FILES_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+</install>

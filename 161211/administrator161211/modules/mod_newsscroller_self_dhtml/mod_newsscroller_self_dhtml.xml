@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<install type="module" version="1.5.0" method="upgrade">
+<name>Newsscroller Self DHTML J1.5</name>
+	<author>Viktor Vogel</author>
+	<creationDate>05.10.2010</creationDate>
+	<copyright>This module its released under GPL/GNU License</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>admin@kubik-rubik.de</authorEmail>
+	<authorUrl>www.kubik-rubik.de</authorUrl>
+	<version>1.5-3-2</version>
+	<description>NEWSSCROLLERDESC</description>
+	<files>
+		<filename module="mod_newsscroller_self_dhtml">mod_newsscroller_self_dhtml.php</filename>
+		<filename module="mod_newsscroller_self_dhtml">helper.php</filename>
+		<filename module="mod_newsscroller_self_dhtml">index.html</filename>		
+		<filename module="mod_newsscroller_self_dhtml">tmpl/default.php</filename>		
+		<filename module="mod_newsscroller_self_dhtml">tmpl/index.html</filename>	
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_newsscroller_self_dhtml.ini</language>
+		<language tag="de-DE">de-DE.mod_newsscroller_self_dhtml.ini</language>
+	</languages>
+	<params>
+		<param name="@spacer" type="spacer"
+default="" label="Keine Nachrichten" description="" />
+		<param name="nonews" type="text" size="40" default="NS-DHTML - Version 1.5-3" label="NONEWS" description="NONEWSDESC" />
+			<param name="@spacer" type="spacer"
+default="" label="News 1" description="" />
+		<param name="linenews1status" type="radio" default="no" label="CAPTIONASK" description="CAPTIONASKDESC">
+			<option value="yes">YES</option>
+			<option value="no">NO</option>
+		</param>
+		<param name="linenews1" type="text" size="40" default="" label="CAPTION" description="CAPTIONDESC" />
+		<param name="news1" type="textarea" cols="40" rows="5" default="" label="TEXT" description="TEXTDESC" />
+		<param name="urlnews1status" type="radio" default="no" label="LINKASK" description="LINKASKDESC">
+			<option value="yes">YES</option>
+			<option value="no">NO</option>
+		</param>
+		<param name="urlnews1" type="text" size="40" default="http://" label="LINK" description="LINKDESC" />
+		<param name="urlnews1name" type="text" size="40" default="Link" label="LINKNAME" description="LINKNAMEDESC" />
+		<param name="urlnews1newwindow" type="radio" default="_blank" label="NEWWINDOW" description="NEWWINDOWDESC">
+			<option value="_blank">YES</option>
+			<option value="_self">NO</option>
+		</param>
+			<param name="@spacer" type="spacer"
+default="" label="News 2" description="" />
+		<param name="linenews2status" type="radio" default="no" label="CAPTIONASK" description="CAPTIONASKDESC">
+			<option value="yes">YES</option>
+			<option value="no">NO</option>
+		</param>
+		<param name="linenews2" type="text" size="40" default="" label="CAPTION" description="CAPTIONDESC" />
+		<param name="news2" type="textarea" cols="40" rows="5" default="" label="TEXT" description="TEXTDESC" />
+		<param name="urlnews2status" type="radio" default="no" label="LINKASK" description="LINKASKDESC">
+			<option value="yes">YES</option>
+			<option value="no">NO</option>
+		</param>
+		<param name="urlnews2" type="text" size="40" default="http://" label="LINK" description="LINKDESC" />
+		<param name="urlnews2name" type="text" size="40" default="Link" label="LINKNAME" description="LINKNAMEDESC" />
+		<param name="urlnews2newwindow" type="radio" default="_blank" label="NEWWINDOW" description="NEWWINDOWDESC">
+			<option value="_blank">YES</option>
+			<option value="_self">NO</option>
+		</param>
+		<param name="@spacer" type="spacer"
+default="" label="News 3" description="" />
+		<param name="linenews3status" type="radio" default="no" label="CAPTIONASK" description="CAPTIONASKDESC">
+			<option value="yes">YES</option>
+			<option value="no">NO</option>
+		</param>
+		<param name="linenews3" type="text" size="40" default="" label="CAPTION" description="CAPTIONDESC" />
+		<param name="news3" type="textarea" cols="40" rows="5" default="" label="TEXT" description="TEXTDESC" />
+		<param name="urlnews3status" type="radio" default="no" label="LINKASK" description="LINKASKDESC">
+			<option value="yes">YES</option>
+			<option value="no">NO</option>
+		</param>
+		<param name="urlnews3" type="text" size="40" default="http://" label="LINK" description="LINKDESC" />
+		<param name="urlnews3name" type="text" size="40" default="Link" label="LINKNAME" description="LINKNAMEDESC" />
+		<param name="urlnews3newwindow" type="radio" default="_blank" label="NEWWINDOW" description="NEWWINDOWDESC">
+			<option value="_blank">YES</option>
+			<option value="_self">NO</option>
+		</param>
+		<param name="@spacer" type="spacer"
+default="" label="News 4" description="" />
+		<param name="linenews4status" type="radio" default="no" label="CAPTIONASK" description="CAPTIONASKDESC">
+			<option value="yes">YES</option>
+			<option value="no">NO</option>
+		</param>
+		<param name="linenews4" type="text" size="40" default="" label="CAPTION" description="CAPTIONDESC" />
+		<param name="news4" type="textarea" cols="40" rows="5" default="" label="TEXT" description="TEXTDESC" />
+		<param name="urlnews4status" type="radio" default="no" label="LINKASK" description="LINKASKDESC">
+			<option value="yes">YES</option>
+			<option value="no">NO</option>
+		</param>
+		<param name="urlnews4" type="text" size="40" default="http://" label="LINK" description="LINKDESC" />
+		<param name="urlnews4name" type="text" size="40" default="Link" label="LINKNAME" description="LINKNAMEDESC" />
+		<param name="urlnews4newwindow" type="radio" default="_blank" label="NEWWINDOW" description="NEWWINDOWDESC">
+			<option value="_blank">YES</option>
+			<option value="_self">NO</option>
+		</param>
+		<param name="@spacer" type="spacer"
+default="" label="News 5" description="" />
+		<param name="linenews5status" type="radio" default="no" label="CAPTIONASK" description="CAPTIONASKDESC">
+			<option value="yes">YES</option>
+			<option value="no">NO</option>
+		</param>
+		<param name="linenews5" type="text" size="40" default="" label="CAPTION" description="CAPTIONDESC" />
+		<param name="news5" type="textarea" cols="40" rows="5" default="" label="TEXT" description="TEXTDESC" />
+		<param name="urlnews5status" type="radio" default="no" label="LINKASK" description="LINKASKDESC">
+			<option value="yes">YES</option>
+			<option value="no">NO</option>
+		</param>
+		<param name="urlnews5" type="text" size="40" default="http://" label="LINK" description="LINKDESC" />
+		<param name="urlnews5name" type="text" size="40" default="Link" label="LINKNAME" description="LINKNAMEDESC" />
+		<param name="urlnews5newwindow" type="radio" default="_blank" label="NEWWINDOW" description="NEWWINDOWDESC">
+			<option value="_blank">YES</option>
+			<option value="_self">NO</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="CSS - Aussehen" description="" />
+		<param name="sort" type="radio" default="0" label="SORT" description="SORTDESC">
+			<option value="0">ASC</option>
+			<option value="1">DESC</option>
+			<option value="2">RANDOM</option>
+			<option value="3">MANUAL</option>
+		</param>
+		<param name="manualsorting" type="text" default="1,2,3,4,5" label="MANUALSORTING" description="MANUALSORTINGDESC" />
+		<param name="color" type="text" default="#000000" label="COLOR" description="COLORDESC" />
+		<param name="colortext" type="text" default="#3F3F3F" label="COLORTEXT" description="COLORTEXTDESC" />
+		<param name="colorlink" type="text" default="#6F2222" label="COLORLINK" description="COLORLINKDESC" />
+		<param name="bgcolor" type="text" default="transparent" label="BGCOLOR" description="BGCOLORDESC" />
+		<param name="textsize" type="list" default="14" label="SIZE" description="SIZEDESC" >
+        <option value="7">7 px</option>
+        <option value="8">8 px</option>
+        <option value="9">9 px</option>
+        <option value="10">10 px</option>
+        <option value="11">11 px</option>
+        <option value="12">12 px</option>
+        <option value="13">13 px</option>
+        <option value="14">14 px</option>
+        <option value="15">15 px</option>
+        <option value="16">16 px</option>
+        <option value="17">17 px</option>
+        <option value="18">18 px</option>
+      </param>
+	  <param name="textweight" type="list" default="normal" label="FONTWEIGHT" description="FONTWEIGHTDESC" >
+	  <option value="normal">NORMAL</option>
+        <option value="bold">BOLD</option>
+        <option value="bolder">BOLDER</option>
+        <option value="lighter">LIGHTER</option>
+      </param>
+       <param name="fontstyle" type="radio" default="normal" label="FONTSTYLE" description="FONTSTYLEDESC">
+			<option value="normal">NORMAL</option>
+			<option value="italic">ITALIC</option>
+			</param>
+	    <param name="textalign" type="radio" default="center" label="TEXTALIGN" description="TEXTALIGNDESC">
+			<option value="center">CENTER</option>
+			<option value="left">LEFT</option>
+			<option value="right">RIGHT</option>
+			</param>
+		<param name="hor" type="radio" default="1" label="HOR" description="HORDESC">
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="height" type="text" default="200" label="HEIGHT" description="HEIGHTDESC"></param>
+		<param name="width" type="text" default="100" label="WIDTH" description="WIDTHDESC"></param>
+		<param name="marqueespeed" type="list" default="2" label="MARQUEESPEED" description="MARQUEESPEEDDESC">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		   </param>
+		<param name="scrolldelay" type="text" default="2" label="SCROLLDELAY" description="SCROLLDELAYDESC"></param>
+		   	<param name="pauseit" type="radio" default="1" label="PAUSEIT" description="PAUSEITDESC">
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="consecutive" type="radio" default="1" label="CONSECUTIVE" description="CONSECUTIVEDESC">
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="copy" type="radio" default="1" label="POWERED BY LABEL" description="POWERED BY">
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="Ein Suffix, welches hinzugefügt werden kann (table.moduletable or div.moduletable), was ein individuelles Style des Modules ermöglicht!" />
+	</params>
+</install>

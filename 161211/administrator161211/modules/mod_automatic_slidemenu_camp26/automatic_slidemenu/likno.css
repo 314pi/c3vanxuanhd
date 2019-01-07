@@ -1,0 +1,71 @@
+.divHeadHeader {
+	cursor: pointer;
+	height:36px;
+	width:36px;
+	float:left;
+}
+.divBodyHeader {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight:normal;
+	color: #000;
+	height:36px;
+	white-space:nowrap;
+	width:auto;
+	float:left;
+	cursor: pointer;
+	text-decoration:none;
+}
+.divBodyHeader:link {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight:normal;
+	color: #000;
+	height:36px;
+	white-space:nowrap;
+	width:auto;
+	float:left;
+	cursor: pointer;
+	text-decoration:none;
+}
+.divBodyHeader:visited {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight:normal;
+	color: #000;
+	height:36px;
+	white-space:nowrap;
+	width:auto;
+	float:left;
+	cursor: pointer;
+	text-decoration:none;
+}
+.divBodyHeader:hover {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight:normal;
+	color: #000;
+	height:36px;
+	white-space:nowrap;
+	width:auto;
+	float:left;
+	cursor: pointer;
+	text-decoration:none;
+}
+.divBodyHeader p{
+	margin: 1px 5px 1px 5px;	
+}
+html.divBodyHeader p{
+	margin: 1px 5px 1px 5px;	
+}
+
+.divHeadSubmenu {
+	cursor: pointer;
+	float:none;
+	width:auto;
+}
+.divBodySubmenu {
+	float:none;
+	width:auto;
+}
+

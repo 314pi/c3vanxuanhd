@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade">
+	<name>jDownloads Tree</name>
+	<author>Josh Prakash</author>
+	<creationDate>2011-01-19</creationDate>
+	<copyright>Copyright (C) 2008-2010 youthpole.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>joshprakash@yahoo.com</authorEmail>
+	<authorUrl>www.youthpole.com</authorUrl>
+	<version>1.3</version>
+	<description>jDownloads tree - This module shows a list of defined Categories and Sub Categories in a tree for Joomla 1.5. Original (Docman jDMTree 1.5.5 ) developed by Josh Prakash. (C) 2008-2010 www.youthpole.com / Adapted and modified for jDownloads by Arno Betz</description>
+	<files>
+		<filename module="mod_jdownloads_tree">mod_jdownloads_tree.php</filename>
+		<filename>index.html</filename>
+		<filename>jDtree/jdownloadstree.php</filename>
+		<filename>jDtree/index.html</filename>
+		<filename>jDtree/images/minus.gif</filename>
+		<filename>jDtree/images/plus.gif</filename>
+		<filename>jDtree/images/folder.gif</filename>
+		<filename>jDtree/images/base.gif</filename>
+		<filename>jDtree/images/index.html</filename>
+	</files>
+    <languages>
+        <language tag="en-GB">en-GB.mod_jdownloads_tree.ini</language>
+    </languages>
+	<params>
+		<param name="lengthc" type="text" default="20" label="CAT_MAX_LENGTH" description="CAT_MAX_LENGTH_DESC" />
+		<param name="catoption" type="list" default="1" label="CAT_OPTION" description="CAT_OPTION_DESC">
+			<option value="1">OPTION_INCLUDE</option>
+			<option value="0">OPTION_EXCLUDE</option>
+		</param>
+		<param name="catid" type="text" default="" label="CAT_IDS" description="CAT_IDS_DESC" />
+        <param name="moduleclass_sfx" type="text" default="" label="CLASS_SUFFIX_TITLE" description="CLASS_SUFFIX_DESC"/>
+	</params>
+	<params group="advanced">
+		<param name="cache" type="list" default="1" label="CACHE_LABEL" description="CACHE_DESCRIPTION">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="CACHE_TIME_LABEL" description="CACHE_TIME_DESCRIPTION" />
+	</params>
+</install>

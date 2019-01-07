@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/plugin-install.dtd">
+<install type="plugin" group="editors-xtd" method="upgrade" version="1.5.0">
+	<name>Editor Button Plugin for jDownloads Content Plugin</name>
+	<creationDate>2010-04-01</creationDate>
+    <author>Arno Betz</author>
+    <authorEmail>info@jdownloads.com</authorEmail>
+    <authorUrl>www.jdownloads.com</authorUrl>
+    <copyright>Copyright (C) 2011 Arno Betz</copyright>
+    <license>GNU/GPL</license>
+	<version>1.2</version>
+	<description>jDownloads Editor Button Plugin - adds a jDownloads Download button into article editor for the jDownloads content plugin. Required jDownloads v.1.7.4 or newer.</description>
+	<files>
+		<filename plugin="jdownload">jdownload.php</filename>
+		<filename plugin="jdownload">jdownload.xml</filename>
+		<filename plugin="jdownload">jdownload.css</filename>
+		<filename plugin="jdownload">jdownload.png</filename>
+	</files>
+	<params>
+        <param name="access" type="list" default="1" label="JLIST_BUTTON_PLG_ACCESS_LEVEL" description="JLIST_BUTTON_PLG_ACCESS_LEVEL_DESC">
+            <option value="1">Special</option>
+            <option value="0">Administrators</option>
+        </param>
+	</params>	
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_jdownload.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.plg_editors-xtd_jdownload.ini</language>
+	</languages>
+	<administration>
+		<languages >
+			<language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_jdownload.ini</language>
+            <language tag="de-DE">language/de-DE/de-DE.plg_editors-xtd_jdownload.ini</language>
+		</languages>
+	</administration>
+</install>

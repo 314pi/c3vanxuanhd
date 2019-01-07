@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="plugin" version="1.5.0" group="system" method="upgrade">
+   <name>System - J2top</name>
+   <author>freakedout</author>
+   <creationDate>September 2010</creationDate>
+   <copyright>(C) 2010 freakedout</copyright>
+   <license>http://www.gnu.org/licenses/gpl.html</license>
+   <authorEmail>contact@freakedout.de</authorEmail>
+   <authorUrl>www.freakedout.de</authorUrl>
+   <version>1.1</version>
+   <description><![CDATA[J2TOP_DESC]]></description>
+<params addpath="/plugins/system/J2top/elements">
+    <param name="text" type="textarea" cols="25" rows="3" default="Top of page" label="Text" description="The text to display on the button" />
+    <param name="font_size" type="text" default="14px" label="Text size" description="The text size" />
+    <param name="font_color"       type="j2topcolortext" class="picker_text" onchange="this.style.background=this.value;" default="#676767" label="Text color" description="The text color. default: #676767" />
+    <param name="font_color_hover" type="j2topcolortext" class="picker_text" onchange="this.style.background=this.value;" default="#4D87C7" label="Text color (hover)" description="The text color while hovering. default: #4D87C7" />
+    <param name="width" type="text" default="95px" label="Width" description="The buttons width" />
+    <param name="height" type="text" default="30px" label="Height" description="The buttons height" />
+    <param name="pad_top" type="text" default="7px" label="padding-top" description="Text padding" />
+    <param name="pad_bottom" type="text" default="0px" label="padding-bottom" description="Text padding" />
+    <param name="pad_left" type="text" default="7px" label="padding-left" description="Text padding" />
+    <param name="pad_right" type="text" default="0px" label="padding-right" description="Text padding" />
+
+    <param name="bottom" type="text" default="3px" label="Position - bottom" description="Distance from the bottom" />
+    <param name="left_right" type="radio" default="2" label="Position" description="Align button to the left or right border of the window?">
+       <option value="1">left</option>
+       <option value="2">right</option>
+   </param>
+   <param name="right" type="text" default="3px" label="Position - right" description="Distance to the right. For example '3px'" />
+   <param name="left" type="text" default="3px" label="Position - left" description="Distance to the left. For example '3px'" />
+
+    <param name="use_bg" type="radio" default="1" label="Background image" description="Use a background image">
+       <option value="1">on</option>
+       <option value="0">off</option>
+   </param>
+    <param name="bg_image" type="imagelist" directory="/images" default="" hide_none="1" label="Background image" description="Select a background image from /images folder" />
+    <param name="bg_color" type="j2topcolortext" class="picker_text" onchange="this.style.background=this.value;" default="transparent" label="Background color" description="Define a background color like #676767" />
+    <param name="use_bg_hover" type="radio" default="1" label="Background image (hover)" description="Use a background image while hovering">
+       <option value="1">on</option>
+       <option value="0">off</option>
+   </param>
+    <param name="bg_image_hover" type="imagelist" directory="/images" default="" hide_none="1" label="Background image (hover)" description="Select a background image from /images folder" />
+    <param name="bg_color_hover" type="j2topcolortext" class="picker_text" onchange="this.style.background=this.value;" default="transparent" label="Background color (hover)" description="Define a background color like #676767" />
+    <param name="duration" type="text" default="250" label="Fade duration" description="Duration of fading in ms when button appears or disappears. 1000=1sec" />
+    <param name="show_pos" type="text" default="200" label="Fade position" description="Pixels you must scroll down before button fades in/out" />
+    <param name="transp" type="text" default="1" label="Button transparency" description="Set a transparency for the button between 0.1 and 1" />
+
+	<param name="backend" type="radio" default="1" label="Display in backend" description="Display the Top of page button in administrator interface?">
+       <option value="1">Yes</option>
+       <option value="0">No</option>
+   </param>
+</params>
+<files>
+    <filename plugin="J2top">J2top.php</filename>
+    <folder plugin="J2top">J2top</folder>
+
+</files>
+<languages>
+   <language tag="en-GB">language/en-GB.plg_system_J2top.ini</language>
+   <language tag="de-DE">language/de-DE.plg_system_J2top.ini</language>
+</languages>
+</install>

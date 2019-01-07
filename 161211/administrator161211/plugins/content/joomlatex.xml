@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+	<name>Content - JoomLaTeX</name>
+	<author>Alex Matulich, Arcadia Research Labs, Inc. Modified from bot_mimetex.</author>
+	<creationDate>April 2010</creationDate>
+	<copyright>Copyright 2010 Arcadia Research Labs, Inc.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>alex@arcadiaresearch.com</authorEmail>
+	<authorUrl>arcadiaresearch.com</authorUrl>
+	<version>3.0</version>
+	<description>Displays TeX math formulas using the codecogs.com server. Allows for a {tex} tag for use in content markup; e.g. {tex}c^2=a^2+b^2{/tex}</description>
+	<files>
+		<filename plugin="joomlatex">joomlatex.php</filename>
+	</files>
+	<config>
+	<!-- for Joomla 1.6 use: -->
+	<fields name="params">
+		<fieldset name="basic">
+		<field name="server" type="text" default="http://latex.codecogs.com/gif.latex" size="40" label="LaTeX server" description="The URL where LaTeX is installed" />
+		<field name="imgpath" type="text" default="/images/joomlatex" size="40" label="Image path" description="Server-writable path under Joomla root directory to cache images (optional). Recommended: create a directory for exclusive use of JoomlaTeX." />
+		<field name="use_curl" type="radio" default="1" label="Method to get image for caching" description="Some hosting providers disable fopen() or the PHP cURL library for retrieving files from a remote location. Select whichever method is available to you.">
+			<option value="0">Remote fopen()</option>
+			<option value="1">PHP cURL</option>
+		</field>
+		</fieldset>
+	</fields>
+	</config>
+	<params>
+		<!-- Joomla 1.5 compatibility -->
+		<param name="server" type="text" default="http://latex.codecogs.com/gif.latex" size="40" label="LaTeX server" description="The URL where LaTeX is installed" />
+		<param name="imgpath" type="text" default="/images/joomlatex" size="40" label="Image path" description="Server-writable path under Joomla root directory to cache images (optional). Recommended: create a directory for exclusive use of JoomlaTeX." />
+		<param name="use_curl" type="radio" default="1" label="Method to get image for caching" description="Some hosting providers disable fopen() or the PHP cURL library for retrieving files from a remote location. Select whichever method is available to you.">
+			<option value="0">Remote fopen()</option>
+			<option value="1">PHP cURL</option>
+		</param>
+	</params>
+</install>

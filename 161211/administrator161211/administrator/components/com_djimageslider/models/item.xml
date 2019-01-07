@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model>
+	<params addpath="/administrator/components/com_djimageslider/elements">
+		<param type="list" name="targetswitch" label="Select target" default="-1">
+			<option value="-1">- select target -</option>
+			<option value="0">Menu Item</option>
+			<option value="1">Target URL</option>
+			<option value="2">Article</option>			
+			<option value="3">Virtuemart product</option>
+			<option value="4">DJCatalog2 product</option>
+		</param>
+		<param name="target" type="menuitem" default="" label="Menu Item" description="" />
+		<param name="targeturl" size="50" type="text" default="" label="Target URL" description="" />
+		<param name="id" type="article" default="0" label="Article" description="ARTICLE DESC" />
+		<param name="targetvmprod" type="vmproduct" default="0" label="Virtuemart product" description="VM PRODUCT DESC" />
+		<param name="targetdjc2prod" type="djc2product" default="0" label="DJCatalog2 Product" description="DJCATALOG2 PRODUCT DESC" />
+	</params>
+</model>

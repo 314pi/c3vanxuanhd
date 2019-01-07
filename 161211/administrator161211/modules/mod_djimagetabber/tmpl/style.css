@@ -1,0 +1,36 @@
+.djimagetabber {
+	background: none;
+}
+
+.djimagetabber-title {
+	margin: 0.5em 0;
+}
+.djimagetabber-title,
+.djimagetabber-title a {
+	color: #BF0B0B !important;
+	margin:0;
+	font-weight:bold;
+}
+
+.djimagetabber-text {
+	height: 90px;
+	color: #fff; 
+}
+
+.djimagetabber-text .readon {
+	margin-top: 10px;
+	float: right;
+	color: #fff !important;
+	padding-bottom: 0;
+line-height:13px;
+}
+
+.djimagetabber-ind {
+	
+}
+
+.djimagetabber-tab span {
+	color: #fff;
+	padding: 0 10px;
+	font-size: 14px;
+}

@@ -1,0 +1,1222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://www.joomla.org/xml/dtd/1.5/plugin-install.dtd">
+<install type="plugin" group="system" version="1.5">
+	<name>System - Timed Styles</name>
+	<description>PLG_SYSTEM_TIMEDSTYLES_DESC</description>
+	<version>1.4.1</version>
+	<creationDate>October 2011</creationDate>
+	<author>NoNumber! (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright © 2011 NoNumber! All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<files>
+		<filename plugin="timedstyles">timedstyles.php</filename>
+		<folder>timedstyles</folder>
+	</files>
+
+	<!-- Parameters -->
+	<params addpath="/plugins/system/nnframework/fields">
+		<param name="@loadlanguage" type="nn_loadlanguage" extension="plg_system_timedstyles" />
+		<param name="@license" type="nn_license" extension="TIMED_STYLES" />
+		<param name="@version" type="nn_version" extension="TIMED_STYLES" xml="/plugins/system/timedstyles.xml" />
+		<param name="@header" type="nn_header"
+			label="TIMED_STYLES"
+			description="TIMED_STYLES_DESC"
+			xml="/plugins/system/timedstyles.xml"
+			image="/plugins/system/timedstyles/images/logo.png"
+			image_w="60" image_h="80"
+			url="http://www.nonumber.nl/timedstyles"
+			help_url="http://www.nonumber.nl/timedstyles" />
+
+	<!-- ITEM 1 -->
+		<param name="@block_item_a_1" type="nn_block" start="1" label="TS_STYLESHEET_01" />
+			<param name="style1_enable" type="radio" default="0" label="Enable">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+			<param name="@toggler_item_a_1" type="nn_toggler" param="style1_enable" value="1" />
+				<param name="style1_file" type="textarea" cols="40" default="" label="TS_FILE" description="TS_FILE_DESC" />
+				<param name="style1_css" type="textarea" cols="40" default="" label="TS_CSS" description="TS_CSS_DESC" />
+				<param name="@block_item_assignments_a_1" type="nn_block" start="1" label="NN_PUBLISHING_ASSIGNMENTS" />
+					<param name="@block_item_assignments_1" type="nn_block" nostyle="1" description="NN_DATE_TIME_DESC" />
+					<param name="@time_item_assignments_1" type="nn_datetime" format="%Y-%m-%d %H:%M"  label="NN_CURRENT_DATE" />
+					<param name="@block_item_date_a_1" type="nn_block" start="1" label="NN_DATE" />
+						<param name="style1_date" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_date_a_1" type="nn_toggler" param="style1_date" value="1,2" />
+							<param name="style1_date_publish_up" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_START_PUBLISHING" description="NN_START_PUBLISHING_DESC" />
+							<param name="style1_date_publish_down" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_FINISH_PUBLISHING" description="NN_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_date_b_1" type="nn_toggler" />
+					<param name="@block_item_date_b_1" type="nn_block" end="1" />
+					<param name="@block_item_seasons_a_1" type="nn_block" start="1" label="NN_SEASONS" />
+						<param name="style1_seasons" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_seasons_a_1" type="nn_toggler" param="style1_seasons" value="1,2" />
+							<param name="style1_seasons_selection" type="nn_checkbox" newlines="1" default="" label="NN_SEASONS" description="NN_SEASONS_DESC">
+								<option value="winter">NN_WINTER</option>
+								<option value="spring">NN_SPRING</option>
+								<option value="summer">NN_SUMMER</option>
+								<option value="fall">NN_FALL</option>
+							</param>
+							<param name="style1_seasons_hemisphere" type="radio" default="northern" label="NN_HEMISPHERE" description="NN_HEMISPHERE_DESC">
+								<option value="northern">NN_NORTHERN</option>
+								<option value="southern">NN_SOUTHERN</option>
+								<option value="australia">NN_AUSTRALIA</option>
+							</param>
+						<param name="@toggler_item_seasons_b_1" type="nn_toggler" />
+					<param name="@block_item_seasons_b_1" type="nn_block" end="1" />
+					<param name="@block_item_months_a_1" type="nn_block" start="1" label="NN_MONTHS" />
+						<param name="style1_months" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_months_a_1" type="nn_toggler" param="style1_months" value="1,2" />
+							<param name="style1_months_selection" type="nn_checkbox" newlines="1" default="" label="NN_MONTHS" description="NN_MONTHS_DESC">
+								<option value="1">January</option>
+								<option value="2">February</option>
+								<option value="3">March</option>
+								<option value="4">April</option>
+								<option value="5">May</option>
+								<option value="6">June</option>
+								<option value="7">July</option>
+								<option value="8">August</option>
+								<option value="9">September</option>
+								<option value="10">October</option>
+								<option value="11">November</option>
+								<option value="12">December</option>
+							</param>
+						<param name="@toggler_item_months_b_1" type="nn_toggler" />
+					<param name="@block_item_months_b_1" type="nn_block" end="1" />
+					<param name="@block_item_days_a_1" type="nn_block" start="1" label="NN_DAYS" />
+						<param name="style1_days" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_days_a_1" type="nn_toggler" param="style1_days" value="1,2" />
+							<param name="style1_days_selection" type="nn_checkbox" newlines="1" default="" label="NN_DAYS" description="NN_DAYS_DESC">
+								<option value="1">Monday</option>
+								<option value="2">Tuesday</option>
+								<option value="3">Wednesday</option>
+								<option value="4">Thursday</option>
+								<option value="5">Friday</option>
+								<option value="6">Saturday</option>
+								<option value="7">Sunday</option>
+							</param>
+						<param name="@toggler_item_days_b_1" type="nn_toggler" />
+					<param name="@block_item_days_b_1" type="nn_block" end="1" />
+					<param name="@block_item_time_a_1" type="nn_block" start="1" label="NN_TIME" />
+						<param name="style1_time" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_time_a_1" type="nn_toggler" param="style1_time" value="1,2" />
+							<param name="style1_time_publish_up" type="text" size="10" default="0:00" label="NN_START_PUBLISHING" description="NN_TIME_START_PUBLISHING_DESC" />
+							<param name="style1_time_publish_down" type="text" size="10" default="0:00" label="NN_FINISH_PUBLISHING" description="NN_TIME_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_time_b_1" type="nn_toggler" />
+					<param name="@block_item_time_b_1" type="nn_block" end="1" />
+				<param name="@block_item_assignments_b_1" type="nn_block" end="1" />
+			<param name="@toggler_item_b_1" type="nn_toggler" />
+		<param name="@block_item_b_1" type="nn_block" end="1" />
+
+	<!-- ITEM 2 -->
+		<param name="@block_item_a_2" type="nn_block" start="1" label="TS_STYLESHEET_02" />
+			<param name="style2_enable" type="radio" default="0" label="Enable">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+			<param name="@toggler_item_a_2" type="nn_toggler" param="style2_enable" value="1" />
+				<param name="style2_file" type="textarea" cols="40" default="" label="TS_FILE" description="TS_FILE_DESC" />
+				<param name="style2_css" type="textarea" cols="40" default="" label="TS_CSS" description="TS_CSS_DESC" />
+				<param name="@block_item_assignments_a_2" type="nn_block" start="1" label="NN_PUBLISHING_ASSIGNMENTS" />
+					<param name="@block_item_assignments_2" type="nn_block" nostyle="1" description="NN_DATE_TIME_DESC" />
+					<param name="@time_item_assignments_2" type="nn_datetime" format="%Y-%m-%d %H:%M"  label="NN_CURRENT_DATE" />
+					<param name="@block_item_date_a_2" type="nn_block" start="1" label="NN_DATE" />
+						<param name="style2_date" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_date_a_2" type="nn_toggler" param="style2_date" value="1,2" />
+							<param name="style2_date_publish_up" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_START_PUBLISHING" description="NN_START_PUBLISHING_DESC" />
+							<param name="style2_date_publish_down" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_FINISH_PUBLISHING" description="NN_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_date_b_2" type="nn_toggler" />
+					<param name="@block_item_date_b_2" type="nn_block" end="1" />
+					<param name="@block_item_seasons_a_2" type="nn_block" start="1" label="NN_SEASONS" />
+						<param name="style2_seasons" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_seasons_a_2" type="nn_toggler" param="style2_seasons" value="1,2" />
+							<param name="style2_seasons_selection" type="nn_checkbox" newlines="1" default="" label="NN_SEASONS" description="NN_SEASONS_DESC">
+								<option value="winter">NN_WINTER</option>
+								<option value="spring">NN_SPRING</option>
+								<option value="summer">NN_SUMMER</option>
+								<option value="fall">NN_FALL</option>
+							</param>
+							<param name="style2_seasons_hemisphere" type="radio" default="northern" label="NN_HEMISPHERE" description="NN_HEMISPHERE_DESC">
+								<option value="northern">NN_NORTHERN</option>
+								<option value="southern">NN_SOUTHERN</option>
+								<option value="australia">NN_AUSTRALIA</option>
+							</param>
+						<param name="@toggler_item_seasons_b_2" type="nn_toggler" />
+					<param name="@block_item_seasons_b_2" type="nn_block" end="1" />
+					<param name="@block_item_months_a_2" type="nn_block" start="1" label="NN_MONTHS" />
+						<param name="style2_months" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_months_a_2" type="nn_toggler" param="style2_months" value="1,2" />
+							<param name="style2_months_selection" type="nn_checkbox" newlines="1" default="" label="NN_MONTHS" description="NN_MONTHS_DESC">
+								<option value="1">January</option>
+								<option value="2">February</option>
+								<option value="3">March</option>
+								<option value="4">April</option>
+								<option value="5">May</option>
+								<option value="6">June</option>
+								<option value="7">July</option>
+								<option value="8">August</option>
+								<option value="9">September</option>
+								<option value="10">October</option>
+								<option value="11">November</option>
+								<option value="12">December</option>
+							</param>
+						<param name="@toggler_item_months_b_2" type="nn_toggler" />
+					<param name="@block_item_months_b_2" type="nn_block" end="1" />
+					<param name="@block_item_days_a_2" type="nn_block" start="1" label="NN_DAYS" />
+						<param name="style2_days" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_days_a_2" type="nn_toggler" param="style2_days" value="1,2" />
+							<param name="style2_days_selection" type="nn_checkbox" newlines="1" default="" label="NN_DAYS" description="NN_DAYS_DESC">
+								<option value="1">Monday</option>
+								<option value="2">Tuesday</option>
+								<option value="3">Wednesday</option>
+								<option value="4">Thursday</option>
+								<option value="5">Friday</option>
+								<option value="6">Saturday</option>
+								<option value="7">Sunday</option>
+							</param>
+						<param name="@toggler_item_days_b_2" type="nn_toggler" />
+					<param name="@block_item_days_b_2" type="nn_block" end="1" />
+					<param name="@block_item_time_a_2" type="nn_block" start="1" label="NN_TIME" />
+						<param name="style2_time" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_time_a_2" type="nn_toggler" param="style2_time" value="1,2" />
+							<param name="style2_time_publish_up" type="text" size="10" default="0:00" label="NN_START_PUBLISHING" description="NN_TIME_START_PUBLISHING_DESC" />
+							<param name="style2_time_publish_down" type="text" size="10" default="0:00" label="NN_FINISH_PUBLISHING" description="NN_TIME_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_time_b_2" type="nn_toggler" />
+					<param name="@block_item_time_b_2" type="nn_block" end="1" />
+				<param name="@block_item_assignments_b_2" type="nn_block" end="1" />
+			<param name="@toggler_item_b_2" type="nn_toggler" />
+		<param name="@block_item_b_2" type="nn_block" end="1" />
+
+	<!-- ITEM 3 -->
+		<param name="@block_item_a_3" type="nn_block" start="1" label="TS_STYLESHEET_03" />
+			<param name="style3_enable" type="radio" default="0" label="Enable">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+			<param name="@toggler_item_a_3" type="nn_toggler" param="style3_enable" value="1" />
+				<param name="style3_file" type="textarea" cols="40" default="" label="TS_FILE" description="TS_FILE_DESC" />
+				<param name="style3_css" type="textarea" cols="40" default="" label="TS_CSS" description="TS_CSS_DESC" />
+				<param name="@block_item_assignments_a_3" type="nn_block" start="1" label="NN_PUBLISHING_ASSIGNMENTS" />
+					<param name="@block_item_assignments_3" type="nn_block" nostyle="1" description="NN_DATE_TIME_DESC" />
+					<param name="@time_item_assignments_3" type="nn_datetime" format="%Y-%m-%d %H:%M"  label="NN_CURRENT_DATE" />
+					<param name="@block_item_date_a_3" type="nn_block" start="1" label="NN_DATE" />
+						<param name="style3_date" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_date_a_3" type="nn_toggler" param="style3_date" value="1,2" />
+							<param name="style3_date_publish_up" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_START_PUBLISHING" description="NN_START_PUBLISHING_DESC" />
+							<param name="style3_date_publish_down" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_FINISH_PUBLISHING" description="NN_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_date_b_3" type="nn_toggler" />
+					<param name="@block_item_date_b_3" type="nn_block" end="1" />
+					<param name="@block_item_seasons_a_3" type="nn_block" start="1" label="NN_SEASONS" />
+						<param name="style3_seasons" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_seasons_a_3" type="nn_toggler" param="style3_seasons" value="1,2" />
+							<param name="style3_seasons_selection" type="nn_checkbox" newlines="1" default="" label="NN_SEASONS" description="NN_SEASONS_DESC">
+								<option value="winter">NN_WINTER</option>
+								<option value="spring">NN_SPRING</option>
+								<option value="summer">NN_SUMMER</option>
+								<option value="fall">NN_FALL</option>
+							</param>
+							<param name="style3_seasons_hemisphere" type="radio" default="northern" label="NN_HEMISPHERE" description="NN_HEMISPHERE_DESC">
+								<option value="northern">NN_NORTHERN</option>
+								<option value="southern">NN_SOUTHERN</option>
+								<option value="australia">NN_AUSTRALIA</option>
+							</param>
+						<param name="@toggler_item_seasons_b_3" type="nn_toggler" />
+					<param name="@block_item_seasons_b_3" type="nn_block" end="1" />
+					<param name="@block_item_months_a_3" type="nn_block" start="1" label="NN_MONTHS" />
+						<param name="style3_months" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_months_a_3" type="nn_toggler" param="style3_months" value="1,2" />
+							<param name="style3_months_selection" type="nn_checkbox" newlines="1" default="" label="NN_MONTHS" description="NN_MONTHS_DESC">
+								<option value="1">January</option>
+								<option value="2">February</option>
+								<option value="3">March</option>
+								<option value="4">April</option>
+								<option value="5">May</option>
+								<option value="6">June</option>
+								<option value="7">July</option>
+								<option value="8">August</option>
+								<option value="9">September</option>
+								<option value="10">October</option>
+								<option value="11">November</option>
+								<option value="12">December</option>
+							</param>
+						<param name="@toggler_item_months_b_3" type="nn_toggler" />
+					<param name="@block_item_months_b_3" type="nn_block" end="1" />
+					<param name="@block_item_days_a_3" type="nn_block" start="1" label="NN_DAYS" />
+						<param name="style3_days" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_days_a_3" type="nn_toggler" param="style3_days" value="1,2" />
+							<param name="style3_days_selection" type="nn_checkbox" newlines="1" default="" label="NN_DAYS" description="NN_DAYS_DESC">
+								<option value="1">Monday</option>
+								<option value="2">Tuesday</option>
+								<option value="3">Wednesday</option>
+								<option value="4">Thursday</option>
+								<option value="5">Friday</option>
+								<option value="6">Saturday</option>
+								<option value="7">Sunday</option>
+							</param>
+						<param name="@toggler_item_days_b_3" type="nn_toggler" />
+					<param name="@block_item_days_b_3" type="nn_block" end="1" />
+					<param name="@block_item_time_a_3" type="nn_block" start="1" label="NN_TIME" />
+						<param name="style3_time" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_time_a_3" type="nn_toggler" param="style3_time" value="1,2" />
+							<param name="style3_time_publish_up" type="text" size="10" default="0:00" label="NN_START_PUBLISHING" description="NN_TIME_START_PUBLISHING_DESC" />
+							<param name="style3_time_publish_down" type="text" size="10" default="0:00" label="NN_FINISH_PUBLISHING" description="NN_TIME_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_time_b_3" type="nn_toggler" />
+					<param name="@block_item_time_b_3" type="nn_block" end="1" />
+				<param name="@block_item_assignments_b_3" type="nn_block" end="1" />
+			<param name="@toggler_item_b_3" type="nn_toggler" />
+		<param name="@block_item_b_3" type="nn_block" end="1" />
+
+	<!-- ITEM 4 -->
+		<param name="@block_item_a_4" type="nn_block" start="1" label="TS_STYLESHEET_04" />
+			<param name="style4_enable" type="radio" default="0" label="Enable">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+			<param name="@toggler_item_a_4" type="nn_toggler" param="style4_enable" value="1" />
+				<param name="style4_file" type="textarea" cols="40" default="" label="TS_FILE" description="TS_FILE_DESC" />
+				<param name="style4_css" type="textarea" cols="40" default="" label="TS_CSS" description="TS_CSS_DESC" />
+				<param name="@block_item_assignments_a_4" type="nn_block" start="1" label="NN_PUBLISHING_ASSIGNMENTS" />
+					<param name="@block_item_assignments_4" type="nn_block" nostyle="1" description="NN_DATE_TIME_DESC" />
+					<param name="@time_item_assignments_4" type="nn_datetime" format="%Y-%m-%d %H:%M"  label="NN_CURRENT_DATE" />
+					<param name="@block_item_date_a_4" type="nn_block" start="1" label="NN_DATE" />
+						<param name="style4_date" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_date_a_4" type="nn_toggler" param="style4_date" value="1,2" />
+							<param name="style4_date_publish_up" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_START_PUBLISHING" description="NN_START_PUBLISHING_DESC" />
+							<param name="style4_date_publish_down" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_FINISH_PUBLISHING" description="NN_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_date_b_4" type="nn_toggler" />
+					<param name="@block_item_date_b_4" type="nn_block" end="1" />
+					<param name="@block_item_seasons_a_4" type="nn_block" start="1" label="NN_SEASONS" />
+						<param name="style4_seasons" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_seasons_a_4" type="nn_toggler" param="style4_seasons" value="1,2" />
+							<param name="style4_seasons_selection" type="nn_checkbox" newlines="1" default="" label="NN_SEASONS" description="NN_SEASONS_DESC">
+								<option value="winter">NN_WINTER</option>
+								<option value="spring">NN_SPRING</option>
+								<option value="summer">NN_SUMMER</option>
+								<option value="fall">NN_FALL</option>
+							</param>
+							<param name="style4_seasons_hemisphere" type="radio" default="northern" label="NN_HEMISPHERE" description="NN_HEMISPHERE_DESC">
+								<option value="northern">NN_NORTHERN</option>
+								<option value="southern">NN_SOUTHERN</option>
+								<option value="australia">NN_AUSTRALIA</option>
+							</param>
+						<param name="@toggler_item_seasons_b_4" type="nn_toggler" />
+					<param name="@block_item_seasons_b_4" type="nn_block" end="1" />
+					<param name="@block_item_months_a_4" type="nn_block" start="1" label="NN_MONTHS" />
+						<param name="style4_months" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_months_a_4" type="nn_toggler" param="style4_months" value="1,2" />
+							<param name="style4_months_selection" type="nn_checkbox" newlines="1" default="" label="NN_MONTHS" description="NN_MONTHS_DESC">
+								<option value="1">January</option>
+								<option value="2">February</option>
+								<option value="3">March</option>
+								<option value="4">April</option>
+								<option value="5">May</option>
+								<option value="6">June</option>
+								<option value="7">July</option>
+								<option value="8">August</option>
+								<option value="9">September</option>
+								<option value="10">October</option>
+								<option value="11">November</option>
+								<option value="12">December</option>
+							</param>
+						<param name="@toggler_item_months_b_4" type="nn_toggler" />
+					<param name="@block_item_months_b_4" type="nn_block" end="1" />
+					<param name="@block_item_days_a_4" type="nn_block" start="1" label="NN_DAYS" />
+						<param name="style4_days" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_days_a_4" type="nn_toggler" param="style4_days" value="1,2" />
+							<param name="style4_days_selection" type="nn_checkbox" newlines="1" default="" label="NN_DAYS" description="NN_DAYS_DESC">
+								<option value="1">Monday</option>
+								<option value="2">Tuesday</option>
+								<option value="3">Wednesday</option>
+								<option value="4">Thursday</option>
+								<option value="5">Friday</option>
+								<option value="6">Saturday</option>
+								<option value="7">Sunday</option>
+							</param>
+						<param name="@toggler_item_days_b_4" type="nn_toggler" />
+					<param name="@block_item_days_b_4" type="nn_block" end="1" />
+					<param name="@block_item_time_a_4" type="nn_block" start="1" label="NN_TIME" />
+						<param name="style4_time" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_time_a_4" type="nn_toggler" param="style4_time" value="1,2" />
+							<param name="style4_time_publish_up" type="text" size="10" default="0:00" label="NN_START_PUBLISHING" description="NN_TIME_START_PUBLISHING_DESC" />
+							<param name="style4_time_publish_down" type="text" size="10" default="0:00" label="NN_FINISH_PUBLISHING" description="NN_TIME_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_time_b_4" type="nn_toggler" />
+					<param name="@block_item_time_b_4" type="nn_block" end="1" />
+				<param name="@block_item_assignments_b_4" type="nn_block" end="1" />
+			<param name="@toggler_item_b_4" type="nn_toggler" />
+		<param name="@block_item_b_4" type="nn_block" end="1" />
+
+	<!-- ITEM 5 -->
+		<param name="@block_item_a_5" type="nn_block" start="1" label="TS_STYLESHEET_05" />
+			<param name="style5_enable" type="radio" default="0" label="Enable">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+			<param name="@toggler_item_a_5" type="nn_toggler" param="style5_enable" value="1" />
+				<param name="style5_file" type="textarea" cols="40" default="" label="TS_FILE" description="TS_FILE_DESC" />
+				<param name="style5_css" type="textarea" cols="40" default="" label="TS_CSS" description="TS_CSS_DESC" />
+				<param name="@block_item_assignments_a_5" type="nn_block" start="1" label="NN_PUBLISHING_ASSIGNMENTS" />
+					<param name="@block_item_assignments_5" type="nn_block" nostyle="1" description="NN_DATE_TIME_DESC" />
+					<param name="@time_item_assignments_5" type="nn_datetime" format="%Y-%m-%d %H:%M"  label="NN_CURRENT_DATE" />
+					<param name="@block_item_date_a_5" type="nn_block" start="1" label="NN_DATE" />
+						<param name="style5_date" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_date_a_5" type="nn_toggler" param="style5_date" value="1,2" />
+							<param name="style5_date_publish_up" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_START_PUBLISHING" description="NN_START_PUBLISHING_DESC" />
+							<param name="style5_date_publish_down" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_FINISH_PUBLISHING" description="NN_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_date_b_5" type="nn_toggler" />
+					<param name="@block_item_date_b_5" type="nn_block" end="1" />
+					<param name="@block_item_seasons_a_5" type="nn_block" start="1" label="NN_SEASONS" />
+						<param name="style5_seasons" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_seasons_a_5" type="nn_toggler" param="style5_seasons" value="1,2" />
+							<param name="style5_seasons_selection" type="nn_checkbox" newlines="1" default="" label="NN_SEASONS" description="NN_SEASONS_DESC">
+								<option value="winter">NN_WINTER</option>
+								<option value="spring">NN_SPRING</option>
+								<option value="summer">NN_SUMMER</option>
+								<option value="fall">NN_FALL</option>
+							</param>
+							<param name="style5_seasons_hemisphere" type="radio" default="northern" label="NN_HEMISPHERE" description="NN_HEMISPHERE_DESC">
+								<option value="northern">NN_NORTHERN</option>
+								<option value="southern">NN_SOUTHERN</option>
+								<option value="australia">NN_AUSTRALIA</option>
+							</param>
+						<param name="@toggler_item_seasons_b_5" type="nn_toggler" />
+					<param name="@block_item_seasons_b_5" type="nn_block" end="1" />
+					<param name="@block_item_months_a_5" type="nn_block" start="1" label="NN_MONTHS" />
+						<param name="style5_months" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_months_a_5" type="nn_toggler" param="style5_months" value="1,2" />
+							<param name="style5_months_selection" type="nn_checkbox" newlines="1" default="" label="NN_MONTHS" description="NN_MONTHS_DESC">
+								<option value="1">January</option>
+								<option value="2">February</option>
+								<option value="3">March</option>
+								<option value="4">April</option>
+								<option value="5">May</option>
+								<option value="6">June</option>
+								<option value="7">July</option>
+								<option value="8">August</option>
+								<option value="9">September</option>
+								<option value="10">October</option>
+								<option value="11">November</option>
+								<option value="12">December</option>
+							</param>
+						<param name="@toggler_item_months_b_5" type="nn_toggler" />
+					<param name="@block_item_months_b_5" type="nn_block" end="1" />
+					<param name="@block_item_days_a_5" type="nn_block" start="1" label="NN_DAYS" />
+						<param name="style5_days" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_days_a_5" type="nn_toggler" param="style5_days" value="1,2" />
+							<param name="style5_days_selection" type="nn_checkbox" newlines="1" default="" label="NN_DAYS" description="NN_DAYS_DESC">
+								<option value="1">Monday</option>
+								<option value="2">Tuesday</option>
+								<option value="3">Wednesday</option>
+								<option value="4">Thursday</option>
+								<option value="5">Friday</option>
+								<option value="6">Saturday</option>
+								<option value="7">Sunday</option>
+							</param>
+						<param name="@toggler_item_days_b_5" type="nn_toggler" />
+					<param name="@block_item_days_b_5" type="nn_block" end="1" />
+					<param name="@block_item_time_a_5" type="nn_block" start="1" label="NN_TIME" />
+						<param name="style5_time" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_time_a_5" type="nn_toggler" param="style5_time" value="1,2" />
+							<param name="style5_time_publish_up" type="text" size="10" default="0:00" label="NN_START_PUBLISHING" description="NN_TIME_START_PUBLISHING_DESC" />
+							<param name="style5_time_publish_down" type="text" size="10" default="0:00" label="NN_FINISH_PUBLISHING" description="NN_TIME_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_time_b_5" type="nn_toggler" />
+					<param name="@block_item_time_b_5" type="nn_block" end="1" />
+				<param name="@block_item_assignments_b_5" type="nn_block" end="1" />
+			<param name="@toggler_item_b_5" type="nn_toggler" />
+		<param name="@block_item_b_5" type="nn_block" end="1" />
+
+	<!-- ITEM 6 -->
+		<param name="@block_item_a_6" type="nn_block" start="1" label="TS_STYLESHEET_06" />
+			<param name="style6_enable" type="radio" default="0" label="Enable">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+			<param name="@toggler_item_a_6" type="nn_toggler" param="style6_enable" value="1" />
+				<param name="style6_file" type="textarea" cols="40" default="" label="TS_FILE" description="TS_FILE_DESC" />
+				<param name="style6_css" type="textarea" cols="40" default="" label="TS_CSS" description="TS_CSS_DESC" />
+				<param name="@block_item_assignments_a_6" type="nn_block" start="1" label="NN_PUBLISHING_ASSIGNMENTS" />
+					<param name="@block_item_assignments_6" type="nn_block" nostyle="1" description="NN_DATE_TIME_DESC" />
+					<param name="@time_item_assignments_6" type="nn_datetime" format="%Y-%m-%d %H:%M"  label="NN_CURRENT_DATE" />
+					<param name="@block_item_date_a_6" type="nn_block" start="1" label="NN_DATE" />
+						<param name="style6_date" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_date_a_6" type="nn_toggler" param="style6_date" value="1,2" />
+							<param name="style6_date_publish_up" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_START_PUBLISHING" description="NN_START_PUBLISHING_DESC" />
+							<param name="style6_date_publish_down" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_FINISH_PUBLISHING" description="NN_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_date_b_6" type="nn_toggler" />
+					<param name="@block_item_date_b_6" type="nn_block" end="1" />
+					<param name="@block_item_seasons_a_6" type="nn_block" start="1" label="NN_SEASONS" />
+						<param name="style6_seasons" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_seasons_a_6" type="nn_toggler" param="style6_seasons" value="1,2" />
+							<param name="style6_seasons_selection" type="nn_checkbox" newlines="1" default="" label="NN_SEASONS" description="NN_SEASONS_DESC">
+								<option value="winter">NN_WINTER</option>
+								<option value="spring">NN_SPRING</option>
+								<option value="summer">NN_SUMMER</option>
+								<option value="fall">NN_FALL</option>
+							</param>
+							<param name="style6_seasons_hemisphere" type="radio" default="northern" label="NN_HEMISPHERE" description="NN_HEMISPHERE_DESC">
+								<option value="northern">NN_NORTHERN</option>
+								<option value="southern">NN_SOUTHERN</option>
+								<option value="australia">NN_AUSTRALIA</option>
+							</param>
+						<param name="@toggler_item_seasons_b_6" type="nn_toggler" />
+					<param name="@block_item_seasons_b_6" type="nn_block" end="1" />
+					<param name="@block_item_months_a_6" type="nn_block" start="1" label="NN_MONTHS" />
+						<param name="style6_months" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_months_a_6" type="nn_toggler" param="style6_months" value="1,2" />
+							<param name="style6_months_selection" type="nn_checkbox" newlines="1" default="" label="NN_MONTHS" description="NN_MONTHS_DESC">
+								<option value="1">January</option>
+								<option value="2">February</option>
+								<option value="3">March</option>
+								<option value="4">April</option>
+								<option value="5">May</option>
+								<option value="6">June</option>
+								<option value="7">July</option>
+								<option value="8">August</option>
+								<option value="9">September</option>
+								<option value="10">October</option>
+								<option value="11">November</option>
+								<option value="12">December</option>
+							</param>
+						<param name="@toggler_item_months_b_6" type="nn_toggler" />
+					<param name="@block_item_months_b_6" type="nn_block" end="1" />
+					<param name="@block_item_days_a_6" type="nn_block" start="1" label="NN_DAYS" />
+						<param name="style6_days" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_days_a_6" type="nn_toggler" param="style6_days" value="1,2" />
+							<param name="style6_days_selection" type="nn_checkbox" newlines="1" default="" label="NN_DAYS" description="NN_DAYS_DESC">
+								<option value="1">Monday</option>
+								<option value="2">Tuesday</option>
+								<option value="3">Wednesday</option>
+								<option value="4">Thursday</option>
+								<option value="5">Friday</option>
+								<option value="6">Saturday</option>
+								<option value="7">Sunday</option>
+							</param>
+						<param name="@toggler_item_days_b_6" type="nn_toggler" />
+					<param name="@block_item_days_b_6" type="nn_block" end="1" />
+					<param name="@block_item_time_a_6" type="nn_block" start="1" label="NN_TIME" />
+						<param name="style6_time" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_time_a_6" type="nn_toggler" param="style6_time" value="1,2" />
+							<param name="style6_time_publish_up" type="text" size="10" default="0:00" label="NN_START_PUBLISHING" description="NN_TIME_START_PUBLISHING_DESC" />
+							<param name="style6_time_publish_down" type="text" size="10" default="0:00" label="NN_FINISH_PUBLISHING" description="NN_TIME_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_time_b_6" type="nn_toggler" />
+					<param name="@block_item_time_b_6" type="nn_block" end="1" />
+				<param name="@block_item_assignments_b_6" type="nn_block" end="1" />
+			<param name="@toggler_item_b_6" type="nn_toggler" />
+		<param name="@block_item_b_6" type="nn_block" end="1" />
+
+	<!-- ITEM 7 -->
+		<param name="@block_item_a_7" type="nn_block" start="1" label="TS_STYLESHEET_007" />
+			<param name="style7_enable" type="radio" default="0" label="Enable">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+			<param name="@toggler_item_a_7" type="nn_toggler" param="style7_enable" value="1" />
+				<param name="style7_file" type="textarea" cols="40" default="" label="TS_FILE" description="TS_FILE_DESC" />
+				<param name="style7_css" type="textarea" cols="40" default="" label="TS_CSS" description="TS_CSS_DESC" />
+				<param name="@block_item_assignments_a_7" type="nn_block" start="1" label="NN_PUBLISHING_ASSIGNMENTS" />
+					<param name="@block_item_assignments_7" type="nn_block" nostyle="1" description="NN_DATE_TIME_DESC" />
+					<param name="@time_item_assignments_7" type="nn_datetime" format="%Y-%m-%d %H:%M"  label="NN_CURRENT_DATE" />
+					<param name="@block_item_date_a_7" type="nn_block" start="1" label="NN_DATE" />
+						<param name="style7_date" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_date_a_7" type="nn_toggler" param="style7_date" value="1,2" />
+							<param name="style7_date_publish_up" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_START_PUBLISHING" description="NN_START_PUBLISHING_DESC" />
+							<param name="style7_date_publish_down" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_FINISH_PUBLISHING" description="NN_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_date_b_7" type="nn_toggler" />
+					<param name="@block_item_date_b_7" type="nn_block" end="1" />
+					<param name="@block_item_seasons_a_7" type="nn_block" start="1" label="NN_SEASONS" />
+						<param name="style7_seasons" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_seasons_a_7" type="nn_toggler" param="style7_seasons" value="1,2" />
+							<param name="style7_seasons_selection" type="nn_checkbox" newlines="1" default="" label="NN_SEASONS" description="NN_SEASONS_DESC">
+								<option value="winter">NN_WINTER</option>
+								<option value="spring">NN_SPRING</option>
+								<option value="summer">NN_SUMMER</option>
+								<option value="fall">NN_FALL</option>
+							</param>
+							<param name="style7_seasons_hemisphere" type="radio" default="northern" label="NN_HEMISPHERE" description="NN_HEMISPHERE_DESC">
+								<option value="northern">NN_NORTHERN</option>
+								<option value="southern">NN_SOUTHERN</option>
+								<option value="australia">NN_AUSTRALIA</option>
+							</param>
+						<param name="@toggler_item_seasons_b_7" type="nn_toggler" />
+					<param name="@block_item_seasons_b_7" type="nn_block" end="1" />
+					<param name="@block_item_months_a_7" type="nn_block" start="1" label="NN_MONTHS" />
+						<param name="style7_months" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_months_a_7" type="nn_toggler" param="style7_months" value="1,2" />
+							<param name="style7_months_selection" type="nn_checkbox" newlines="1" default="" label="NN_MONTHS" description="NN_MONTHS_DESC">
+								<option value="1">January</option>
+								<option value="2">February</option>
+								<option value="3">March</option>
+								<option value="4">April</option>
+								<option value="5">May</option>
+								<option value="6">June</option>
+								<option value="7">July</option>
+								<option value="8">August</option>
+								<option value="9">September</option>
+								<option value="10">October</option>
+								<option value="11">November</option>
+								<option value="12">December</option>
+							</param>
+						<param name="@toggler_item_months_b_7" type="nn_toggler" />
+					<param name="@block_item_months_b_7" type="nn_block" end="1" />
+					<param name="@block_item_days_a_7" type="nn_block" start="1" label="NN_DAYS" />
+						<param name="style7_days" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_days_a_7" type="nn_toggler" param="style7_days" value="1,2" />
+							<param name="style7_days_selection" type="nn_checkbox" newlines="1" default="" label="NN_DAYS" description="NN_DAYS_DESC">
+								<option value="1">Monday</option>
+								<option value="2">Tuesday</option>
+								<option value="3">Wednesday</option>
+								<option value="4">Thursday</option>
+								<option value="5">Friday</option>
+								<option value="6">Saturday</option>
+								<option value="7">Sunday</option>
+							</param>
+						<param name="@toggler_item_days_b_7" type="nn_toggler" />
+					<param name="@block_item_days_b_7" type="nn_block" end="1" />
+					<param name="@block_item_time_a_7" type="nn_block" start="1" label="NN_TIME" />
+						<param name="style7_time" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_time_a_7" type="nn_toggler" param="style7_time" value="1,2" />
+							<param name="style7_time_publish_up" type="text" size="10" default="0:00" label="NN_START_PUBLISHING" description="NN_TIME_START_PUBLISHING_DESC" />
+							<param name="style7_time_publish_down" type="text" size="10" default="0:00" label="NN_FINISH_PUBLISHING" description="NN_TIME_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_time_b_7" type="nn_toggler" />
+					<param name="@block_item_time_b_7" type="nn_block" end="1" />
+				<param name="@block_item_assignments_b_7" type="nn_block" end="1" />
+			<param name="@toggler_item_b_7" type="nn_toggler" />
+		<param name="@block_item_b_7" type="nn_block" end="1" />
+
+	<!-- ITEM 8 -->
+		<param name="@block_item_a_8" type="nn_block" start="1" label="TS_STYLESHEET_08" />
+			<param name="style8_enable" type="radio" default="0" label="Enable">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+			<param name="@toggler_item_a_8" type="nn_toggler" param="style8_enable" value="1" />
+				<param name="style8_file" type="textarea" cols="40" default="" label="TS_FILE" description="TS_FILE_DESC" />
+				<param name="style8_css" type="textarea" cols="40" default="" label="TS_CSS" description="TS_CSS_DESC" />
+				<param name="@block_item_assignments_a_8" type="nn_block" start="1" label="NN_PUBLISHING_ASSIGNMENTS" />
+					<param name="@block_item_assignments_8" type="nn_block" nostyle="1" description="NN_DATE_TIME_DESC" />
+					<param name="@time_item_assignments_8" type="nn_datetime" format="%Y-%m-%d %H:%M"  label="NN_CURRENT_DATE" />
+					<param name="@block_item_date_a_8" type="nn_block" start="1" label="NN_DATE" />
+						<param name="style8_date" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_date_a_8" type="nn_toggler" param="style8_date" value="1,2" />
+							<param name="style8_date_publish_up" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_START_PUBLISHING" description="NN_START_PUBLISHING_DESC" />
+							<param name="style8_date_publish_down" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_FINISH_PUBLISHING" description="NN_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_date_b_8" type="nn_toggler" />
+					<param name="@block_item_date_b_8" type="nn_block" end="1" />
+					<param name="@block_item_seasons_a_8" type="nn_block" start="1" label="NN_SEASONS" />
+						<param name="style8_seasons" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_seasons_a_8" type="nn_toggler" param="style8_seasons" value="1,2" />
+							<param name="style8_seasons_selection" type="nn_checkbox" newlines="1" default="" label="NN_SEASONS" description="NN_SEASONS_DESC">
+								<option value="winter">NN_WINTER</option>
+								<option value="spring">NN_SPRING</option>
+								<option value="summer">NN_SUMMER</option>
+								<option value="fall">NN_FALL</option>
+							</param>
+							<param name="style8_seasons_hemisphere" type="radio" default="northern" label="NN_HEMISPHERE" description="NN_HEMISPHERE_DESC">
+								<option value="northern">NN_NORTHERN</option>
+								<option value="southern">NN_SOUTHERN</option>
+								<option value="australia">NN_AUSTRALIA</option>
+							</param>
+						<param name="@toggler_item_seasons_b_8" type="nn_toggler" />
+					<param name="@block_item_seasons_b_8" type="nn_block" end="1" />
+					<param name="@block_item_months_a_8" type="nn_block" start="1" label="NN_MONTHS" />
+						<param name="style8_months" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_months_a_8" type="nn_toggler" param="style8_months" value="1,2" />
+							<param name="style8_months_selection" type="nn_checkbox" newlines="1" default="" label="NN_MONTHS" description="NN_MONTHS_DESC">
+								<option value="1">January</option>
+								<option value="2">February</option>
+								<option value="3">March</option>
+								<option value="4">April</option>
+								<option value="5">May</option>
+								<option value="6">June</option>
+								<option value="7">July</option>
+								<option value="8">August</option>
+								<option value="9">September</option>
+								<option value="10">October</option>
+								<option value="11">November</option>
+								<option value="12">December</option>
+							</param>
+						<param name="@toggler_item_months_b_8" type="nn_toggler" />
+					<param name="@block_item_months_b_8" type="nn_block" end="1" />
+					<param name="@block_item_days_a_8" type="nn_block" start="1" label="NN_DAYS" />
+						<param name="style8_days" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_days_a_8" type="nn_toggler" param="style8_days" value="1,2" />
+							<param name="style8_days_selection" type="nn_checkbox" newlines="1" default="" label="NN_DAYS" description="NN_DAYS_DESC">
+								<option value="1">Monday</option>
+								<option value="2">Tuesday</option>
+								<option value="3">Wednesday</option>
+								<option value="4">Thursday</option>
+								<option value="5">Friday</option>
+								<option value="6">Saturday</option>
+								<option value="7">Sunday</option>
+							</param>
+						<param name="@toggler_item_days_b_8" type="nn_toggler" />
+					<param name="@block_item_days_b_8" type="nn_block" end="1" />
+					<param name="@block_item_time_a_8" type="nn_block" start="1" label="NN_TIME" />
+						<param name="style8_time" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_time_a_8" type="nn_toggler" param="style8_time" value="1,2" />
+							<param name="style8_time_publish_up" type="text" size="10" default="0:00" label="NN_START_PUBLISHING" description="NN_TIME_START_PUBLISHING_DESC" />
+							<param name="style8_time_publish_down" type="text" size="10" default="0:00" label="NN_FINISH_PUBLISHING" description="NN_TIME_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_time_b_8" type="nn_toggler" />
+					<param name="@block_item_time_b_8" type="nn_block" end="1" />
+				<param name="@block_item_assignments_b_8" type="nn_block" end="1" />
+			<param name="@toggler_item_b_8" type="nn_toggler" />
+		<param name="@block_item_b_8" type="nn_block" end="1" />
+
+	<!-- ITEM 9 -->
+		<param name="@block_item_a_9" type="nn_block" start="1" label="TS_STYLESHEET_09" />
+			<param name="style9_enable" type="radio" default="0" label="Enable">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+			<param name="@toggler_item_a_9" type="nn_toggler" param="style9_enable" value="1" />
+				<param name="style9_file" type="textarea" cols="40" default="" label="TS_FILE" description="TS_FILE_DESC" />
+				<param name="style9_css" type="textarea" cols="40" default="" label="TS_CSS" description="TS_CSS_DESC" />
+				<param name="@block_item_assignments_a_9" type="nn_block" start="1" label="NN_PUBLISHING_ASSIGNMENTS" />
+					<param name="@block_item_assignments_9" type="nn_block" nostyle="1" description="NN_DATE_TIME_DESC" />
+					<param name="@time_item_assignments_9" type="nn_datetime" format="%Y-%m-%d %H:%M"  label="NN_CURRENT_DATE" />
+					<param name="@block_item_date_a_9" type="nn_block" start="1" label="NN_DATE" />
+						<param name="style9_date" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_date_a_9" type="nn_toggler" param="style9_date" value="1,2" />
+							<param name="style9_date_publish_up" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_START_PUBLISHING" description="NN_START_PUBLISHING_DESC" />
+							<param name="style9_date_publish_down" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_FINISH_PUBLISHING" description="NN_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_date_b_9" type="nn_toggler" />
+					<param name="@block_item_date_b_9" type="nn_block" end="1" />
+					<param name="@block_item_seasons_a_9" type="nn_block" start="1" label="NN_SEASONS" />
+						<param name="style9_seasons" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_seasons_a_9" type="nn_toggler" param="style9_seasons" value="1,2" />
+							<param name="style9_seasons_selection" type="nn_checkbox" newlines="1" default="" label="NN_SEASONS" description="NN_SEASONS_DESC">
+								<option value="winter">NN_WINTER</option>
+								<option value="spring">NN_SPRING</option>
+								<option value="summer">NN_SUMMER</option>
+								<option value="fall">NN_FALL</option>
+							</param>
+							<param name="style9_seasons_hemisphere" type="radio" default="northern" label="NN_HEMISPHERE" description="NN_HEMISPHERE_DESC">
+								<option value="northern">NN_NORTHERN</option>
+								<option value="southern">NN_SOUTHERN</option>
+								<option value="australia">NN_AUSTRALIA</option>
+							</param>
+						<param name="@toggler_item_seasons_b_9" type="nn_toggler" />
+					<param name="@block_item_seasons_b_9" type="nn_block" end="1" />
+					<param name="@block_item_months_a_9" type="nn_block" start="1" label="NN_MONTHS" />
+						<param name="style9_months" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_months_a_9" type="nn_toggler" param="style9_months" value="1,2" />
+							<param name="style9_months_selection" type="nn_checkbox" newlines="1" default="" label="NN_MONTHS" description="NN_MONTHS_DESC">
+								<option value="1">January</option>
+								<option value="2">February</option>
+								<option value="3">March</option>
+								<option value="4">April</option>
+								<option value="5">May</option>
+								<option value="6">June</option>
+								<option value="7">July</option>
+								<option value="8">August</option>
+								<option value="9">September</option>
+								<option value="10">October</option>
+								<option value="11">November</option>
+								<option value="12">December</option>
+							</param>
+						<param name="@toggler_item_months_b_9" type="nn_toggler" />
+					<param name="@block_item_months_b_9" type="nn_block" end="1" />
+					<param name="@block_item_days_a_9" type="nn_block" start="1" label="NN_DAYS" />
+						<param name="style9_days" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_days_a_9" type="nn_toggler" param="style9_days" value="1,2" />
+							<param name="style9_days_selection" type="nn_checkbox" newlines="1" default="" label="NN_DAYS" description="NN_DAYS_DESC">
+								<option value="1">Monday</option>
+								<option value="2">Tuesday</option>
+								<option value="3">Wednesday</option>
+								<option value="4">Thursday</option>
+								<option value="5">Friday</option>
+								<option value="6">Saturday</option>
+								<option value="7">Sunday</option>
+							</param>
+						<param name="@toggler_item_days_b_9" type="nn_toggler" />
+					<param name="@block_item_days_b_9" type="nn_block" end="1" />
+					<param name="@block_item_time_a_9" type="nn_block" start="1" label="NN_TIME" />
+						<param name="style9_time" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_time_a_9" type="nn_toggler" param="style9_time" value="1,2" />
+							<param name="style9_time_publish_up" type="text" size="10" default="0:00" label="NN_START_PUBLISHING" description="NN_TIME_START_PUBLISHING_DESC" />
+							<param name="style9_time_publish_down" type="text" size="10" default="0:00" label="NN_FINISH_PUBLISHING" description="NN_TIME_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_time_b_9" type="nn_toggler" />
+					<param name="@block_item_time_b_9" type="nn_block" end="1" />
+				<param name="@block_item_assignments_b_9" type="nn_block" end="1" />
+			<param name="@toggler_item_b_9" type="nn_toggler" />
+		<param name="@block_item_b_9" type="nn_block" end="1" />
+
+	<!-- ITEM 10 -->
+		<param name="@block_item_a_10" type="nn_block" start="1" label="TS_STYLESHEET_10" />
+			<param name="style10_enable" type="radio" default="0" label="Enable">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+			<param name="@toggler_item_a_10" type="nn_toggler" param="style10_enable" value="1" />
+				<param name="style10_file" type="textarea" cols="40" default="" label="TS_FILE" description="TS_FILE_DESC" />
+				<param name="style10_css" type="textarea" cols="40" default="" label="TS_CSS" description="TS_CSS_DESC" />
+				<param name="@block_item_assignments_a_10" type="nn_block" start="1" label="NN_PUBLISHING_ASSIGNMENTS" />
+					<param name="@block_item_assignments_10" type="nn_block" nostyle="1" description="NN_DATE_TIME_DESC" />
+					<param name="@time_item_assignments_10" type="nn_datetime" format="%Y-%m-%d %H:%M"  label="NN_CURRENT_DATE" />
+					<param name="@block_item_date_a_10" type="nn_block" start="1" label="NN_DATE" />
+						<param name="style10_date" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_date_a_10" type="nn_toggler" param="style10_date" value="1,2" />
+							<param name="style10_date_publish_up" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_START_PUBLISHING" description="NN_START_PUBLISHING_DESC" />
+							<param name="style10_date_publish_down" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_FINISH_PUBLISHING" description="NN_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_date_b_10" type="nn_toggler" />
+					<param name="@block_item_date_b_10" type="nn_block" end="1" />
+					<param name="@block_item_seasons_a_10" type="nn_block" start="1" label="NN_SEASONS" />
+						<param name="style10_seasons" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_seasons_a_10" type="nn_toggler" param="style10_seasons" value="1,2" />
+							<param name="style10_seasons_selection" type="nn_checkbox" newlines="1" default="" label="NN_SEASONS" description="NN_SEASONS_DESC">
+								<option value="winter">NN_WINTER</option>
+								<option value="spring">NN_SPRING</option>
+								<option value="summer">NN_SUMMER</option>
+								<option value="fall">NN_FALL</option>
+							</param>
+							<param name="style10_seasons_hemisphere" type="radio" default="northern" label="NN_HEMISPHERE" description="NN_HEMISPHERE_DESC">
+								<option value="northern">NN_NORTHERN</option>
+								<option value="southern">NN_SOUTHERN</option>
+								<option value="australia">NN_AUSTRALIA</option>
+							</param>
+						<param name="@toggler_item_seasons_b_10" type="nn_toggler" />
+					<param name="@block_item_seasons_b_10" type="nn_block" end="1" />
+					<param name="@block_item_months_a_10" type="nn_block" start="1" label="NN_MONTHS" />
+						<param name="style10_months" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_months_a_10" type="nn_toggler" param="style10_months" value="1,2" />
+							<param name="style10_months_selection" type="nn_checkbox" newlines="1" default="" label="NN_MONTHS" description="NN_MONTHS_DESC">
+								<option value="1">January</option>
+								<option value="2">February</option>
+								<option value="3">March</option>
+								<option value="4">April</option>
+								<option value="5">May</option>
+								<option value="6">June</option>
+								<option value="7">July</option>
+								<option value="8">August</option>
+								<option value="9">September</option>
+								<option value="10">October</option>
+								<option value="11">November</option>
+								<option value="12">December</option>
+							</param>
+						<param name="@toggler_item_months_b_10" type="nn_toggler" />
+					<param name="@block_item_months_b_10" type="nn_block" end="1" />
+					<param name="@block_item_days_a_10" type="nn_block" start="1" label="NN_DAYS" />
+						<param name="style10_days" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_days_a_10" type="nn_toggler" param="style10_days" value="1,2" />
+							<param name="style10_days_selection" type="nn_checkbox" newlines="1" default="" label="NN_DAYS" description="NN_DAYS_DESC">
+								<option value="1">Monday</option>
+								<option value="2">Tuesday</option>
+								<option value="3">Wednesday</option>
+								<option value="4">Thursday</option>
+								<option value="5">Friday</option>
+								<option value="6">Saturday</option>
+								<option value="7">Sunday</option>
+							</param>
+						<param name="@toggler_item_days_b_10" type="nn_toggler" />
+					<param name="@block_item_days_b_10" type="nn_block" end="1" />
+					<param name="@block_item_time_a_10" type="nn_block" start="1" label="NN_TIME" />
+						<param name="style10_time" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_time_a_10" type="nn_toggler" param="style10_time" value="1,2" />
+							<param name="style10_time_publish_up" type="text" size="10" default="0:00" label="NN_START_PUBLISHING" description="NN_TIME_START_PUBLISHING_DESC" />
+							<param name="style10_time_publish_down" type="text" size="10" default="0:00" label="NN_FINISH_PUBLISHING" description="NN_TIME_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_time_b_10" type="nn_toggler" />
+					<param name="@block_item_time_b_10" type="nn_block" end="1" />
+				<param name="@block_item_assignments_b_10" type="nn_block" end="1" />
+			<param name="@toggler_item_b_10" type="nn_toggler" />
+		<param name="@block_item_b_10" type="nn_block" end="1" />
+
+	<!-- ITEM 11 -->
+		<param name="@block_item_a_11" type="nn_block" start="1" label="TS_STYLESHEET_11" />
+			<param name="style11_enable" type="radio" default="0" label="Enable">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+			<param name="@toggler_item_a_11" type="nn_toggler" param="style11_enable" value="1" />
+				<param name="style11_file" type="textarea" cols="40" default="" label="TS_FILE" description="TS_FILE_DESC" />
+				<param name="style11_css" type="textarea" cols="40" default="" label="TS_CSS" description="TS_CSS_DESC" />
+				<param name="@block_item_assignments_a_11" type="nn_block" start="1" label="NN_PUBLISHING_ASSIGNMENTS" />
+					<param name="@block_item_assignments_11" type="nn_block" nostyle="1" description="NN_DATE_TIME_DESC" />
+					<param name="@time_item_assignments_11" type="nn_datetime" format="%Y-%m-%d %H:%M"  label="NN_CURRENT_DATE" />
+					<param name="@block_item_date_a_11" type="nn_block" start="1" label="NN_DATE" />
+						<param name="style11_date" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_date_a_11" type="nn_toggler" param="style11_date" value="1,2" />
+							<param name="style11_date_publish_up" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_START_PUBLISHING" description="NN_START_PUBLISHING_DESC" />
+							<param name="style11_date_publish_down" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_FINISH_PUBLISHING" description="NN_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_date_b_11" type="nn_toggler" />
+					<param name="@block_item_date_b_11" type="nn_block" end="1" />
+					<param name="@block_item_seasons_a_11" type="nn_block" start="1" label="NN_SEASONS" />
+						<param name="style11_seasons" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_seasons_a_11" type="nn_toggler" param="style11_seasons" value="1,2" />
+							<param name="style11_seasons_selection" type="nn_checkbox" newlines="1" default="" label="NN_SEASONS" description="NN_SEASONS_DESC">
+								<option value="winter">NN_WINTER</option>
+								<option value="spring">NN_SPRING</option>
+								<option value="summer">NN_SUMMER</option>
+								<option value="fall">NN_FALL</option>
+							</param>
+							<param name="style11_seasons_hemisphere" type="radio" default="northern" label="NN_HEMISPHERE" description="NN_HEMISPHERE_DESC">
+								<option value="northern">NN_NORTHERN</option>
+								<option value="southern">NN_SOUTHERN</option>
+								<option value="australia">NN_AUSTRALIA</option>
+							</param>
+						<param name="@toggler_item_seasons_b_11" type="nn_toggler" />
+					<param name="@block_item_seasons_b_11" type="nn_block" end="1" />
+					<param name="@block_item_months_a_11" type="nn_block" start="1" label="NN_MONTHS" />
+						<param name="style11_months" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_months_a_11" type="nn_toggler" param="style11_months" value="1,2" />
+							<param name="style11_months_selection" type="nn_checkbox" newlines="1" default="" label="NN_MONTHS" description="NN_MONTHS_DESC">
+								<option value="1">January</option>
+								<option value="2">February</option>
+								<option value="3">March</option>
+								<option value="4">April</option>
+								<option value="5">May</option>
+								<option value="6">June</option>
+								<option value="7">July</option>
+								<option value="8">August</option>
+								<option value="9">September</option>
+								<option value="10">October</option>
+								<option value="11">November</option>
+								<option value="12">December</option>
+							</param>
+						<param name="@toggler_item_months_b_11" type="nn_toggler" />
+					<param name="@block_item_months_b_11" type="nn_block" end="1" />
+					<param name="@block_item_days_a_11" type="nn_block" start="1" label="NN_DAYS" />
+						<param name="style11_days" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_days_a_11" type="nn_toggler" param="style11_days" value="1,2" />
+							<param name="style11_days_selection" type="nn_checkbox" newlines="1" default="" label="NN_DAYS" description="NN_DAYS_DESC">
+								<option value="1">Monday</option>
+								<option value="2">Tuesday</option>
+								<option value="3">Wednesday</option>
+								<option value="4">Thursday</option>
+								<option value="5">Friday</option>
+								<option value="6">Saturday</option>
+								<option value="7">Sunday</option>
+							</param>
+						<param name="@toggler_item_days_b_11" type="nn_toggler" />
+					<param name="@block_item_days_b_11" type="nn_block" end="1" />
+					<param name="@block_item_time_a_11" type="nn_block" start="1" label="NN_TIME" />
+						<param name="style11_time" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_time_a_11" type="nn_toggler" param="style11_time" value="1,2" />
+							<param name="style11_time_publish_up" type="text" size="10" default="0:00" label="NN_START_PUBLISHING" description="NN_TIME_START_PUBLISHING_DESC" />
+							<param name="style11_time_publish_down" type="text" size="10" default="0:00" label="NN_FINISH_PUBLISHING" description="NN_TIME_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_time_b_11" type="nn_toggler" />
+					<param name="@block_item_time_b_11" type="nn_block" end="1" />
+				<param name="@block_item_assignments_b_11" type="nn_block" end="1" />
+			<param name="@toggler_item_b_11" type="nn_toggler" />
+		<param name="@block_item_b_11" type="nn_block" end="1" />
+
+	<!-- ITEM 12 -->
+		<param name="@block_item_a_12" type="nn_block" start="1" label="TS_STYLESHEET_12" />
+			<param name="style12_enable" type="radio" default="0" label="Enable">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+			<param name="@toggler_item_a_12" type="nn_toggler" param="style12_enable" value="1" />
+				<param name="style12_file" type="textarea" cols="40" default="" label="TS_FILE" description="TS_FILE_DESC" />
+				<param name="style12_css" type="textarea" cols="40" default="" label="TS_CSS" description="TS_CSS_DESC" />
+				<param name="@block_item_assignments_a_12" type="nn_block" start="1" label="NN_PUBLISHING_ASSIGNMENTS" />
+					<param name="@block_item_assignments_12" type="nn_block" nostyle="1" description="NN_DATE_TIME_DESC" />
+					<param name="@time_item_assignments_12" type="nn_datetime" format="%Y-%m-%d %H:%M"  label="NN_CURRENT_DATE" />
+					<param name="@block_item_date_a_12" type="nn_block" start="1" label="NN_DATE" />
+						<param name="style12_date" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_date_a_12" type="nn_toggler" param="style12_date" value="1,2" />
+							<param name="style12_date_publish_up" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_START_PUBLISHING" description="NN_START_PUBLISHING_DESC" />
+							<param name="style12_date_publish_down" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_FINISH_PUBLISHING" description="NN_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_date_b_12" type="nn_toggler" />
+					<param name="@block_item_date_b_12" type="nn_block" end="1" />
+					<param name="@block_item_seasons_a_12" type="nn_block" start="1" label="NN_SEASONS" />
+						<param name="style12_seasons" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_seasons_a_12" type="nn_toggler" param="style12_seasons" value="1,2" />
+							<param name="style12_seasons_selection" type="nn_checkbox" newlines="1" default="" label="NN_SEASONS" description="NN_SEASONS_DESC">
+								<option value="winter">NN_WINTER</option>
+								<option value="spring">NN_SPRING</option>
+								<option value="summer">NN_SUMMER</option>
+								<option value="fall">NN_FALL</option>
+							</param>
+							<param name="style12_seasons_hemisphere" type="radio" default="northern" label="NN_HEMISPHERE" description="NN_HEMISPHERE_DESC">
+								<option value="northern">NN_NORTHERN</option>
+								<option value="southern">NN_SOUTHERN</option>
+								<option value="australia">NN_AUSTRALIA</option>
+							</param>
+						<param name="@toggler_item_seasons_b_12" type="nn_toggler" />
+					<param name="@block_item_seasons_b_12" type="nn_block" end="1" />
+					<param name="@block_item_months_a_12" type="nn_block" start="1" label="NN_MONTHS" />
+						<param name="style12_months" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_months_a_12" type="nn_toggler" param="style12_months" value="1,2" />
+							<param name="style12_months_selection" type="nn_checkbox" newlines="1" default="" label="NN_MONTHS" description="NN_MONTHS_DESC">
+								<option value="1">January</option>
+								<option value="2">February</option>
+								<option value="3">March</option>
+								<option value="4">April</option>
+								<option value="5">May</option>
+								<option value="6">June</option>
+								<option value="7">July</option>
+								<option value="8">August</option>
+								<option value="9">September</option>
+								<option value="10">October</option>
+								<option value="11">November</option>
+								<option value="12">December</option>
+							</param>
+						<param name="@toggler_item_months_b_12" type="nn_toggler" />
+					<param name="@block_item_months_b_12" type="nn_block" end="1" />
+					<param name="@block_item_days_a_12" type="nn_block" start="1" label="NN_DAYS" />
+						<param name="style12_days" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_days_a_12" type="nn_toggler" param="style12_days" value="1,2" />
+							<param name="style12_days_selection" type="nn_checkbox" newlines="1" default="" label="NN_DAYS" description="NN_DAYS_DESC">
+								<option value="1">Monday</option>
+								<option value="2">Tuesday</option>
+								<option value="3">Wednesday</option>
+								<option value="4">Thursday</option>
+								<option value="5">Friday</option>
+								<option value="6">Saturday</option>
+								<option value="7">Sunday</option>
+							</param>
+						<param name="@toggler_item_days_b_12" type="nn_toggler" />
+					<param name="@block_item_days_b_12" type="nn_block" end="1" />
+					<param name="@block_item_time_a_12" type="nn_block" start="1" label="NN_TIME" />
+						<param name="style12_time" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+							<option value="1">NN_SELECTION</option>
+							<option value="2">NN_EXCLUDE_SELECTION</option>
+							<option value="0">NN_IGNORE</option>
+						</param>
+						<param name="@toggler_item_time_a_12" type="nn_toggler" param="style12_time" value="1,2" />
+							<param name="style12_time_publish_up" type="text" size="10" default="0:00" label="NN_START_PUBLISHING" description="NN_TIME_START_PUBLISHING_DESC" />
+							<param name="style12_time_publish_down" type="text" size="10" default="0:00" label="NN_FINISH_PUBLISHING" description="NN_TIME_FINISH_PUBLISHING_DESC" />
+						<param name="@toggler_item_time_b_12" type="nn_toggler" />
+					<param name="@block_item_time_b_12" type="nn_block" end="1" />
+				<param name="@block_item_assignments_b_12" type="nn_block" end="1" />
+			<param name="@toggler_item_b_12" type="nn_toggler" />
+		<param name="@block_item_b_12" type="nn_block" end="1" />
+
+	</params>
+</install>

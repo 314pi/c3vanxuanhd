@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://www.joomla.org/xml/dtd/1.5/plugin-install.dtd">
+<install type="plugin" group="system" version="1.5">
+	<name>System - Slider</name>
+	<description>PLG_SYSTEM_SLIDER_DESC</description>
+	<version>1.7.1</version>
+	<creationDate>October 2011</creationDate>
+	<author>NoNumber! (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright © 2011 NoNumber! All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<!-- Files -->
+	<files>
+		<filename plugin="slider">slider.php</filename>
+		<folder>slider</folder>
+	</files>
+
+	<!-- Parameters -->
+	<params addpath="/plugins/system/nnframework/fields">
+		<param name="@loadlanguage" type="nn_loadlanguage" extension="plg_system_slider" />
+		<param name="@license" type="nn_license" extension="SLIDER" />
+		<param name="@version" type="nn_version" extension="SLIDER" xml="/plugins/system/slider.xml" />
+		<param name="@header" type="nn_header"
+			label="SLIDER"
+			description="SLIDER_DESC"
+			xml="/plugins/system/slider.xml"
+			image="/plugins/system/slider/images/logo.png"
+			image_w="60" image_h="80"
+			url="http://www.nonumber.nl/slider"
+			help_url="http://www.nonumber.nl/slider" />
+
+		<param name="slider_mode" type="radio" default="click" label="SLD_MODE" description="SLD_MODE_DESC">
+			<option value="click">SLD_CLICK</option>
+			<option value="mouseenter">SLD_HOVER</option>
+		</param>
+		<param name="slider_slide_speed" type="text" size="5" default="500" label="SLD_SLIDE_SPEED" description="SLD_SLIDE_SPEED_DESC" />
+		<param name="slider_fade_in_speed" type="text" size="5" default="1000" label="SLD_FADE_IN_SPEED" description="SLD_FADE_SPEED_DESC" />
+		<param name="slider_fade_out_speed" type="text" size="5" default="400" label="SLD_FADE_OUT_SPEED" description="SLD_FADE_SPEED_DESC" />
+
+		<param name="@block_scroll_a" type="nn_block" start="1" />
+			<param name="slider_scroll" type="radio" default="1" label="SLD_SCROLL" description="SLD_SCROLL_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+				<option value="2">SLD_SCROLL_TO_SLIDE</option>
+			</param>
+			<param name="slider_slidelinkscroll" type="radio" default="1" label="SLD_SCROLL_SLIDELINKS" description="SLD_SCROLL_SLIDELINKS_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+			<param name="slider_urlscroll" type="radio" default="1" label="SLD_SCROLL_BY_URL" description="SLD_SCROLL_BY_URL_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+		<param name="@block_scroll_b" type="nn_block" end="1" />
+
+		<param name="indent" type="nn_radiolist" size="2" default="noindent" label="SLD_INDENTATION" description="SLD_INDENTATION_DESC">
+			<option value="noindent">None</option>
+			<option value="indenttitle">SLD_INDENT_TITLE</option>
+			<option value="indentcontent">SLD_INDENT_CONTENT</option>
+			<option value="indent">SLD_INDENT_BOTH</option>
+		</param>
+		<param name="outline" type="radio" default="1" label="SLD_OUTLINE" description="SLD_OUTLINE_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</param>
+		<param name="@toggler_outline_a" type="nn_toggler" param="outline" value="1" />
+			<param name="line_color" type="nn_colorpicker" default="B4B4B4" label="SLD_LINE_COLOR" description="SLD_LINE_COLOR_DESC" />
+		<param name="@toggler_outline_b" type="nn_toggler" />
+		<param name="rounded" type="radio" default="1" label="SLD_ROUNDED_CORNERS" description="SLD_ROUNDED_CORNERS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@toggler_rounded_a" type="nn_toggler" param="rounded" value="1" />
+			<param name="rounded_radius" type="text" size="5" default="10" label="SLD_ROUNDED_RADIUS" description="SLD_ROUNDED_RADIUS_DESC" />
+		<param name="@toggler_rounded_b" type="nn_toggler" />
+
+		<param name="@hr_tags" type="nn_hr" />
+
+		<param name="tag_open" type="text" size="20" default="slide" label="SLD_OPENING_TAG" description="SLD_OPENING_TAG_DESC" />
+		<param name="tag_close" type="text" size="20" default="slides" label="SLD_CLOSING_TAG" description="SLD_CLOSING_TAG_DESC" />
+		<param name="tag_slidelink" type="text" size="20" default="slidelink" label="SLD_SLIDE_LINK_TAG" description="SLD_SLIDE_LINK_TAG_DESC" />
+		<param name="tag_delimiter" type="nn_radiolist" size="2" default="=" label="SLD_TAG_SYNTAX" description="SLD_TAG_SYNTAX_DESC">
+			<option value="=">SLD_SYNTAX_IS</option>
+			<option value="space">SLD_SYNTAX_SPACE</option>
+		</param>
+		<param name="place_comments" type="radio" default="1" label="NN_PLACE_HTML_COMMENTS" description="NN_PLACE_HTML_COMMENTS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+
+	<param name="@slide_button" type="nn_slide" label="COM_PLUGINS_SLIDER_EDITOR_BUTTON_FIELDSET_LABEL" />
+		<param name="button_text" type="text" default="Insert Slides" label="NN_BUTTON_TEXT" description="NN_BUTTON_TEXT_DESC" />
+		<param name="button_icon" type="radio" default="1" label="NN_SHOW_ICON" description="NN_SHOW_ICON_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="enable_frontend" type="radio" default="1" label="NN_ENABLE_IN_FRONTEND" description="NN_ENABLE_IN_FRONTEND_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+
+	<param name="@slide_advanced" type="nn_slide" label="ADVANCED PARAMETERS" />
+		<param name="title_tag" type="text" size="20" default="h2" label="SLD_TITLE_TAG" description="SLD_TITLE_TAG_DESC" />
+		<param name="use_cookies" type="radio" default="0" label="SLD_USE_COOKIES" description="SLD_USE_COOKIES_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@set_cookies_a" type="nn_toggler" param="use_cookies" value="0" />
+			<param name="set_cookies" type="radio" default="0" label="SLD_SAVE_COOKIES" description="SLD_SAVE_COOKIES_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+		<param name="@set_cookies_b" type="nn_toggler" />
+		<param name="load_stylesheet" type="radio" default="1" label="NN_LOAD_STYLESHEET" description="NN_LOAD_STYLESHEET_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="load_mootools" type="radio" default="1" label="NN_LOAD_MOOTOOLS" description="NN_LOAD_MOOTOOLS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="mootools_compatibility" type="radio" default="1" label="NN_MOOTOOLS_COMPATIBILITY" description="NN_MOOTOOLS_COMPATIBILITY_DESC">
+			<option value="0">NN_AUTO</option>
+			<option value="1">1.11</option>
+			<option value="2">1.2+</option>
+		</param>
+		<param name="use_versioned_files" type="radio" default="0" label="NN_USE_VERSIONED_FILES" description="NN_USE_VERSIONED_FILES_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+</install>

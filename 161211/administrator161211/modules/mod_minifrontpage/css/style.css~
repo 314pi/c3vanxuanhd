@@ -1,0 +1,94 @@
+/* MiniFrontpage CSS*/
+
+
+.minifp td 
+{ 
+	padding-right: 0px;
+	padding-left: 0px;
+}
+.minifp td p {
+	margin-top:3px;
+	
+}
+
+.minifp td img {
+	border:none;
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
+
+.minifp-anotherlinks {
+	font-weight:bold;
+	font-size:100%;
+	padding:5px 5px 5px 10px;
+	margin-bottom:5px;
+	background: url(../images/bgheader.gif) repeat-x bottom #F5F5F5;
+	display: block;
+}
+
+.minifp-anotherlinks a
+{
+ 
+}
+
+.minifp ul li {
+	font-size:100%;
+	padding-left:0;
+}
+
+#all .minifp ul li a
+{
+	color: #000;
+	font-weight: normal;
+}
+
+#all .minifp ul li .minitime, #all .minifp ul li .minitime:link, #all .minifp ul li .minitime:hover 
+{
+	color: #717171;
+	font-size: 80%;
+	text-decoration: none;
+	font-style: italic;
+}
+
+#all .minifp ul li a:hover
+{
+	color: #d66704;
+}
+
+
+#all .minifp-introtitle a, #all .minifp-introtitle a:visited, #all .minifp-introtitle a:active, #all .minifp-introtitle a:link {
+	font-size:93%;
+	font-weight: normal;
+	color:#000;
+}
+
+#all .minifp-introtitle a:hover {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.minifp-date {
+	color:#666;
+	font-weight: normal;
+	font-style: italic;
+	font-size:90%;
+}
+.minifp-full-link-wrp {
+	color: #d66704;
+	text-align: left;}
+a.minifp-full-link, a:visited.minifp-full-link, a:active.minifp-full-link, a:link.minifp-full-link {
+
+	font-weight: normal;
+	font-size:80%;
+	background:#333333;
+	color: #d66704;;
+	padding:2px 5px;
+	letter-spacing:0px;
+}
+
+a:hover.minifp-full-link {
+	text-decoration: none;
+	background:#FF0000;
+}
+.minifp-seperator {
+	line-height:1px;}

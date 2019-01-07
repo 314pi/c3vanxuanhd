@@ -1,0 +1,40 @@
+<?php
+/**
+ * @package Xpert Tabs
+ * @version 1.5.1
+ * @author ThemeXpert http://www.themexpert.com
+ * @copyright Copyright (C) 2009 - 2011 ThemeXpert
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ *
+ */
+
+// no direct access
+defined( '_JEXEC' ) or die( 'Restricted access' );
+
+class JElementModules extends JElement
+{
+
+	var	$_name = 'Modules';
+
+	function fetchElement($name, $value, &$node, $control_name)
+	{
+
+        // Construct an array of the HTML OPTION statements.
+        $options = array ();
+        // creating database instance
+        $db =& JFactory::getDBO();
+        // generating query
+		$db->setQuery("SELECT id, module, title FROM #__modules WHERE ( published !=-2 ) AND client_id=0 AND module != 'mod_mainmenu' ORDER BY position ASC");
+ 		// getting results
+   		$results = $db->loadObjectList();
+
+		foreach ($results as $option)
+		{
+			$options[] = JHTML::_('select.option', $option->id, $option->title);
+		}
+
+		$output= JHTML::_('select.genericlist',  $options, ''.$control_name.'['.$name.'][]', 'class="inputbox" style="width:90%;" multiple="multiple" size="10"', 'value', 'text', $value );
+
+		return $output;
+	}
+} 

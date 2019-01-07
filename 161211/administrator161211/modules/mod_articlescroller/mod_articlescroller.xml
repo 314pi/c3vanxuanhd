@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+    <!-- Name of the Module -->
+        <name>Article Scroller</name> 
+ 
+    <!-- Name of the Author -->
+        <author>JEEMA Web Solutions</author> 
+ 
+    <!-- Version Date of the Module -->
+        <creationDate>05-Oct-2009</creationDate> 
+ 
+    <!-- Copyright information -->
+        <copyright>All rights reserved by www.jeema.net.</copyright> 
+ 
+    <!-- License Information -->
+        <license>GPL 2.0</license> 
+ 
+    <!-- Author's email address -->
+        <authorEmail>support@jeema.net</authorEmail> 
+ 
+    <!-- Author's website -->
+        <authorUrl>www.jeema.net</authorUrl> 
+ 
+    <!-- Module version number -->
+        <version>1.0.0</version> 
+ 
+    <!-- Description of what the module does -->
+        <description>Scroll a single article inside a module</description>
+ 
+    <!-- Listing of all files that should be installed for the module to function -->
+        <files>
+        <!-- The "module" attribute signifies that this is the main controller file -->
+                <filename module="mod_articlescroller">mod_articlescroller.php</filename>
+                <filename>index.html</filename>
+                <filename>helper.php</filename>
+                <filename>tmpl/default.php</filename>
+                <filename>tmpl/index.html</filename>
+        </files>
+ 
+    <languages>
+        <!-- Any language files included with the module -->
+    </languages>
+ 
+    <!-- Optional parameters -->
+        <params>
+        <!-- parameter to allow placement of a module class suffix for the module table / xhtml display -->
+        <param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+ 
+        <!-- just gives us a little room between the previous paramter and the next -->
+        <param name="@spacer" type="spacer" default="" label="" description="" />
+ 
+        <param name="article_id" type="text" default="1" label="Article Id" description="Specify the article id"/>
+        <param name="scroll_direction" type="radio" default="up" label="Scroll direction" description="Specify the scroll direction">
+          <option value="up">Up</option>
+          <option value="down">Down</option>
+          <option value="left">Left</option>
+          <option value="right">Right</option>
+        </param>
+        <param name="container_width" type="text" default="180" label="Container Width" description="Specify the container width"/>
+        <param name="container_height" type="text" default="300" label="Container Height" description="Specify the container height"/>
+        <param name="scroll_amount" type="text" default="1" label="Scroll Amount" description="Specify the Scroll Amount"/>
+        <param name="scroll_delay" type="text" default="1" label="Scroll Delay" description="Specify the Scroll Delay"/>
+
+        <param name="@spacer" type="spacer" default="" label="" description="" />
+
+        <!-- just gives us a little room between the previous paramter and the next -->
+        <param name="@spacer" type="spacer" default="" label="" description="" />
+
+        <param name="article_pre_css" type="textarea" rows="3" cols="30" default="&lt;div&gt;" label="Pre Css" description="Pre Css style"/>
+        <param name="article_post_css" type="textarea" rows="3" cols="30" default="&lt;/div&gt;" label="Post Css" description="Post Css style"/>
+
+        </params>
+</install>

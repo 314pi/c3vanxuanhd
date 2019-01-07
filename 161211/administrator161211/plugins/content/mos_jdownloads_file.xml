@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content" method="upgrade">
+<name>jdownloads_content_plugin</name>
+<creationDate>2011-10-10</creationDate>
+<version>1.18</version>
+<author>Marco Pelozzi</author>
+<copyright>(c) Marco 2008</copyright>
+<license>GNU/GPL</license>
+<authorEmail>marco.u3@bluewin.ch</authorEmail>
+<authorUrl>www.redorion.com/plugindemo</authorUrl>
+<description>MODULE : MOS_JDOWNLOADS_FILE</description>
+<params>
+</params>
+<files>
+  <filename plugin="mos_jdownloads_file">mos_jdownloads_file.php</filename>
+  <filename plugin="mos_jdownloads_file">mos_jdownloads_file/images/offline.gif</filename>
+  <filename plugin="mos_jdownloads_file">mos_jdownloads_file/images/download.gif</filename>
+  <filename plugin="mos_jdownloads_file">mos_jdownloads_file/images/nodownload.gif</filename>
+  <filename plugin="mos_jdownloads_file">mos_jdownloads_file/images/link_extern.gif</filename>
+  <filename plugin="mos_jdownloads_file">mos_jdownloads_file/css/mos_jdownloads_file.css</filename>
+  <filename plugin="mos_jdownloads_file">mos_jdownloads_file/index.html</filename>
+  <filename plugin="mos_jdownloads_file">mos_jdownloads_file/languages/en-GB.php</filename>
+  <filename plugin="mos_jdownloads_file">mos_jdownloads_file/languages/fr-FR.php</filename>
+  <filename plugin="mos_jdownloads_file">mos_jdownloads_file/languages/de-DE.php</filename>
+  <filename plugin="mos_jdownloads_file">mos_jdownloads_file/lightbox/index.html</filename>
+  <filename plugin="mos_jdownloads_file">mos_jdownloads_file/lightbox/lightbox.css</filename>
+  <filename plugin="mos_jdownloads_file">mos_jdownloads_file/lightbox/lightbox.js</filename>
+  <filename plugin="mos_jdownloads_file">mos_jdownloads_file/lightbox/loading.gif</filename>
+  <filename plugin="mos_jdownloads_file">mos_jdownloads_file/lightbox/overlay.png</filename>
+  <filename plugin="mos_jdownloads_file">mos_jdownloads_file/lightbox/close.gif</filename>
+</files>
+<languages>
+  <language tag="en-GB">language/en-GB/en-GB.plg_content_mos_jdownloads_file.ini</language>
+  <language tag="fr-FR">language/fr-FR/fr-FR.plg_content_mos_jdownloads_file.ini</language>
+  <language tag="de-DE">language/de-DE/de-DE.plg_content_mos_jdownloads_file.ini</language>
+  <language tag="bg-BG">language/bg-BG/bg-BG.plg_content_mos_jdownloads_file.ini</language>
+  <language tag="es-ES">language/es-ES/es-ES.plg_content_mos_jdownloads_file.ini</language>
+</languages>
+</install>

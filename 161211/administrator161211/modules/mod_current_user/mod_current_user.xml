@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+ 	<name>Current User</name>
+	<author>Phil Chimbolo</author>
+	<creationDate>August 2009</creationDate>
+	<copyright>(c)2009 Phil Chimbolo. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>philc@pmcware.com</authorEmail>
+	<authorUrl>www.pmcware.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Shows current user information for logged on (registered) users</description>
+	<files>
+		<filename module="mod_current_user">mod_current_user.php</filename>
+	</files>
+        <params>
+                <param name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+                        <option value="0">Never</option>
+                </param>
+                <param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+                <param name="@spacer" type="spacer" default="" label="" description="" />
+                <param name="showname" type="radio" default="1" label="Show Name" description="Show/Hide the users full registered name">
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                </param>
+		<param name="shownamelbl" type="text" size= "40" default="Name:" label="Name Label" />
+                <param name="showusername" type="radio" default="1" label="Show Username" description="Show/Hide the users username">
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                </param>
+		<param name="showusernamelbl" type="text" size= "40" default="Username:" label="Username Label" />
+                <param name="showuseremail" type="radio" default="1" label="Show Email" description="Show/Hide the users email address">
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                </param>
+		<param name="showuseremaillbl" type="text" size= "40" default="Email:" label="User Email Label" />
+                <param name="showusertype" type="radio" default="1" label="Show User Type" description="Show/Hide the users type / role">
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                </param>
+		<param name="showusertypelbl" type="text" size= "40" default="User Type:" label="User Type Label" />
+                <param name="showregdate" type="radio" default="1" label="Show Reg Date" description="Show/Hide the users registration date">
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                </param>
+		<param name="showregdatelbl" type="text" size= "40" default="Registered:" label="Reg Date Label" />
+                <param name="showlastlogin" type="radio" default="1" label="Show Last Login" description="Show/Hide the users last login date">
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                </param>
+		<param name="showlastloginlbl" type="text" size= "40" default="Last Login:" label="Last Login Date Label" />
+		<param name="labelcolor" type="text" size= "10" default="FFFF44" label="Label Color" />
+		<param name="textcolor" type="text" size= "10" default="FFFFFF" label="Text Color" />
+        </params>
+</install>

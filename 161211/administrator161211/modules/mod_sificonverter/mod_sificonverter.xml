@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Sifi Converter</name>
+	<author>Urmila Champatiray</author>
+	<creationDate>July 2010</creationDate>
+	<copyright>Copyright (C) 2010 Joomlaseo.org. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>admin@joomlaseo.org</authorEmail>
+	<authorUrl>www.joomlaseo.org</authorUrl>
+	<version>1.1</version>
+	<description>	
+	<![CDATA[
+		Unit Converter Module for Joomla 1.5 is a best converter for science based sites <br /><br />&copy;&nbsp;<a href="http://www.joomlaseo.org">Joomla SEO Tips</a><br/><br/>
+		
+		<strong>Joomla Converter</strong><br/>
+		&nbsp;- Best Unit Converter for Joomla; <br/>
+		&nbsp;- has all features required in a Unit Converter;<br/>
+		&nbsp;- Starting from temp, pressure, volume and many more;<br/>
+		&nbsp;- Made with JavaScript;<br/>
+		&nbsp;- Give us a rating if you liked it;<br/>
+
+		<br/>
+		]]>
+	</description>	
+	<files>
+		<filename module="mod_sificonverter">mod_sificonverter.php</filename>
+		<filename>GNU-License.txt</filename>
+	</files>
+	
+</install>

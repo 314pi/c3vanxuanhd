@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade">
+	<name>AJAX Shoutbox</name>
+	<author>Bart Jochems</author>
+	<creationDate>February 2011</creationDate>
+	<copyright>(C) Bart Jochems</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>info@batjo.nl</authorEmail>
+	<authorUrl>http://joomla.batjo.nl</authorUrl>
+	<version>1.4</version>
+	<description>An AJAX Shoutbox</description>
+	<files>
+		<filename module="mod_shoutbox">mod_shoutbox.php</filename>
+		<filename module="mod_shoutbox">helper.php</filename>
+		<filename module="mod_shoutbox">index.html</filename>
+		<filename module="mod_shoutbox">css/mod_shoutbox.css</filename>
+		<filename module="mod_shoutbox">js/fatAjax.js</filename>
+		<filename module="mod_shoutbox">js/sbsmile.js</filename>
+		<filename module="mod_shoutbox">js/index.html</filename>
+		<filename module="mod_shoutbox">tmpl/default.php</filename>
+		<filename module="mod_shoutbox">tmpl/index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_shoutbox.ini</language>
+    </languages>
+	<params>
+		<param name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+			<option value="0">Never</option>
+		</param>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+		<param name="shouts" type="text" default="10" label="Display number of shouts" description="Controls how many shouts are displayed" />
+		<param name="refresh" type="text" default="4" label="Refresh time in seconds" description="Controls how fast the refresh takes place" />
+		<param name="fadefrom" type="text" default="#000000" label="The color to fade from" description="Example: #000000" />
+		<param name="fadeto" type="text" default="#FFFFFF" label="Color to fade to" description="Example: #FFFFFF" />
+		<param name="submit" type="list" default="0" label="Show send button" description="Hiding the send button results in less spam in the shoutbox. However your clients must have javascript enabled, which most do">
+			<option value="0">No (less spam)</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="post_guest" type="list" default="1" label="Allow guest users to post">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="name" type="list" default="1" label="Display username/fullname">
+			<option value="0">Username</option>
+			<option value="1">Fullname</option>
+		</param>
+		<param name="tag" type="list" default="1" label="Display Guest [] tag?">
+			<option value="0">Off</option>
+			<option value="1">On</option>
+		</param>
+		<param name="url" type="list" default="1" label="Display a URL input field">
+			<option value="0">Off</option>
+			<option value="1">On</option>
+		</param>
+		<param name="textarea" type="list" default="1" label="Display a textarea instead of an input field">
+			<option value="0">Off</option>
+			<option value="1">On</option>
+		</param>
+	</params>
+</install>

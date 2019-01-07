@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="corejoomla" method="upgrade">
+	<name>CoreJoomla - jQuery Plugin</name>
+	<creationDate>03-Nov-2011</creationDate>
+	<author>corejoomla.com</author>
+	<authorEmail>support@corejoomla.com</authorEmail>
+	<authorUrl>http://www.corejoomla.com</authorUrl>
+	<copyright>Copyright (C) Copyright © 2009 - 2010 corejoomla.com. All rights reserved.</copyright>
+	<license>http://www.joomlart.com GNU/GPL</license>
+	<version>1.5.1</version>
+	<description>The plugin provides common interface for including jQuery and few important jQuery plugins for use in components/modules.</description>
+	<files>
+		<filename plugin="jquery">jquery.php</filename>
+		<folder>jquery</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_corejoomla_jquery.ini</language>
+	</languages>
+	<params>
+		<param name="use_cdn" type="radio" default="1" label="USE_GOOGLE_CDN" description="USE_GOOGLE_CDN_DESC">
+			<option value="1">LBL_YES</option>
+			<option value="0">LBL_NO</option>
+		</param>
+		<param name="jquery" type="radio" default="1" label="INCLUDE_JQUERY" description="INCLUDE_JQUERY_DESC">
+			<option value="1">LBL_YES</option>
+			<option value="0">LBL_NO</option>
+		</param>
+		<param name="jqueryui" type="radio" default="0" label="INCLUDE_JQUEY_UI" description="INCLUDE_JQUEY_UI_DESC">
+			<option value="1">LBL_YES</option>
+			<option value="0">LBL_NO</option>
+		</param>
+        <param name="jqueryui-theme" type="list" default="start" label="JQUERY_UI_THEME" description="JQUERY_UI_THEME_DESC">
+            <option value="black-tie">black-tie</option>
+            <option value="blitzer">blitzer</option>
+            <option value="cupertino">cupertino</option>
+            <option value="dark-hive">dark-hive</option>
+            <option value="dot-luv">dot-luv</option>
+            <option value="eggplant">eggplant</option>
+            <option value="excite-bike">excite-bike</option>
+            <option value="flick">flick</option>
+            <option value="hot-sneaks">hot-sneaks</option>
+            <option value="humanity">humanity</option>
+            <option value="le-frog">le-frog</option>
+            <option value="mint-choc">mint-choc</option>
+            <option value="overcast">overcast</option>
+            <option value="pepper-grinder">pepper-grinder</option>
+            <option value="redmond">redmond</option>
+            <option value="smoothness">smoothness</option>
+            <option value="south-street">south-street</option>
+            <option value="start">start</option>
+            <option value="sunny">sunny</option>
+            <option value="swanky-purse">swanky-purse</option>
+            <option value="trontastic">trontastic</option>
+            <option value="ui-darkness">ui-darkness</option>
+            <option value="ui-lightness">ui-lightness</option>
+            <option value="vader">vader</option>
+        </param>
+		<param name="jqueryform" type="radio" default="0" label="INCLUDE_JQUERY_FORM" description="INCLUDE_JQUERY_FORM_DESC">
+			<option value="1">LBL_YES</option>
+			<option value="0">LBL_NO</option>
+		</param>
+	</params>
+</install>

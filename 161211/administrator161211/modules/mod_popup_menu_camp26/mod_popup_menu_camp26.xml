@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>camp26 Pop Up Menu</name>
+	<author>Reza Erauansyah</author>
+	<creationDate>26 January 2010</creationDate>
+	<license>GPLv2.0 - http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<authorEmail>old_smu17@yahoo.com</authorEmail>
+	<authorUrl>www.camp26.biz</authorUrl>
+	<version>1.0</version>
+	<description>MODULE : POPUPMENU</description>
+	<files>
+		<filename module="mod_popup_menu_camp26">mod_popup_menu_camp26.php</filename>
+		<filename>popup_menu/menu.css</filename>
+		<filename>popup_menu/jquery.js</filename>
+		<filename>popup_menu/index.html</filename>
+		<filename>popup_menu/stack.js</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+		<folder>popup_menu/images</folder>		
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_popup_menu_camp26.ini</language>
+	</languages>
+	<params>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A Suffix to be applied the CSS class of this module, this allow indivdual module styling" />
+		<param name="js_system" type="radio" default="1" label="Include JQuery" description="Choose NO, If you want to insert or was insert the JQuery on your template" >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="txtcolor" type="text" default="#FFF" label="Menu Text Font Color" description="Text Color in hex format, eg. #000000,#CCCCCC" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="menu_status1" type="radio" default="1" label="Menu 1 Status" description="Enable or disable this menu">
+			<option value="0">Disable</option>
+			<option value="1">Enable</option>
+		</param>
+		<param name="menu_url1" type="text" default="http://www.camp26.com" label="Url for Menu 1 " description="Type an url here, eg.http://www.camp26.org" />
+		<param name="menu_img1" type="imagelist" directory="/modules/mod_popup_menu_camp26/popup_menu/images" default="aperture.png" label="Menu 1 image" description="Image for 1st Menu" />
+		<param name="menu_txt1" type="text" default="Menu-1" label="Text for Menu 1 " description="Type your menu text here, eg.Home " />
+		<param name="target_url1" type="radio" default="_self" label="Menu 1 Target" description="Target of the first menu">
+			<option value="_self">Self Browser</option>
+			<option value="_blank">Open New Browser</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="menu_status2" type="radio" default="1" label="Menu 2 Status" description="Enable or disable this menu">
+			<option value="0">Disable</option>
+			<option value="1">Enable</option>
+		</param>
+		<param name="menu_url2" type="text" default="http://www.camp26.com" label="Url for Menu 2 " description="Type an url here, eg.http://www.camp26.org" />
+		<param name="menu_img2" type="imagelist" directory="/modules/mod_popup_menu_camp26/popup_menu/images" default="photoshop.png" label="Menu 2 image" description="Image for 2nd Menu" />
+		<param name="menu_txt2" type="text" default="Menu-2" label="Text for Menu 2 " description="Type your menu text here, eg.Home " />
+		<param name="target_url2" type="radio" default="_self" label="Menu 2 Target" description="Target of the second menu">
+			<option value="_self">Self Browser</option>
+			<option value="_blank">Open New Browser</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="menu_status3" type="radio" default="1" label="Menu 3 Status" description="Enable or disable this menu">
+			<option value="0">Disable</option>
+			<option value="1">Enable</option>
+		</param>
+		<param name="menu_url3" type="text" default="http://www.camp26.com" label="Url for Menu 3 " description="Type an url here, eg.http://www.camp26.org" />
+		<param name="menu_img3" type="imagelist" directory="/modules/mod_popup_menu_camp26/popup_menu/images" default="safari.png" label="Menu 3 image" description="Image for 3th Menu" />
+		<param name="menu_txt3" type="text" default="Menu-3" label="Text for Menu 3 " description="Type your menu text here, eg.Home " />
+		<param name="target_url3" type="radio" default="_self" label="Menu 3 Target" description="Target of the third menu">
+			<option value="_self">Self Browser</option>
+			<option value="_blank">Open New Browser</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="menu_status4" type="radio" default="1" label="Menu 4 Status" description="Enable or disable this menu">
+			<option value="0">Disable</option>
+			<option value="1">Enable</option>
+		</param>
+		<param name="menu_url4" type="text" default="http://www.camp26.com" label="Url for Menu 4 " description="Type an url here, eg.http://www.camp26.org" />
+		<param name="menu_img4" type="imagelist" directory="/modules/mod_popup_menu_camp26/popup_menu/images" default="coda.png" label="Menu 4 image" description="Image for 4th Menu" />
+		<param name="menu_txt4" type="text" default="Menu-4" label="Text for Menu 4 " description="Type your menu text here, eg.Home " />
+		<param name="target_url4" type="radio" default="_self" label="Menu 4 Target" description="Target of the fourth menu">
+			<option value="_self">Self Browser</option>
+			<option value="_blank">Open New Browser</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="menu_status5" type="radio" default="1" label="Menu 5 Status" description="Enable or disable this menu">
+			<option value="0">Disable</option>
+			<option value="1">Enable</option>
+		</param>
+		<param name="menu_url5" type="text" default="http://www.camp26.com" label="Url for Menu 5 " description="Type an url here, eg.http://www.camp26.org" />
+		<param name="menu_img5" type="imagelist" directory="/modules/mod_popup_menu_camp26/popup_menu/images" default="finder.png" label="Menu 5 image" description="Image for 5th Menu" />
+		<param name="menu_txt5" type="text" default="Menu-5" label="Text for Menu 5 " description="Type your menu text here, eg.Home " />
+		<param name="target_url5" type="radio" default="_self" label="Menu 5 Target" description="Target of the fifth menu">
+			<option value="_self">Self Browser</option>
+			<option value="_blank">Open New Browser</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="menu_status6" type="radio" default="1" label="Menu 6 Status" description="Enable or disable this menu">
+			<option value="0">Disable</option>
+			<option value="1">Enable</option>
+		</param>
+		<param name="menu_url6" type="text" default="http://www.scamp26.com" label="Url for Menu 6 " description="Type an url here, eg.http://www.camp26.org" />
+		<param name="menu_img6" type="imagelist" directory="/modules/mod_popup_menu_camp26/popup_menu/images" default="home.png" label="Menu 6 image" description="Image for 6th Menu" />
+		<param name="menu_txt6" type="text" default="Menu-6" label="Text for Menu 6 " description="Type your menu text here, eg.Home " />
+		<param name="target_url6" type="radio" default="_self" label="Menu 6 Target" description="Target of the sixth menu">
+			<option value="_self">Self Browser</option>
+			<option value="_blank">Open New Browser</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+	
+	</params>
+	<params group="advanced">
+		<param name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+	</params>
+</install>

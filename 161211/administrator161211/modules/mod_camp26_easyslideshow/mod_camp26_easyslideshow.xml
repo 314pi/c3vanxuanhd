@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Camp26 Easy SlideShow</name>
+	<author>Reza Erauansyah - Camp26</author>
+	<creationDate>july 2009</creationDate>
+	<copyright>Joomla!</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>old_smu17@yahoo.com</authorEmail>
+	<authorUrl>camp26.biz</authorUrl>
+	<version>1.0.0</version>
+	<description>DESCSLIDESHOW</description>
+	<files>
+		<filename module="mod_camp26_easyslideshow">mod_camp26_easyslideshow.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+		<filename>tmpl/index.html</filename>
+        <filename>tmpl/default.php</filename>
+		<filename>scripts/index.html</filename>
+		<filename>scripts/jquery-1.3.2.min.js</filename>
+		<filename>scripts/jquery.easing.1.3.js</filename>
+		<filename>scripts/jquery-galleryview-1.1/index.html</filename>
+		<filename>scripts/jquery-galleryview-1.1/jquery.galleryview-1.1.js</filename>
+		<filename>scripts/jquery-galleryview-1.1/jquery.timers-1.1.2.js</filename>
+		<filename>css/index.html</filename>
+		<filename>css/s3Slider.css</filename>
+		<filename>scripts/jquery-galleryview-1.1/themes/index.html</filename>
+		<filename>scripts/jquery-galleryview-1.1/themes/camp26/index.html</filename>
+		<filename>scripts/jquery-galleryview-1.1/themes/camp26/next.png</filename>
+		<filename>scripts/jquery-galleryview-1.1/themes/camp26/prev.png</filename>
+		<filename>scripts/jquery-galleryview-1.1/themes/camp26/panel-nav-next.png</filename>
+		<filename>scripts/jquery-galleryview-1.1/themes/camp26/panel-nav-prev.png</filename>
+		<filename>images/index.html</filename>
+		<filename>images/01.jpg</filename>
+		<filename>images/02.jpg</filename>
+		<filename>images/03.jpg</filename>
+		<filename>images/04.jpg</filename>
+		<filename>images/05.jpg</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_camp26_easyslideshow.ini</language>
+	</languages>
+
+	<params>
+		<param name="height" type="text" default="300" label="HEIGHT" description="PARAMHEIGHT" /> 
+		<param name="width" type="text" default="520" label="WIDTH" description="PARAMWIDTH" /> 
+		<param name="transition_speed" type="text" default="1500" label="SPEED" description="PARAMSPEED" /> 
+		<param name="transition_interval" type="text" default="5000" label="INTERVAL" description="PARAMINTERVAL" /> 
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="folder" type="text" default="modules/mod_camp26_easyslideshow/images" label="IMAGE FOLDER" description="PARAMIMAGEFOLDER" /> 
+		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="images1" type="text" default="01.jpg" label="FIRSTIMAGE" description="PARAMFIRSTIMAGE" />
+		<param name="text1" type="textarea" default="your text here" label="TEXT" description="PARAMTEXT" cols="60" rows="4" />
+		<param name="url1" type="text" default="http://www.camp26.biz" label="url" description="PARAMURL" />
+		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="images2" type="text" default="02.jpg" label="SECONDIMAGE" description="PARAMSECONDIMAGE" />
+		<param name="text2" type="textarea" default="your text here" label="TEXT" description="PARAMTEXT" cols="60" rows="4" />
+		<param name="url2" type="text" default="http://www.camp26.biz" label="url" description="PARAMURL" />
+		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="images3" type="text" default="03.jpg" label="THIRDIMAGE" description="PARAMTHIRDIMAGE" />
+		<param name="text3" type="textarea" default="your text here" label="TEXT" description="PARAMTEXT" cols="60" rows="4" />
+		<param name="url3" type="text" default="http://www.camp26.biz" label="url" description="PARAMURL" />
+		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="images4" type="text" default="04.jpg" label="FOURTHIMAGE" description="PARAMFOURTHIMAGE" />
+		<param name="text4" type="textarea" default="your text here" label="TEXT" description="PARAMTEXT" cols="60" rows="4" />
+		<param name="url4" type="text" default="http://www.camp26.biz" label="url" description="PARAMURL" />
+		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="images5" type="text" default="05.jpg" label="FIFTHIMAGE" description="PARAMFIFTHIMAGE" />
+		<param name="text5" type="textarea" default="your text here" label="TEXT" description="PARAMTEXT" cols="60" rows="4" />
+		<param name="url5" type="text" default="http://www.camp26.biz" label="URL" description="PARAMURL" />
+		
+	</params>
+
+	<params group="other">
+		<param name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+			<option value="0">Never</option>
+		</param>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	</params>
+</install>

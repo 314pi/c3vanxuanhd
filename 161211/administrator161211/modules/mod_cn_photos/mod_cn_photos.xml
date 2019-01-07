@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>CN Photos</name>
+	<author>Caleb Nance</author>
+	<creationDate>October 2010</creationDate>
+	<copyright>demo.calebnance.com</copyright>
+	<license>GNU/GPL license: http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>calebnance@gmail.com</authorEmail>
+	<authorUrl>demo.calebnance.com</authorUrl>
+	<version>1.9</version>
+	<description>Thanks so much for downloading CN Photos! Leave a review on Joomla Extensions Directory if you have some time, and donations to the future of this module and all other extensions are always appreciated! Please let me know of any bugs or things that you would want to see added or changed contact me - http://demo.calebnance.com/Contact/Caleb-Nance.html - Hope you enjoy! Have a great day.</description>
+	<files>
+    	<filename module="mod_cn_photos">mod_cn_photos.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>mod_cn_photos.xml</filename>
+        <folder>css</folder>
+        <folder>gallery</folder>
+        <folder>js</folder>
+        <folder>tmpl</folder>
+    </files>
+	<params>
+		<param name="modid" type="text" default="1" label="Set Module ID" description="Set this to a different id, so you can have multiple modules on one page." />
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="Module Suffix for the module class." />
+		<param name="@spacer1" type="spacer" default="Images General" label="" description="" />
+		<param name="width" type="text" default="150" label="Width" description="Width of Images in px (ex. 150)" />
+		<param name="height" type="text" default="150" label="Height" description="Height of Images in px (ex. 150)" />
+		<param name="path" type="text" default="modules/mod_cn_photos/gallery" label="Image Path" description="This is the path to the folder of all the images that you want to show up in the slideshow" />
+		<param name="border" type="radio" default="0" label="Show Border on Images" description="If this is set to yes, then there will be a 10px border around the images. (Rounded in FF and Chrome)">
+  			<option value="0">No</option>
+  			<option value="1">Yes</option>
+		</param>
+		<param name="bordercolor" type="text" default="EEEEEE" label="Border Color" description="Hex color of the border (if border is to be shown)" />
+		<param name="random" type="radio" default="0" label="Randomize Images" description="If this is set to yes, then the images in the folder you've selected will be displayed in random order instead of by name.">
+  			<option value="0">No</option>
+  			<option value="1">Yes</option>
+		</param>
+		<param name="@spacer2" type="spacer" default="Animation Options" label="" description="" />
+		<param name="fx" type="list" default="fade" label="Animation" description="Select which effect you would like the images to be transitioned with..">
+			<option value="none">No Effect</option>
+			<option value="fade">Fade</option>
+			<option value="shuffle">Shuffle</option>
+			<option value="scrollDown">Scroll Down</option>
+			<option value="scrollUp">Scroll Up</option>
+			<option value="scrollLeft">Scroll Left</option>
+			<option value="scrollRight">Scroll Right</option>
+			<option value="zoom">Zoom</option>
+			<option value="turnDown">Turn Down</option>
+			<option value="curtainX">Curtain Side to Side</option>
+			<option value="curtainY">Curtain Top to Bottom</option>
+		</param>
+		<param name="pause" type="radio" default="0" label="Pause On Hover" description="If this is set to yes, then when the user hovers over the image, it pauses everything from moving.">
+  			<option value="0">No</option>
+  			<option value="1">Yes</option>
+		</param>
+		<param name="next" type="radio" default="0" label="Next Slide On Click" description="If this is set to yes, then when the user clicks on the image, it goes to the next image.">
+  			<option value="0">No</option>
+  			<option value="1">Yes</option>
+		</param>
+		<param name="timeout" type="list" default="3000" label="Time on Each Slide" description="This is the time for which each slide is paused on.">
+			<option value="1000">1 Second</option>
+			<option value="2000">2 Seconds</option>
+			<option value="3000">3 Seconds</option>
+			<option value="4000">4 Seconds</option>
+			<option value="5000">5 Seconds</option>
+			<option value="6000">6 Seconds</option>
+			<option value="7000">7 Seconds</option>
+			<option value="8000">8 Seconds</option>
+			<option value="9000">9 Seconds</option>
+			<option value="10000">10 Seconds</option>
+			<option value="11000">11 Seconds</option>
+			<option value="12000">12 Seconds</option>
+			<option value="13000">13 Seconds</option>
+			<option value="14000">14 Seconds</option>
+			<option value="15000">15 Seconds</option>
+			<option value="20000">20 Seconds</option>
+		</param>
+		<param name="speed" type="list" default="1000" label="Speed of Annimation" description="This is the time at which the annimation happens.">
+			<option value="200">0.2 Seconds</option>
+			<option value="500">0.5 Seconds</option>
+			<option value="1000">1.0 Second</option>
+			<option value="1500">1.5 Seconds</option>
+			<option value="2000">2.0 Seconds</option>
+			<option value="3000">3.0 Seconds</option>
+			<option value="4000">4.0 Seconds</option>
+		</param>
+		<param name="@spacer3" type="spacer" default="Shuffle Animation Options" label="" description="" />
+		<param name="shuffle" type="list" default="tr" label="Suffle Options" description="This is if the shuffle is selected under animation, then you can select how you want it to shuffle.">
+			<option value="tl">Top Left</option>
+			<option value="t">Top</option>
+			<option value="tr">Top Right</option>
+			<option value="r">Right</option>
+			<option value="br">Bottom Right</option>
+			<option value="b">Bottom</option>
+			<option value="bl">Bottom Left</option>
+			<option value="l">Left</option>
+			<option value="opl">Off Page Left</option>
+			<option value="opr">Off Page Right</option>
+		</param>
+		
+	</params>
+	
+	<params group="advanced">
+		<param name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="cache_time" type="text" default="15" label="Cache Time" description="The time in minutes before the module is re-cached." />
+	</params>
+	
+</install>

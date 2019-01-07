@@ -1,0 +1,22 @@
+
+/*moving text Plugin
+*@author Sakis Terzis @ breakDesigns.net
+* @copyright	Copyright (C) 2008 breakDesigns.net
+ * @license		GNU/GPL, see LICENSE.php
+ *more info @ joomla.breakdesigns.net
+ *developer Terzis Sakis
+*/
+
+/* CSS Document */
+@charset "utf-8";
+
+#maskBlock{
+overflow-x:hidden;
+width:300px;
+position:relative;
+}
+
+.movingObj {
+white-space:nowrap;
+}
+

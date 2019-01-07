@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+	<name>quanlydiem</name>
+	<creationDate>2011-04-02</creationDate>
+	<author>Việt Hùng</author>
+	<authorEmail>Việt Hùng@gmail.com</authorEmail>
+	<authorUrl>aaa</authorUrl>
+	<copyright>Bản quyền thuộc về Lê Việt Hùng</copyright>
+	<license>Việt Hùng</license>
+	<version>2.0</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>Chúc mọi người vui vẻ!</description>
+
+	<!-- Site Main File Copy Section -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>quanlydiem.php</filename>
+		<filename>controller.php</filename>
+		
+		<filename>views/index.html</filename>
+		
+		<filename>views/ketquafull/index.html</filename>
+		<filename>views/ketquafull/view.html.php</filename>
+		<filename>views/ketquafull/tmpl/index.html</filename>
+		<filename>views/ketquafull/tmpl/default.php</filename>
+		
+		<filename>models/ketquafull.php</filename>
+		<filename>models/quanlydiem.php</filename>
+		
+
+		<filename>views/quanlydiem/index.html</filename>
+		<filename>views/quanlydiem/view.html.php</filename>
+		<filename>views/quanlydiem/tmpl/index.html</filename>
+		<filename>views/quanlydiem/tmpl/default.php</filename>
+	</files>
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">uninstall.sql</file>
+		</sql>
+	</uninstall>	
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu>Quản lý điểm</menu>
+		<submenu>
+			<menu task="cpanel">Quản lý</menu>
+			<menu link="option=com_quanlydiem&amp;view=hss">Danh sách học sinh</menu>
+
+			<menu link="option=com_quanlydiem&amp;view=hks">Học kì</menu>
+			<menu link="option=com_quanlydiem&amp;view=nams">Năm học</menu>
+
+			<menu link="option=com_quanlydiem&amp;view=Diems">Điểm</menu>
+			<menu link="option=com_quanlydiem&amp;view=xls">Xếp loại</menu>
+			
+		</submenu>
+		
+		<files folder="admin">
+	
+			<filename>index.html</filename>
+			<filename>admin.quanlydiem.php</filename>
+			<filename>controller.php</filename>
+			
+			<filename>controllers/quanlydiem.php</filename>
+			<filename>controllers/hs.php</filename>
+			
+			<filename>controllers/nam.php</filename>
+
+			<filename>controllers/diem.php</filename>
+			<filename>controllers/xl.php</filename>
+			<filename>controllers/hk.php</filename>
+			<filename>controllers/index.html</filename>
+			
+
+			<filename>models/nams.php</filename>
+			<filename>models/nam.php</filename>
+
+			<filename>models/diems.php</filename>
+			<filename>models/diem.php</filename>
+			<filename>models/xls.php</filename>
+			<filename>models/xl.php</filename>
+			<filename>models/hss.php</filename>
+			<filename>models/hs.php</filename>
+			<filename>models/hks.php</filename>
+			<filename>models/hk.php</filename>
+			<filename>models/index.html</filename>
+			
+			<filename>views/diems/view.html.php</filename>
+			<filename>views/diems/index.html</filename>
+			<filename>views/diems/tmpl/default.php</filename>
+			<filename>views/diems/tmpl/index.html</filename>
+			<filename>views/diem/view.html.php</filename>
+			<filename>views/diem/tmpl/form.php</filename>
+			<filename>views/diem/index.html</filename>
+			<filename>views/diem/tmpl/index.html</filename>			
+			
+			<filename>views/nams/view.html.php</filename>
+			<filename>views/nams/index.html</filename>
+			<filename>views/nams/tmpl/default.php</filename>
+			<filename>views/nams/tmpl/index.html</filename>
+			<filename>views/nam/view.html.php</filename>
+			<filename>views/nam/tmpl/form.php</filename>
+			<filename>views/nam/index.html</filename>
+			<filename>views/nam/tmpl/index.html</filename>		
+			
+			<filename>views/hks/view.html.php</filename>
+			<filename>views/hks/index.html</filename>
+			<filename>views/hks/tmpl/default.php</filename>
+			<filename>views/hks/tmpl/index.html</filename>
+			<filename>views/hk/view.html.php</filename>
+			<filename>views/hk/tmpl/form.php</filename>
+			<filename>views/hk/index.html</filename>
+			<filename>views/hk/tmpl/index.html</filename>		
+			
+			<filename>views/hss/view.html.php</filename>
+			<filename>views/hss/index.html</filename>
+			<filename>views/hss/tmpl/default.php</filename>
+			<filename>views/hss/tmpl/index.html</filename>
+			<filename>views/hs/view.html.php</filename>
+			<filename>views/hs/tmpl/form.php</filename>
+			<filename>views/hs/index.html</filename>
+			<filename>views/hs/tmpl/index.html</filename>	
+			
+			<filename>views/xls/view.html.php</filename>
+			<filename>views/xls/index.html</filename>
+			<filename>views/xls/tmpl/default.php</filename>
+			<filename>views/xls/tmpl/index.html</filename>
+			<filename>views/xl/view.html.php</filename>
+			<filename>views/xl/tmpl/form.php</filename>
+			<filename>views/xl/index.html</filename>
+			<filename>views/xl/tmpl/index.html</filename>	
+			
+			<filename>views/quanlydiems/view.html.php</filename>
+			<filename>views/quanlydiems/index.html</filename>
+			<filename>views/quanlydiems/tmpl/default.php</filename>
+			<filename>views/quanlydiems/tmpl/index.html</filename>
+				
+
+			<filename>tables/nam.php</filename>
+
+			<filename>tables/diem.php</filename>
+			<filename>tables/xl.php</filename>
+			<filename>tables/hk.php</filename>
+			<filename>tables/hs.php</filename>
+			<filename>tables/index.html</filename>
+			
+			<filename>install.sql</filename>
+			<filename>uninstall.sql</filename>
+			
+
+			<filename>xml/nam.xml</filename>
+			<filename>xml/diem.xml</filename>
+			<filename>xml/xl.xml</filename>
+			<filename>xml/hs.xml</filename>
+			<filename>xml/hk.xml</filename>
+			<filename>xml/index.html</filename>
+		</files>		
+	</administration>
+	<params>
+	<param name="truong" type="text" width ="500" default="TRƯỜNG THPT QUỐC TỬ GIÁM" label="Trường" description="" />	
+	</params>
+</install>

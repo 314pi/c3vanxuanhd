@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+	<name>Content - LaTeX</name>
+	<author>Tobias Gesellchen</author>
+	<creationDate>2008-06-04</creationDate>
+	<copyright>(C) 2008 Tobias Gesellchen. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>tobias@gesellix.de</authorEmail>
+	<authorUrl>www.gesellix.de</authorUrl>
+	<version>0.1 2008-06-04 beta</version>
+  <description>DESCLATEX</description>
+  <files>
+    <filename plugin="latex">latex.php</filename>
+    <filename>latex.txt</filename>
+  </files>
+  <languages folder="administrator/language">
+    <language tag="en-GB">en-GB.plg_content_latex.ini</language>
+  </languages>
+</install>

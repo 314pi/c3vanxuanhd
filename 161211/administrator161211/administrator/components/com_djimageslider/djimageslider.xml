@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5" method="upgrade">
+    <name>DJ Image Slider</name>
+    <creationDate>September 2011</creationDate>
+    <author>Blue Constant Media LTD</author>
+	<copyright>Copyright (C) 2010-2011 Blue Constant Media LTD, All rights reserved.</copyright>
+	<license> http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@design-joomla.eu</authorEmail>
+	<authorUrl>http://design-joomla.eu</authorUrl>
+    <version>1.2.4 stable</version>
+	<description>Create custom slides for DJ Image Slider module</description>
+    <administration>
+    	<files folder="administrator">
+        	<filename>admin.djimageslider.php</filename>
+            <filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>config.xml</filename>
+			<folder>assets</folder>
+			<folder>elements</folder>
+            <folder>models</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+			<folder>install</folder>
+        </files>
+		<languages folder="administrator/languages">
+			<language tag="en-GB">en-GB.com_djimageslider.ini</language>
+			<language tag="en-GB">en-GB.com_djimageslider.menu.ini</language>
+            <language tag="pl-PL">pl-PL.com_djimageslider.ini</language>
+            <language tag="pl-PL">pl-PL.com_djimageslider.menu.ini</language>
+            <language tag="ru-RU">ru-RU.com_djimageslider.ini</language>
+            <language tag="ru-RU">ru-RU.com_djimageslider.menu.ini</language>
+        </languages>
+        <menu img="components/com_djimageslider/assets/icon-16-dj.png" link="option=com_djimageslider&amp;view=items">DJ Image Slider</menu>
+		<submenu>
+			<menu link="option=com_djimageslider&amp;view=items">Slides</menu>
+			<menu link="option=com_categories&amp;section=com_djimageslider">Categories</menu>
+		</submenu>
+    </administration>
+	<params>
+		<param name="directory" type="text" default="" label="Image Path" description="IMAGE PATH DESC" />
+	</params>
+	<install>
+		<sql>
+            <file charset="utf8" driver="mysql">install/install.com_djimageslider.sql</file>
+        </sql>
+    </install>
+	<uninstall>
+		<sql>
+            <file charset="utf8" driver="mysql">install/uninstall.com_djimageslider.sql</file>
+        </sql>
+    </uninstall>
+	<installfile>install/install.php</installfile>
+	<uninstallfile>install/uninstall.php</uninstallfile>
+	<modules>
+		<module module="mod_djimageslider" title="DJ Image Slider" position="top" order="-2" client="site" menu="mainmenu" published="0">
+			<files folder="mod_djimageslider">
+				<file>mod_djimageslider.php</file>
+				<file>mod_djimageslider.xml</file>
+				<file>helper.php</file>
+				<file>index.html</file>
+				<folder>tmpl</folder>
+				<folder>assets</folder>
+			</files>
+			<languages>
+				<language tag="en-GB">mod_djimageslider/lang/en-GB.mod_djimageslider.ini</language>
+			</languages>
+			<media />
+		</module>
+		<module module="mod_djimagetabber" title="DJ Image Tabber" position="top" order="-1" client="site" menu="mainmenu" published="0">
+			<files folder="mod_djimagetabber">
+				<file>mod_djimagetabber.php</file>
+				<file>mod_djimagetabber.xml</file>
+				<file>helper.php</file>
+				<file>gpl.txt</file>
+				<file>index.html</file>
+				<folder>tmpl</folder>
+				<folder>js</folder>
+			</files>
+			<languages>
+				<language tag="en-GB">mod_djimagetabber/lang/en-GB.mod_djimagetabber.ini</language>
+			</languages>
+			<media />
+		</module>
+	</modules>
+</install>

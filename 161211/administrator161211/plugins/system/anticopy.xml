@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system" method="upgrade">
+<name>System - AntiCopy</name>
+<author>Galaa</author>
+<creationDate>2011-06-11</creationDate>
+<copyright>Copyright (C) 2011 Galaa (galaa.mn)</copyright>
+<license>This extension in released under the GNU/GPL License - http://www.gnu.org/copyleft/gpl.html</license>
+<authorEmail>contact@galaa.mn</authorEmail>
+<authorUrl>www.galaa.mn</authorUrl>
+<version>1.3</version>
+<description>Restricts copying site contents by disabling the right click, highlight and copy functions using javascript. Copyright (C) 2011 Galaa (http://galaa.mn/)</description>
+<files>
+	<filename plugin="anticopy">anticopy.php</filename>
+</files>
+<params>
+	<param name="disallow_r_click" type="list" default="0" label="Right Click" description="Allow or Disallow the right click">
+		<option value="0">Allow</option>
+		<option value="1">Disallow</option>
+	</param>
+	<param name="disallow_copy" type="list" default="1" label="Select and Copy" description="Disallow or Allow select and copy">
+		<option value="0">Allow</option>
+		<option value="1">Disallow</option>
+	</param>
+	<param name="show_message" type="list" default="0" label="Show Message" description="Show or Do not show popup message when right click or copy">
+		<option value="1">Yes</option>
+		<option value="0">No</option>
+	</param>
+	<param name="message" type="text" size="30" default="Stop copying the copyrighted material!" label="Message" description="Popup message when right click or copy" />
+
+	<param type="spacer" default="Disable the restriction by User Group" description="" />
+
+	<param name="utype1" type="radio" default="1" label="Registered" description="">
+		<option value="1">No</option>
+		<option value="0">Yes</option>
+	</param>
+	<param name="utype2" type="radio" default="0" label="Author" description="">
+		<option value="1">No</option>
+		<option value="0">Yes</option>
+	</param>
+	<param name="utype3" type="radio" default="0" label="Editor" description="">
+		<option value="1">No</option>
+		<option value="0">Yes</option>
+	</param>
+	<param name="utype4" type="radio" default="0" label="Publisher" description="">
+		<option value="1">No</option>
+		<option value="0">Yes</option>
+	</param>
+	<param name="utype5" type="radio" default="0" label="Manager" description="">
+		<option value="1">No</option>
+		<option value="0">Yes</option>
+	</param>
+	<param name="utype6" type="radio" default="0" label="Administrator" description="">
+		<option value="1">No</option>
+		<option value="0">Yes</option>
+	</param>
+	<param name="utype7" type="radio" default="0" label="Super Administrator" description="">
+		<option value="1">No</option>
+		<option value="0">Yes</option>
+	</param>
+</params>
+</install>

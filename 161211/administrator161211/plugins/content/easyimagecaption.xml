@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+    <name>EasyImageCaption</name>
+    <author>Thomas Römer</author>
+    <creationDate>2011-04-03</creationDate>
+    <copyright>Thomas Römer</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>myjoomla@arcor.de</authorEmail>
+    <authorUrl>joomla.roemer-online.org</authorUrl>
+    <version>0.5</version>
+    <description>Plugin description</description>
+    <files>
+        <filename plugin="easyimagecaption">easyimagecaption.php</filename>
+        <filename>easyimagecaption.xml</filename>
+		<filename>easyimagecaption/index.html</filename>
+		<filename>easyimagecaption/simple_html_dom.php</filename>
+		<filename>easyimagecaption/params/index.html</filename>
+		<filename>easyimagecaption/params/paramslider.php</filename>
+    </files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_easyimagecaption.ini</language>
+		<language tag="de-DE">de-DE.plg_content_easyimagecaption.ini</language>
+		<language tag="es-ES">es-ES.plg_content_easyimagecaption.ini</language>
+	</languages>
+	<params addpath="/plugins/content/easyimagecaption/params/">
+		<param name="hide_captions" type="list" default="0" label="Hide captions" description="Hide captions description">
+			<option value="0">never</option>
+			<option value="1">on frontpage</option>
+			<option value="2">in blog view</option>
+			<option value="3">in both</option>
+		</param>
+		<param name="apply_to_intro" type="radio" default="0" label="Apply plugin to introtext" description="Apply plugin to introtext description">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		
+		<param type="spacer" />
+		
+		<param name="apply_to_articles" type="radio" default="1" label="Apply plugin to articles" description="Apply plugin to articles description">
+			<option value="0">none except the following</option>
+			<option value="1">all except the following</option>
+		</param>
+		<param name="except_articles" type="text" label="Except articles" description="Except articles description"></param>
+		<param name="except_categories" type="text" label="Except categories" description="Except categories description"></param>
+		<param name="except_sections" type="text" label="Except sections" description="Except sections description"></param>
+		
+		<param type="spacer" />
+		
+		<param name="apply_to_images" type="radio" default="1" label="Apply plugin to images" description="Apply plugin to images description">
+			<option value="0">none except the following</option>
+			<option value="1">all except the following</option>
+		</param>
+		<param name="except_classes" type="text" label="Except classes" default="no_eic,vsig_top,vsig_thumb,ultimatesbplugin_top,ultimatesbplugin_bottom,sig-link,sig-block,sig-image" description="Except classes description"></param>
+		<param name="except_ids" type="text" label="Except ids" default="no_eic,comment" description="Except ids description"></param>
+		
+		<param type="spacer" />
+		
+		<param name="minimum_size" type="text" label="Minimum size" default="50" description="Minimum size description"></param>
+		<param name="caption_tag" type="radio" default="0" label="Use this tag" description="Use this tag description">
+			<option value="0">ALT</option>
+			<option value="1">TITLE </option>
+		</param>
+		<param name="copy_img_classes" type="radio" default="0" label="Copy image classes" description="Copy image classes description">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="parse_tags" type="list" default="0" label="Parse tags" description="Parse tags description">
+			<option value="0">never</option>
+			<option value="1">always</option>
+			<option value="2">only for following images</option>
+		</param>
+		<param name="tags_classes" type="text" label="Tags image classes" description="Tags image classes description"></param>
+		
+		<param type="spacer" />
+		<param type="spacer" default="Spacer compatibility" />
+		
+		<param name="force_joomla_caption" type="radio" default="0" label="Force Joomla captions" description="Force Joomla captions description">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="handle_jce_caption" type="radio" default="0" label="Handle existing JCE captions" description="Handle existing JCE captions description">
+			<option value="0">Replace by EasyImageCaption</option>
+			<option value="1">Leave untouched</option>
+		</param>
+		<param name="jce_tooltip_fix" type="radio" default="1" label="JCE tooltip fix" description="JCE tooltip fix description">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		
+		
+		<param type="paramslider" default="Caption Styling" />
+		
+		<param name="caption_position" type="radio" default="0" label="Caption position" description="Caption position description">
+			<option value="0">Below image</option>
+			<option value="1">Above image</option>
+		</param>
+		<param name="expand_width" type="text" label="Expand container width" default="0" description="Expand container width description"></param>
+		
+		<param type="spacer" />
+		
+		<param name="use_internal_style" type="radio" default="1" label="Internal styling" description="Internal styling description">
+			<option value="0">Off</option>
+			<option value="1">On</option>
+		</param>
+		<param name="style_background" type="text" label="Background color" default="F2F2F2" description="Background color description"></param>
+		<param name="style_color" type="text" label="Text color" default="000000" description="Text color description"></param>
+		<param name="style_size" type="text" label="Caption text size" default="8" description="Caption text size description"></param>
+		<param name="style_bold" type="radio" default="0" label="Bold text" description="Bold text description">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="style_italic" type="radio" default="0" label="Italic text" description="Italic text description">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="style_align" type="radio" default="0" label="Text align" description="Text align description">
+			<option value="0">Left</option>
+			<option value="1">Center</option>
+			<option value="2">Right</option>
+		</param>
+		<param name="style_vpadding_text" type="text" label="Vertical text space" default="4" description="Vertical text space description"></param>
+		<param name="style_hpadding_text" type="text" label="Horizontal text space" default="8" description="Horizontal text space description"></param>
+		<param name="style_vpadding" type="text" label="Vertical space" default="0" description="Vertical space description"></param>
+		<param name="style_hpadding" type="text" label="Horizontal space" default="0" description="Horizontal space description"></param>
+		<param name="reset_image_margin" type="radio" default="1" label="Reset image margin" description="Reset image margin description">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		
+		<param type="spacer" />
+		<param type="spacer" default="Spacer compatibility JoomPlu" />
+		
+		<param name="comp_joomplu_expand" type="text" label="Expand container width" default="8" description="Expand container width description JoomPlu"></param>
+	</params> 
+</install>

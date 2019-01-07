@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>j7TitleScroller</name>
+	<author>Josh Prakash</author>
+	<creationDate>Nov 2008</creationDate>
+	<copyright>Copyright (c) youthpole.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>joshprakash@yahoo.com</authorEmail>
+	<authorUrl>www.youthpole.com</authorUrl>
+	<version>1.5.0</version>
+	<description>j7TitleScroller - This module lets you setup the website page title to scroll (Joomla 1.5.x). Developed by Josh Prakash. (c) 2008 www.youthpole.com</description>
+	<files>
+		<filename module="mod_j7TitleScroller15">mod_j7TitleScroller15.php</filename>
+		<filename>index.html</filename>
+    <filename>tmpl/default.php</filename>
+    <filename>tmpl/index.html</filename>
+	</files>
+	<params>
+    <param name="@spacer1" type="spacer" default="  SCROLL SETTINGS" label="" description="" />
+		<param name="scrollchoice" type="list" default="-1" label="Scroll Choice" description="Choose scrolling setup">
+      <option value="-1">Scroll specified scrollcount times</option>
+			<option value="0">Scroll Once</option>
+			<option value="1">Scroll Always</option>
+	  </param>
+ 		<param name="scrollcount" type="text" default="4" label="Scroll Count" description="Number of scrolls if first scroll choice is selected (default 4)" />
+		<param name="@spacer2" type="spacer" default="  TIMER SETTINGS (Milliseconds)" label="" description="" />
+		<param name="scrollspeed" type="text" default="250" label="Scroll Speed" description=" Speed of title scroll (default 250)" />
+	</params>
+</install>

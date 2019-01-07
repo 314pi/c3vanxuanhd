@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system" method="upgrade">>
+		<name>jDownloads - System Plugin</name>
+        <author>Arno Betz</author>
+        <creationDate>2011-03-17</creationDate>
+        <copyright>Copyright (C) 2011 Arno Betz</copyright>
+        <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+        <authorEmail>info@jdownloads.com</authorEmail>
+        <authorUrl>www.jdownloads.com</authorUrl>
+		<description>This is a system plugin for jDownloads. You must activate it when you will use the download timeframe options for publishing. Optional can you use the hide functionality when you activate it (inspired by the hider content plugin from Dioscouri Design) and more.</description>
+        <version>1.2</version>
+	<files>
+	<filename   plugin="jdownloads_system_plugin">jdownloads_system_plugin.php</filename>
+	</files>
+	<params>
+        <param name="use_hider" type="list" default="0" label="Activate the hide functionality?" description="">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </param>
+        <param name="@spacer1" type="spacer" default="When Yes, you can use placeholder to hide elements or text. So only specially user groups can seen it.&lt;br /&gt;&lt;br /&gt;Available Placeholder:&lt;br /&gt;{jdpub} This text can only seen visitors who are NOT logged-in {/jdpub}&lt;br /&gt;{jdreg} This text can only seen logged-in users {/jdreg} &lt;br /&gt;{jdauthor} Only Authors seen this {/jdauthor}&lt;br /&gt;{jdeditor} Only Editors seen this {/jdeditor} &lt;br /&gt;{jdpublisher} Only Publishers seen this {/jdpublisher} &lt;br /&gt;{jdmanager} Only Managers seen this {/jdmanager} &lt;br /&gt;{jdadmin} Only Admins seen this {/jdadmin} &lt;br /&gt;{jdsuper} Only Super Administrators seen this {/jdsuper} &lt;br /&gt;{jdspecial} All members from the Special User Group seen this {/jdspecial}&lt;br /&gt;&lt;br /&gt;You can use it in ALL jDownloads output elements (Descriptions, Titles, Layouts etc.) but also in Modules or Article content. When you use a placeholder for a single user type, only this members can seen it. Only a Super Administrator can always seen ALL hidden elements! &lt;br /&gt;&lt;br /&gt;&lt;b&gt; Important:&lt;/b&gt; When you has used this option and deactivate it to a later point, all hidden elements are visible again for all users. But the inserted placeholder are removed automaticly!" label="" description="" />
+        <param name="reduce_log_data_sets_to" type="text" default="" label="Maximum Download Log Data Sets:" description=""/>
+        <param name="@spacer1" type="spacer" default="When you will reduce the amount of the log data sets in the database, you can here define a maximum value. All older data sets above this value will then automaticly deleted. When this field is empty, data sets will not automaticly deleted." label="" description="" />
+    </params>
+</install>

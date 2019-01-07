@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://www.joomla.org/xml/dtd/1.5/plugin-install.dtd">
+<install type="plugin" group="editors-xtd" version="1.5">
+	<name>Button - Tabber</name>
+	<description>PLG_EDITORS-XTD_TABBER_DESC</description>
+	<version>1.7.1</version>
+	<creationDate>October 2011</creationDate>
+	<author>NoNumber! (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright © 2011 NoNumber! All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<!-- Files -->
+	<files>
+		<filename plugin="tabber">tabber.php</filename>
+		<folder>tabber</folder>
+	</files>
+
+	<!-- Parameters -->
+	<params addpath="/plugins/system/nnframework/fields">
+		<param name="@loadlanguage" type="nn_loadlanguage" extension="plg_editors-xtd_tabber" />
+		<param name="@license" type="nn_license" extension="TABBER" />
+		<param name="@version" type="nn_version" extension="TABBER" xml="/plugins/editors-xtd/tabber.xml" />
+		<param name="@dependency" type="nn_dependency"
+			label="TBR_THE_SYSTEM_PLUGIN"
+			file="/plugins/system/tabber.php" />
+		<param name="@header" type="nn_header"
+			label="TABBER"
+			description="TABBER_DESC"
+			xml="/plugins/editors-xtd/tabber.xml"
+			image="/plugins/editors-xtd/tabber/images/logo.png"
+			image_w="60" image_h="80"
+			url="http://www.nonumber.nl/tabber"
+			help_url="http://www.nonumber.nl/tabber" />
+	</params>
+</install>

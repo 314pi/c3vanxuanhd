@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource>
+	<item group="Labels" id="Category.Uncategory">
+		<message>Chung</message>
+		<description>Name for common category</description>
+	</item>
+	<item group="Labels" id="Label.RemainingTime">
+		<message>Thời gian còn lại</message>
+		<description>Label for remaining time</description>
+	</item>
+	<item group="Labels" id="Label.Completed">
+		<message>Hoàn thành</message>
+		<description>Label completed</description>
+	</item>
+	<item group="Labels" id="Label.Print">
+		<message>In kết quả</message>
+		<description>Label print</description>
+	</item>
+	<item group="Labels" id="Label.Continue">
+		<message>Tiếp tục</message>
+		<description>Label continue</description>
+	</item>
+	<item group="Labels" id="Label.Email">
+		<message>E-mail</message>
+		<description>Label e-mail</description>
+	</item>
+	<item group="Labels" id="Title.QuizResultList">
+		<message>Danh mục kết quả</message>
+		<description>Label quiz result list</description>
+	</item>
+	<item group="Labels" id="Label.Quiz">
+		<message>Đề bài</message>
+		<description>Quiz</description>
+	</item>
+	<item group="Labels" id="Label.NumberPos">
+		<message>#</message>
+		<description>Position number label</description>
+	</item>
+	<item group="Labels" id="Label.StartDate">
+		<message>Ngày bắt đầu</message>
+		<description>Start Date label</description>
+	</item>
+	<item group="Labels" id="Label.EndDate">
+		<message>Ngày kết thức</message>
+		<description>End Date label</description>
+	</item>
+	<item group="Labels" id="Label.Score">
+		<message>Điểm</message>
+		<description>Score</description>
+	</item>
+	<item group="Labels" id="Label.Details">
+		<message>Chi tiết</message>
+		<description>Details</description>
+	</item>
+	<item group="Labels" id="Label.Passed">
+		<message>Đạt</message>
+		<description>Passed</description>
+	</item>
+	<item group="Labels" id="Label.NoPassed">
+		<message>Không đạt</message>
+		<description>Not Passed</description>
+	</item>
+	<item group="Labels" id="Label.View">
+		<message>Xem</message>
+		<description>View</description>
+	</item>
+	<item group="Labels" id="Label.Question">
+		<message>Câu hỏi</message>
+		<description>Question label</description>
+	</item>
+	<item group="Labels" id="Label.Choice">
+		<message>Lựa chọn</message>
+		<description>Choice label</description>
+	</item>
+	<item group="Labels" id="Label.Save">
+		<message>Xong</message>
+		<description>Save label</description>
+	</item>
+	<item group="Labels" id="Label.Skip">
+		<message>Nhảy qua</message>
+		<description>Skip label</description>
+	</item>
+	<item group="Labels" id="Label.Guest">
+		<message>Khách</message>
+		<description>Guest label</description>
+	</item>
+	<item group="Labels" id="Label.EmailQuizResult">
+		<message>Kết quả</message>
+		<description>Quiz result email subject</description>
+	</item>
+	<item group="Labels" id="Label.EmailSend">
+		<message>Email đã được gửi</message>
+		<description>Email has been sent label</description>
+	</item>
+	<item group="Labels" id="Label.EmailNotSend">
+		<message>Email chưa gửi được</message>
+		<description>Email has not been sent label</description>
+	</item>
+	<item group="Labels" id="Label.NotItemsFound">
+		<message>Không có mục nào được hiển thị</message>
+		<description>No items to display label</description>
+	</item>
+	<item group="Labels" id="Date.DayShort">
+		<message>ngày</message>
+		<description>Day short label</description>
+	</item>
+	<item group="Labels" id="Date.HourShort">
+		<message>giờ</message>
+		<description>Hour short label</description>
+	</item>
+	<item group="Labels" id="Date.MinuteShort">
+		<message>phút</message>
+		<description>Minute short label</description>
+	</item>
+	<item group="Labels" id="Date.SecondShort">
+		<message>giây</message>
+		<description>Second short label</description>
+	</item>
+	<item group="Labels" id="Label.QuestionInfo">
+		<message>Câu hỏi số %d/%d</message>
+		<description>Question N of M label</description>
+	</item>
+	<item group="Message" id="FrontEnd.QuizNotAvailable">
+		<message>Không có đề thi trong mục này</message>
+		<description>Message for quiz not available</description>
+	</item>
+	<item group="Validators" id="Validator.QuestionEmptyAnswer">
+		<message>Vui lòng điền câu trả lời</message>
+		<description>Freetext validator message</description>
+	</item>
+	<item group="Validators" id="Validator.QuestionNotSelected">
+		<message>Vui lòng chọn câu trả lời</message>
+		<description>Validator message</description>
+	</item>
+</resource>

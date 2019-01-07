@@ -1,0 +1,25 @@
+/* Article message box styles */
+table.ambox {            /* 10% = Will not overlap with other elements */
+    border: 1px solid #B0B0B0; 
+    border-left: 10px solid #1e90ff;    /* Default "notice" blue */
+    background: #FFCC66;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ambox th.mbox-text, 
+.ambox td.mbox-text {            /* The message body cell(s) */
+    padding: 0.25em 0.5em;       /* 0.5em left/right */
+}
+.ambox td.mbox-image {           /* The left image cell */
+    padding: 2px 0 2px 0.5em;    /* 0.5em left, 0px right */
+}
+
+table.ambox-cnstr {
+    border-left: 10px solid #FF6633;    /* Under Construction tag */
+}
+
+.ambox { 
+    text-align: center;
+}
+
+

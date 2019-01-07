@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Camp26 Automatic SlideMenu</name>
+	<author>Reza Erauansyah - Camp26 Team</author>
+	<creationDate>09 November 2009</creationDate>
+	<copyright>2009, Camp26.Biz</copyright>
+	<license>GPLv2.0 - http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<authorEmail>old_smu17@yahoo.com</authorEmail>
+	<authorUrl>www.camp26.biz</authorUrl>
+	<version>1.1</version>
+	<description>CAMP26MODULE : AUTOMATICSLIDEMENU</description>
+	<files>
+		<filename module="mod_automatic_slidemenu_camp26">mod_automatic_slidemenu_camp26.php</filename>
+		<filename>automatic_slidemenu/likno.css</filename>
+		<filename>automatic_slidemenu/divTogg.js</filename>
+		<filename>automatic_slidemenu/jquery-1.3.2.min.js</filename>
+		<filename>automatic_slidemenu/jquery.easing.1.3.js</filename>
+		<filename>automatic_slidemenu/index.html</filename>
+		<filename>automatic_slidemenu/images/header-i.png</filename>
+		<filename>automatic_slidemenu/images/header-j.png</filename>
+		<filename>automatic_slidemenu/images/header-k.png</filename>
+		<filename>automatic_slidemenu/images/header-l.png</filename>
+		<filename>automatic_slidemenu/images/header-m.png</filename>
+		<filename>automatic_slidemenu/images/header-n.png</filename>
+		<filename>automatic_slidemenu/images/header-o.png</filename>
+		<filename>automatic_slidemenu/images/header-p.png</filename>
+		<filename>automatic_slidemenu/images/header-q.png</filename>
+		<filename>automatic_slidemenu/images/index.html</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_automatic_slidemenu_camp26.ini</language>
+	</languages>
+	<params>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A Suffix to be applied the CSS class of this module, this allow indivdual module styling" />
+		
+		<param name="txtcolor" type="text" default="#333333" label="Menu Text Font Color" description="Text Color in hex format, eg. #000000,#CCCCCC" />
+		<param name="fontsize" type="text" default="10px" label="Menu Text Font Size" description="Font size in pixel, eg.12px,13px" />
+		<param name="margin_left" type="text" default="0px" label="Margin Left" description="module's margin left, eg 10px, 50px etc " />
+
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+	
+		<param name="menu_status1" type="radio" default="1" label="Menu 1 Status" description="Enable or disable this menu">
+			<option value="0">Disable</option>
+			<option value="1">Enable</option>
+		</param>
+		<param name="menu_url1" type="text" default="http://www.camp26.biz" label="Url for Menu 1 " description="Type an url here, eg.http://www.camp26.org" />
+		<param name="menu_img1" type="imagelist" directory="/modules/mod_automatic_slidemenu_camp26/automatic_slidemenu/images" default="header-i.png" label="Menu 1 image" description="Image for 1st Menu" />
+		<param name="menu_txt1" type="text" default="welcome" label="Text for Menu 1 (line 1)" description="Type your menu text here, eg.Home " />
+		<param name="menu_txt1b" type="text" default="to our site" label="Text for Menu 1 (line 2)" description="Type your menu text here, eg.Home " />
+		
+		<param name="target_url1" type="radio" default="_self" label="Menu 1 Target" description="Target of the first menu">
+			<option value="_self">Self Browser</option>
+			<option value="_blank">Open New Browser</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="menu_status2" type="radio" default="1" label="Menu 2 Status" description="Enable or disable this menu">
+			<option value="0">Disable</option>
+			<option value="1">Enable</option>
+		</param>
+		<param name="menu_url2" type="text" default="http://www.laskarjoomla.com" label="Url for Menu 2 " description="Type an url here, eg.http://www.camp26.org" />
+		<param name="menu_img2" type="imagelist" directory="/modules/mod_automatic_slidemenu_camp26/automatic_slidemenu/images" default="header-j.png" label="Menu 2 image" description="Image for 2nd Menu" />
+		<param name="menu_txt2" type="text" default="camp26" label="Text for Menu 2 (line 1)" description="Type your menu text here, eg.Home " />
+		<param name="menu_txt2b" type="text" default="joomla pro" label="Text for Menu 2 (line 2)" description="Type your menu text here" />
+		
+		<param name="target_url2" type="radio" default="_self" label="Menu 2 Target" description="Target of the second menu">
+			<option value="_self">Self Browser</option>
+			<option value="_blank">Open New Browser</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="menu_status3" type="radio" default="1" label="Menu 3 Status" description="Enable or disable this menu">
+			<option value="0">Disable</option>
+			<option value="1">Enable</option>
+		</param>
+		<param name="menu_url3" type="text" default="http://www.camp26.biz" label="Url for Menu 3 " description="Type an url here, eg.http://www.camp26.org" />
+		<param name="menu_img3" type="imagelist" directory="/modules/mod_automatic_slidemenu_camp26/automatic_slidemenu/images" default="header-k.png" label="Menu 3 image" description="Image for 3th Menu" />
+		<param name="menu_txt3" type="text" default="Automatic" label="Text for Menu 3 (line 1)" description="Type your menu text here, eg.Home " />
+		<param name="menu_txt3b" type="text" default="SlideMenu" label="Text for Menu 3 (line 2)" description="Type your menu text here" />
+		
+		<param name="target_url3" type="radio" default="_self" label="Menu 3 Target" description="Target of the third menu">
+			<option value="_self">Self Browser</option>
+			<option value="_blank">Open New Browser</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="menu_status4" type="radio" default="1" label="Menu 4 Status" description="Enable or disable this menu">
+			<option value="0">Disable</option>
+			<option value="1">Enable</option>
+		</param>
+		<param name="menu_url4" type="text" default="http://www.laskarjoomla.com" label="Url for Menu 4 " description="Type an url here, eg.http://www.camp26.org" />
+		<param name="menu_img4" type="imagelist" directory="/modules/mod_automatic_slidemenu_camp26/automatic_slidemenu/images" default="header-l.png" label="Menu 4 image" description="Image for 4th Menu" />
+
+		<param name="menu_txt4" type="text" default="Content" label="Text for Menu 4 (line 1)" description="Type your menu text here, eg.Home " />
+		<param name="menu_txt4b" type="text" default="Management System" label="Text for Menu 4 (line 2)" description="Type your menu text here" />
+		<param name="target_url4" type="radio" default="_self" label="Menu 4 Target" description="Target of the fourth menu">
+			<option value="_self">Self Browser</option>
+			<option value="_blank">Open New Browser</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="menu_status5" type="radio" default="1" label="Menu 5 Status" description="Enable or disable this menu">
+			<option value="0">Disable</option>
+			<option value="1">Enable</option>
+		</param>
+		<param name="menu_url5" type="text" default="http://www.camp26.biz" label="Url for Menu 5 " description="Type an url here, eg.http://www.camp26.org" />
+		<param name="menu_img5" type="imagelist" directory="/modules/mod_automatic_slidemenu_camp26/automatic_slidemenu/images" default="header-m.png" label="Menu 5 image" description="Image for 5th Menu" />
+		
+		<param name="menu_txt5" type="text" default="Joomla" label="Text for Menu 5 (line 1)" description="Type your menu text here, eg.Home " />
+		<param name="menu_txt5b" type="text" default="Professional" label="Text for Menu 5 (line 2)" description="Type your menu text here" />
+		<param name="target_url5" type="radio" default="_self" label="Menu 5 Target" description="Target of the fifth menu">
+			<option value="_self">Self Browser</option>
+			<option value="_blank">Open New Browser</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="menu_status6" type="radio" default="1" label="Menu 6 Status" description="Enable or disable this menu">
+			<option value="0">Disable</option>
+			<option value="1">Enable</option>
+		</param>
+		<param name="menu_url6" type="text" default="http://www.laskarjoomla.com" label="Url for Menu 6 " description="Type an url here, eg.http://www.camp26.org" />
+		<param name="menu_img6" type="imagelist" directory="/modules/mod_automatic_slidemenu_camp26/automatic_slidemenu/images" default="header-n.png" label="Menu 6 image" description="Image for 6th Menu" />
+		
+		<param name="menu_txt6" type="text" default="Menu 6" label="Text for Menu 6 (line 1)" description="Type your menu text here, eg.Home " />
+		<param name="menu_txt6b" type="text" default="Automatic Slide" label="Text for Menu 6 (line 2)" description="Type your menu text here" />
+		<param name="target_url6" type="radio" default="_self" label="Menu 6 Target" description="Target of the sixth menu">
+			<option value="_self">Self Browser</option>
+			<option value="_blank">Open New Browser</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="menu_status7" type="radio" default="0" label="Menu 7 Status" description="Enable or disable this menu">
+			<option value="0">Disable</option>
+			<option value="1">Enable</option>
+		</param>
+		<param name="menu_url7" type="text" default="http://www.camp26.biz" label="Url for Menu 7 " description="Type an url here, eg.http://www.camp26.org" />
+		<param name="menu_img7" type="imagelist" directory="/modules/mod_automatic_slidemenu_camp26/automatic_slidemenu/images" default="header-o.png" label="Menu 7 image" description="Image for 7th Menu" />
+		
+		<param name="menu_txt7" type="text" default="Menu 7" label="Text for Menu 7 (line 1)" description="Type your menu text here, eg.Home " />
+		<param name="menu_txt7b" type="text" default="Line Two" label="Text for Menu 7 (line 2)" description="Type your menu text here" />
+		<param name="target_url7" type="radio" default="_self" label="Menu 7 Target" description="Target of the seventh menu">
+			<option value="_self">Self Browser</option>
+			<option value="_blank">Open New Browser</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="menu_status8" type="radio" default="0" label="Menu 8 Status" description="Enable or disable this menu">
+			<option value="0">Disable</option>
+			<option value="1">Enable</option>
+		</param>
+		<param name="menu_url8" type="text" default="http://www.camp26.biz" label="Url for Menu 8 " description="Type an url here, eg.http://www.camp26.org" />
+		<param name="menu_img8" type="imagelist" directory="/modules/mod_automatic_slidemenu_camp26/automatic_slidemenu/images" default="header-p.png" label="Menu 8 image" description="Image for 8th Menu" />
+		
+		<param name="menu_txt8" type="text" default="Menu 8" label="Text for Menu 8 (line 1)" description="Type your menu text here, eg.Home " />
+		<param name="menu_txt8b" type="text" default="Line Two" label="Text for Menu 8 (line 2)" description="Type your menu text here" />
+		<param name="target_url8" type="radio" default="_self" label="Menu 8 Target" description="Target of the sixth menu">
+			<option value="_self">Self Browser</option>
+			<option value="_blank">Open New Browser</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+		<param name="menu_status9" type="radio" default="0" label="Menu 9 Status" description="Enable or disable this menu">
+			<option value="0">Disable</option>
+			<option value="1">Enable</option>
+		</param>
+		<param name="menu_url9" type="text" default="http://www.camp26.biz" label="Url for Menu 9 " description="Type an url here, eg.http://www.camp26.org" />
+		<param name="menu_img9" type="imagelist" directory="/modules/mod_automatic_slidemenu_camp26/automatic_slidemenu/images" default="header-q.png" label="Menu 9 image" description="Image for 9th Menu" />
+		
+		<param name="menu_txt9" type="text" default="Menu 9" label="Text for Menu 9 (line 1)" description="Type your menu text here, eg.Home " />
+		<param name="menu_txt9b" type="text" default="Line Two" label="Text for Menu 9 (line 2)" description="Type your menu text here, eg.Home " />
+		<param name="target_url9" type="radio" default="_self" label="Menu 9 Target" description="Target of the sixth menu">
+			<option value="_self">Self Browser</option>
+			<option value="_blank">Open New Browser</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		
+	
+	</params>
+	
+	<params group="advanced">
+		<param name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+	
+	</params>
+</install>

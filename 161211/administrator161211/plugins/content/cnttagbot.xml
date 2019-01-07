@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+   <name>Content - CntTagBot</name>
+   <author>Messiah</author>
+   <creationDate>Februari 2009</creationDate>
+   <copyright>(C) 2007 The Inevitable One</copyright>
+   <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+   <authorUrl>http://www.theinevitabledossier.com/cnttagbot.html</authorUrl>
+   <authorEmail>messiah@theinevitabledossier.com</authorEmail>
+   <version>1.0</version>
+   <description>
+Content Tag Bot:
+
+{ctb|daycnt|to/since|year|month|day}
+Replaces tag with the number to or since the specified date.
+
+{ctb|cnstr|Instance uniqe text}
+Replaces the tag with a "Page under construction text".
+
+</description>
+   <files>
+      <filename plugin="cnttagbot">cnttagbot.php</filename>
+      <filename plugin="cnttagbot">cnttagbot/cnstr.gif</filename>
+      <filename plugin="cnttagbot">cnttagbot/cnttagbot.css</filename>
+   </files>
+    <params>
+	<param name="cnstrtxt" type="text" default="This page is under construction..." label="Systems wide text for the box" description="This is the central text that will be presented in the construction box. Instance unique tet can be added using the tag syntax,"></param>
+    </params>
+</install>

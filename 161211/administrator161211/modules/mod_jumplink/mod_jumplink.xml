@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="module" version="1.5.0" >
+ <name>mod_jumplink</name>
+ <author>Quadracode</author>
+ <creationDate>Jan 2011</creationDate>
+ <copyright>(C)2011 Paul Daniels - Quadracode</copyright>
+ <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+ <authorEmail>paul@quadracode.com.au</authorEmail>
+ <authorUrl>http://www.quadracode.com.au</authorUrl>
+ <version>1.7</version>
+ <description> Joomla 1.5 friendly jumplink - Creates a dropdown box populated with addresses from the Joomla weblinks table; Pushing the go button will redirect to that address. Enter your links in the weblinks table under the category 'Jumplinks'</description>
+ <files>
+  <filename module="mod_jumplink">mod_jumplink.php</filename>
+ </files>
+ <params>
+	<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	<param name="catname" type="text" default="Jumplinks" label="Weblink category" description="The name of the weblink category to use for the list. 'Jumplinks' is default." />
+	<param name="allweblinks" type="radio" default="0" label="Show all weblink categories" description="Selecting no will only show weblinks with the category defined above. Selecting 'Yes' will override the above option and show all weblink categories.">
+  <option value="0">No</option>
+  <option value="1">Yes</option>
+</param>
+	
+	<param name="buttonname" type="text" default="Go" label="Go button label" description="Type the text to be display for the go button" />
+	<param name="buttonimage" type="filelist" default="-1" label="Submit button image" filter = "\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$"
+ description="Optional image for submit button" directory="images/stories/" />
+    <param name="autodirect" type="radio" default="0" label="Auto direct" description="Auto directs to target page on selection. The first item must be set to blank and no go button will be displayed">
+	 <option value="0">No</option>
+  <option value="1">Yes</option>
+    </param>
+	<param name="firstblank" type="radio" default="0" label="First item blank" description="Selecting Yes will force the first link to be blank in the combo box">
+  <option value="0">No</option>
+  <option value="1">Yes</option>
+</param>
+	<param name="firsttext" type="text" default="" label="First item custom text" description="Will set a title Text for first list item if custom text option is selected" />
+	<param name="separator" type="text" default="" label="Separator char" description="Optional separator char to be repeated on line after custom title text" />
+	<param name="order" type="radio" default="0" label="List order by" description="Set what's order list item are displayed in">
+		<option value="0">Weblink default</option>
+		<option value="1">By Title A-Z</option>
+		<option value="2">By Title Z-A</option> 
+	</param>
+	
+	<param name="target" type="list" default="parent" label="Link targets" description="Target for opening weblink?">
+		<option value="parent">Parent window with navigation </option>
+		<option value="newwith">New window with navigation</option>
+		<option value="newwithout">New window without navigation</option>
+	</param>
+
+ </params>
+</install>

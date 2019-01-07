@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade">
+	<name>jDownloads File List</name>
+    <author>Miguel Tuyaré</author>
+    <creationDate>Jan 2011</creationDate>
+    <copyright>(C) 2011 by Miguel Tuyaré. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>developer@tuxmerlin.com.ar</authorEmail>
+    <authorUrl>www.tuxmerlin.com.ar</authorUrl>
+    <version>1.0</version>
+    <description>This modul shows you the downloads categories from the jDownloads component. It is only for jDownloads 1.5 and later (Support: www.tuxmerlin.com.ar)</description>
+    <files>
+		<filename module="mod_jdowloadsfilelist">mod_jdowloadsfilelist.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tuxelements</folder>
+		<folder>tmpl</folder>
+    </files>
+    <languages>
+		<language tag="en-GB">en-GB.mod_jdowloadsfilelist.ini</language>
+        <language tag="es-ES">es-ES.mod_jdowloadsfilelist.ini</language>
+    </languages>	
+    <params addpath="/modules/mod_jdowloadsfilelist/tuxelements">		
+		<param name="" type="separators" default="ABOUT CATEGORIES" description="" />	
+		<param name="" type="legends" default="ABOUT CATEGORIES DESC" description="" />				
+		<param name="catid" type="text" default="" label="Categories ID" description="CATEGORIESID DESC"/>
+		
+		<param name="" type="separators" default="ABOUT GENERAL VIEW" description="" />	
+		<param name="" type="legends" default="ABOUT GENERAL VIEW DESC" description="" />		
+		<param name="pborderstyle" type="text" size="30" default="1px dotted #000080" label="Plugin Border" description="PLUGINBORDER DESC"/>
+		<param name="pbackground" type="text" default="F5F5F5" label="Plugin Background" description="PLUGINBACK DESC"/>
+		<param name="pmargin" type="text" default="10px" label="Content Separation" description="PLUGINMARGIN DESC"/>
+		
+		<param name="" type="separators" default="ABOUT INTRO CATEGORY" description="" />		
+		<param name="" type="legends" default="ABOUT INTRO CATEGORY TEXT" description="" />		
+		<param name="showintrotext" type="radio" default="0" label="Show Intro Text Category" description="SHOWINTROTEXT DESC">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="introtit" type="text" size="50" default="" label="Intro Title" description="INTROTITLE DESC"/>
+		<param name="introdesc" type="textarea" cols="35" rows="5" default="" label="Text Intro" description="INTRODESC DESC" />
+		<param name="introsize" type="text" default="18" label="Intro Font Size" description="INTROTEXTSIZE DESC"/>
+		<param name="introback" type="text" default="D3D3D3" label="Intro Background Color" description="INTROTEXTBACK DESC"/>
+		<param name="introborder" type="text" default="1px solid #CCCCCC" label="Intro Border" description="INTROTEXTBORDER DESC"/>	
+		
+		<param name="" type="separators" default="ABOUT TITLE" description="" />
+		<param name="" type="legends" default="ABOUT TITLE DESC" description="" />		
+		<param name="titlealign" type="list" default="1" label="Title Align" description="TITLEALIGN DESC">
+			<option value="left">left</option>
+			<option value="right">right</option>
+			<option value="center">center</option>
+		</param>
+		<param name="titlesize" type="text" default="18" label="Title Font Size" description="TITLESIZE DESC"/>
+		<param name="titleback" type="text" default="D3D3D3" label="Title Background Color" description="TITLEBACK DESC"/>
+		<param name="titleborderstyle" type="text" default="1px solid #CCCCCC" label="Title Border" description="TITLEBORDER DESC"/>		
+		
+		<param name="" type="separators" default="ABOUT CATEGORY DESCRIPTION" description="" />
+		<param name="" type="legends" default="ABOUT CATEGORY DESCRIPTION DESC" description="" />
+		<param name="cdescription" type="radio" default="1" label="Display Description" description="DISPLAYDESCRIPTION DESC">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="cimage" type="radio" default="1" label="Display Category Image" description="DISPLAYCATEGORYIMAGE DESC">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>		
+		<param name="cworddesc" type="text" default="" label="Word Count Description" description="WORDCOUNTDESC DESC"/>
+		<param name="cbackdesc" type="text" default="FFFFFF" label="Background Description" description="BACKDESC DESC"/>
+		<param name="cborddesc" type="text" size="30" default="1px solid #ccc" label="Border Description" description="BORDERDESC DESC"/>
+		<param name="cdescfontsize" type="text" default="10" label="Description Font Size" description="DESCFONTSIZE DESC"/>		
+		<param name="cdescfontcolor" type="text" default="000000" label="Description Font Color" description="DESCFONTCOLOR DESC"/>
+		<param name="cdescfontstyle1" type="list" default="0" label="Description Font Case" description="DESCFONTSTYLE1 DESC">
+			<option value="none">None</option>
+			<option value="capitalize">Capitalize</option>
+			<option value="uppercase">Uppercase</option>
+			<option value="lowercase">Lowercase</option>
+		</param>
+		<param name="cdescfontstyle2" type="radio" default="0" label="Description Style" description="DESCFONTSTYLE2 DESC">
+			<option value="normal">Normal</option>
+			<option value="italic">Italic</option>
+			<option value="oblique">Oblique</option>						
+		</param>
+		<param name="ccleancode" type="radio" default="1" label="Clean Code" description="CLEANCODE DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="" type="separators" default="ABOUT FILE DESCRIPTION" description="" />
+		<param name="" type="legends" default="ABOUT FILE DESCRIPTION DESC" description="" />
+		<param name="pagination" type="radio" default="1" label="Display Pagination" description="DISPLAYPAGINATION DESC">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="countdown" type="text" default="10" label="Downloads Count Pagination" description="DOWNLOADCOUNT DESC"/>		
+		<param name="fdescription" type="radio" default="1" label="Display Description" description="DISPLAYDESCRIPTION DESC">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="fdesctype" type="radio" default="1" label="Description Type" description="DESCRIPTIONTYPE DESC">
+			<option value="1">Short</option>
+			<option value="0">Long</option>
+		</param>
+		<param name="fbackdesc" type="text" default="FFFFFF" label="Background Description" description="BACKFILES DESC"/>
+		<param name="fborddesc" type="text" size="30" default="1px solid #ccc" label="Border Description" description="BORDERDESC DESC"/>
+		<param name="fdescfontsize" type="text" default="10" label="Description Font Size" description="FILESFONTSIZE DESC"/>		
+		<param name="fdescfontcolor" type="text" default="000000" label="Description Font Color" description="FILESFONTCOLOR DESC"/>
+		<param name="fdescfontstyle1" type="list" default="0" label="Description Font Case" description="FILESFONTSTYLE1 DESC">
+			<option value="none">None</option>
+			<option value="capitalize">Capitalize</option>
+			<option value="uppercase">Uppercase</option>
+			<option value="lowercase">Lowercase</option>
+		</param>
+		<param name="fdescfontstyle2" type="radio" default="0" label="Description Style" description="FILESFONTSTYLE2 DESC">
+			<option value="normal">Normal</option>
+			<option value="italic">Italic</option>
+			<option value="oblique">Oblique</option>		
+		</param>
+		<param name="fcleancode" type="radio" default="0" label="Clean Code" description="CLEANCODE DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>		
+		<param name="" type="separators" default="ABOUT ACCORDION" description="" />
+		<param name="" type="legends" default="ABOUT ACCORDION DESC" description="" />		
+		<param name="titletext" type="text" default="Page" label="Title Text" description="TITLETEXT DESC"/>		
+		<param name="backgtitle" type="text" default="CCCCCC" label="Background Title Accordion" description="BACKGROUNDTITLE DESC"/>
+		<param name="colortitle" type="text" default="000000" label="Color Title Accordion" description="COLORTITLEACC DESC"/>
+		<param name="backg1" type="text" default="000000" label="Color Title Accordion Active" description="COLORTITLEACTIVE DESC"/>
+		<param name="backg2" type="text" default="FAFAFA" label="Color Title Accordion Normal" description="COLORTILTENORMAL DESC"/>		
+		<param name="" type="legends" default="ABOUT TUX MERLIN DESC" description="" />
+	</params>
+	<params group="advanced">
+		<param name="listtype" type="list" default="0" label="LISTTYPE" description="LISTTYPE DESC" >
+			<option value="img">Image</option>
+			<option value="none">none</option>
+			<option value="circle">circle</option>
+			<option value="disc">disc</option>
+			<option value="square">square</option>
+			<option value="armenian">armenian</option>
+			<option value="decimal">decimal</option>
+			<option value="decimal-leading-zero">leading-zero</option>
+			<option value="georgian">georgian</option>
+			<option value="lower-alpha">lower-alpha</option>
+			<option value="lower-greek">lower-greek</option>
+			<option value="lower-latin">lower-latin</option>
+			<option value="lower-roman">lower-roman</option>
+			<option value="upper-alpha">upper-alpha</option>
+			<option value="upper-latin">upper-latin</option>
+			<option value="upper-roman">upper-roman</option>
+			<option value="inherit">inherit</option>
+		</param>
+		<param name="listimage" type="text" size="50"  default="images/M_images/arrow.png" label="LISTIMAGE" description="LISTIMAGE DESC" />		
+		<param name="marginlist" type="text" size="10"  default="0 0 0 15px" label="MARGINLIST" description="MARGINLIST DESC" />		
+		<param name="linelist" type="text" size="10"  default="4px" label="LINELIST" description="LINELIST DESC" />		
+		<param name="stylelinks" type="textarea" cols="35" rows="5" default="font-size:85%;font-style:italic;" label="STYLEFORLINKS" description="STYLEFORLINKS DESC" />		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />	
+		<param name="@spacer1" type="spacer" default="" label="" description="" />
+		<param name="cache" type="list" default="1" label="CACHE_LABEL" description="CACHE_LABEL DESC">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="CACHE_TIME_LABEL" description="CACHE_TIME_LABEL DESC" />
+	</params>			
+</install>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+	<name>MoveText</name>
+	<author>Sakis Terzis</author>
+	<creationDate>2010</creationDate>
+	<copyright>breakDesigns</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail></authorEmail>
+	<authorUrl>http://breakdesigns.net/</authorUrl>
+	<version>2.2</version>
+	
+	<params>
+	<param name="@spacer" type="spacer" default="=== Settings ===" label="" description="" />
+	<param name="mskWidth" type="text" default="300" label="Vissible text Width in px" description="The width of the visible mask of the text"/>
+	<param name="speed" type="text" default="2" label="Speed of Text" description="The speed of the text movement"/>
+  <param name="time" type="text" default="80" label="Movement Interval" description="The inteval to in milliseconds to do the movement."/>
+	</params>
+	<description>This plugin gives you the ability to have sliding text inside your content.Usage: {text=the text you want to use} example {text=I hope you like that plugin}.    The moving elements could be styled using the className "movingObj". Avoid using p and br tags.
+	
+	</description>
+	<files>
+		<filename plugin="plg_moveText">plg_moveText.php</filename>
+		<filename plugin="plg_moveText">plg_moveText.xml</filename>
+		<filename plugin="plg_moveText">plugin_moveText/moveText.css</filename>
+		<filename plugin="plg_moveText">plugin_moveText/moveText.js</filename>
+		
+	</files>
+</install>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Scientific Calculator</name>
+	<author>Urmila Champatiray</author>
+	<creationDate>July 2010</creationDate>
+	<copyright>Copyright (C) 2010 Joomlaseo.org. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>admin@joomlaseo.org</authorEmail>
+	<authorUrl>www.joomlaseo.org</authorUrl>
+	<version>1.2</version>
+	<description>	
+	<![CDATA[
+		Scientific Calculator Module for Joomla 1.5 is a best calculator for financial sites <br /><br />&copy;&nbsp;<a href="http://www.joomlaseo.org">Joomla SEO Tips</a><br/><br/>
+		
+		<strong>Joomla Calculator</strong><br/>
+		&nbsp;- Change Log- Some calculation errors removed. You can get the exact Multiplication value now;<br/>
+		&nbsp;- Best Scientific calculator for Joomla; <br/>
+		&nbsp;- Comes with Trigonometric Functions;<br/>
+		&nbsp;- Logarithmic and Exponential Functions also Added;<br/>
+		&nbsp;- Made with JavaScript;<br/>
+		&nbsp;- Future addition will be extra parameters in modules to change height and width of Buttons;<br/>
+		&nbsp;- To swap between advanced and simple calculator and a record screen tab;<br/>
+		<br/>
+		]]>
+	</description>	
+	<files>
+		<filename module="mod_scientificcalculator">mod_scientificcalculator.php</filename>
+		<filename>GNU-License.txt</filename>
+		<filename>index.html</filename>
+	</files>
+	
+</install>

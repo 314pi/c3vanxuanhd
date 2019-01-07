@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+ <params>
+  <param name="directory" type="text" default="" label="Image Path" description="IMAGE PATH DESC" />
+ </params>
+</config>
